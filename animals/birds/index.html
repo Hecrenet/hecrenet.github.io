@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Birds</title>
+		<link rel="stylesheet" type="text/css" href="../css.css">
+		<script type="text/javascript" src="../js.js"></script>
+	</head>
+	<body>
+		<div id="nav">
+			<ul>
+				<li style="float:right"><a href="../index.html"><img src=../images/hbird-face.png alt="Hecretary Bird's Face" width="25%"></a></li>
+				<li style="float:left">The Official Hecrepedia</li>
+			</ul>
+		</div>
+
+		<h1>Birds</h1>
+
+		<!--Tab Buttons-->
+		<div class="tab">
+  			<button class="tablinks" onclick="openTab(event, 'General')" id="defaultOpen">General</button>
+  			<button class="tablinks" onclick="openTab(event, 'Common')">Common</button>
+  			<button class="tablinks" onclick="openTab(event, 'Rare')">Rare</button>
+			<button class="tablinks" onclick="openTab(event, 'Mystical')">Mystical</button>
+			<button class="tablinks" onclick="openTab(event, 'Legendary')">Legendary</button>
+		</div>
+		
+		<!--Tab Content-->
+		<div id="General" class="tabcontent">
+			<div id="section" class="left">
+				<h2>What are birds?</h2>
+				<p>Many people consider birds to just be the tiny things that can take flight by flapping their wings like maniacs. This is false.</p>
+				<p>Birds are majestic winged creatures. Since birds are so diverse, this is the common definition that we use when talking about birds.</p>
+			</div>
+			<div id="section" class="right">
+				<h2>Common Powers</h2>
+			</div>
+		</div>
+
+		<script>
+			document.getElementById("defaultOpen").click();
+		</script>
+
+		<div id="Common" class="tabcontent">
+		</div>
+
+		<div id="Rare" class="tabcontent">
+		</div>
+
+		<div id="Mystical" class="tabcontent">
+		</div>
+
+		<div id="Legendary" class="tabcontent">
+			<div id="section" class="left">
+				<h2>Hecretary Bird</h2>
+				<a href="hbird.html"><img src="../images/hbird.jpg" alt="Hecretary Bird in an open field." width="90%"></a>
+			</div>
+		</div>
+	</body>
+</html>
