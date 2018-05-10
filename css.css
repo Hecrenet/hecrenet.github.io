@@ -68,8 +68,8 @@ body {
 }
 
 #section.middle {
-	float: left;
-	clear: right;
+	float: right;
+	clear: left;
 	width: 98%;
 }
 
