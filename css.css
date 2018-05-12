@@ -212,7 +212,9 @@ a:visited {
 
 /* Headings */
 
-h1{}
+h1{
+	margin: 2%;
+}
 
 h2.center {
 	text-align: center;
