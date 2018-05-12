@@ -1,14 +1,12 @@
 /* Main Body Elements */
 
 body {
+	margin: 0;
 	background: #ffffff;
 	font-family: sans-serif;
 }
 
 #nav ul {
-	position: fixed;
-	top: 0;
-	left: 0;
 	padding: 0;
 	margin: 0;
 	list-style: none;
