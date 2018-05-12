@@ -6,6 +6,10 @@ body {
 	font-family: sans-serif;
 }
 
+#nav {
+	position: relative;
+}
+
 #nav ul {
 	padding: 0;
 	margin: 0;
@@ -15,7 +19,15 @@ body {
 	overflow: hidden;
 }
 
+#nav img {
+	border: none;
+	vertical-align: middle;
+}
+
 #nav li {
+	position: absolute;
+  	top: 50%;
+  	transform: translateY(-50%);
 	margin: 0;
 	padding: 0;
 }
@@ -36,11 +48,6 @@ body {
 #nav li a:visited {
 	color: #ffffff;
 	text-decoration: none;
-}
-
-#nav img {
-	border: none;
-	vertical-align: middle;
 }
 
 #section {
