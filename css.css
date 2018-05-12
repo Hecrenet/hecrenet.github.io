@@ -119,6 +119,10 @@ body {
 /* Images */
 
 img {
+	
+}
+
+img.zoom {
 
 	border-radius: 10px;
 
@@ -140,7 +144,7 @@ img {
   	-webkit-transform: scale(1); /* Safari and Chrome */
 }
 
-img:hover {
+img:hover.zoom {
 	opacity: 0.8;
 	-webkit-transition: all .3s ease-in;
   	-moz-transition: all .3s ease-in;
