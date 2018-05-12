@@ -20,17 +20,12 @@ body {
 	margin-bottom: -99999px;
 }
 
+#nav li:hover{
+	background-color: #000000;
+}
+
 #nav ul li{
 	display: inline;
-}
-
-#nav li a {
-	display: block;
-	text-align: center;
-}
-
-#nav li a:hover {
-	background-color: #000000;
 }
 
 #nav li a:link {
@@ -41,11 +36,6 @@ body {
 #nav li a:visited {
 	color: #ffffff;
 	text-decoration: none;
-}
-
-#nav ul a:hover {
-	text-decoration: underline;
-	font-weight: normal;
 }
 
 #nav img {
