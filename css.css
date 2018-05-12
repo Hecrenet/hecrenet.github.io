@@ -6,6 +6,7 @@ body {
 }
 
 #nav ul {
+	padding: 10px;
 	list-style: none;
 	background-color: #3a3a3a;
 	color: white;
@@ -13,7 +14,8 @@ body {
 }
 
 #nav li {
-	padding: 20px;
+	margin: 0;
+	padding: 0;
 	padding-bottom: 99999px; 
 	margin-bottom: -99999px;
 }
@@ -25,6 +27,10 @@ body {
 #nav li a {
 	display: block;
 	text-align: center;
+}
+
+#nav li a:hover {
+	background-color: #000000;
 }
 
 #nav li a:link {
