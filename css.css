@@ -55,16 +55,19 @@ body {
 	padding: 5px;
 	margin: 10px;
 	box-shadow: 1px 1px 5px #cecece;
+	overflow: hidden;
 }
 
 #section.left {
 	float: left;
 	width: 45%;
+	max-width: 45%;
 }
 
 #section.right {
 	float: right;
 	width: 45%;
+	max-width: 45%;
 }
 
 #section.middle {
