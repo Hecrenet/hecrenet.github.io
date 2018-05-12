@@ -119,7 +119,9 @@ body {
 /* Images */
 
 img {
-	
+	display: block;
+	margin: 0;
+	padding: 0;
 }
 
 img.zoom {
@@ -161,12 +163,13 @@ img:hover.zoom {
 /* Tables */
 
 table {
+	width: 100%;
 	margin-top: 10px;
 	margin-left: auto;
 	margin-right: auto;
 	float: none;
 	
-	border: 1 px solid #000000;
+	border: 1px solid #000000;
 }
 
 td {
