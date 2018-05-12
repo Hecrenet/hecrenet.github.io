@@ -219,6 +219,10 @@ h3 {
 	padding-left: 20px;
 }
 
+h3.center {
+	text-align: center;
+}
+
 p {
 	padding-left: 20px;
 }
