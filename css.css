@@ -14,7 +14,7 @@ body {
 	top: 20px;
 }
 
-#nav .moveLeft {
+#nav .moveRight {
 	position: relative;
 	left: 65px;
 }
