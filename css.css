@@ -9,6 +9,16 @@ body {
 #nav {
 }
 
+#nav .moveDown {
+	position: relative;
+	top: 20px;
+}
+
+#nav .moveLeft {
+	position: relative;
+	left: 65px;
+}
+
 #nav ul {
 	padding: 0;
 	margin: 0;
