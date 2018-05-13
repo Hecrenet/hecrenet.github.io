@@ -43,7 +43,7 @@ body {
 }
 
 #nav ul li{
-	display: inline;
+	display: inline-block;
 }
 
 #nav li a:link {
