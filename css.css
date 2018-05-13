@@ -24,9 +24,6 @@ body {
 }
 
 #nav li {
-	position: absolute;
-  	top: 50%;
-  	transform: translateY(-50%);
 	margin: 0;
 	padding: 0;
 }
