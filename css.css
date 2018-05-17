@@ -38,10 +38,6 @@ body {
 	padding: 0;
 }
 
-#nav li:hover{
-	background-color: #000000;
-}
-
 #nav ul li{
 	display: inline-block;
 }
