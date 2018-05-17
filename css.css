@@ -24,7 +24,7 @@ body {
 	margin: 0;
 	list-style: none;
 	background-color: #3a3a3a;
-	color: white;
+	color: #ffffff;
 	overflow: hidden;
 }
 
@@ -78,9 +78,8 @@ body {
 }
 
 #section.middle {
-	float: right;
-	clear: left;
-	width: 98%;
+	clear: both;
+	width: auto;
 }
 
 
