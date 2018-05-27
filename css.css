@@ -24,7 +24,6 @@ body {
 	position: relative;
 	animation-fill-mode: forwards;
  	animation-name: slide;
-  	animation-duration: 1s;
   	opacity: 0;
 }
 
