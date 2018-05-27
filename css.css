@@ -19,6 +19,13 @@ body {
 	margin: 10px;
 	box-shadow: 1px 1px 5px #cecece;
 	overflow: hidden;
+	
+	/* Animation CSS */
+	position: relative;
+	animation-fill-mode: forwards;
+ 	animation-name: slide;
+  	animation-duration: 1s;
+  	opacity: 0;
 }
 
 #section.left {
@@ -36,6 +43,11 @@ body {
 #section.middle {
 	clear: both;
 	width: auto;
+}
+
+@keyframes slide {
+	0% {bottom: 0px; opactiy: 0;}
+	100% {bottom: 200px; opacity: 1;}
 }
 
 /* TOP BAR */
