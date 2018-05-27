@@ -1,4 +1,4 @@
-/* Main Body Elements */
+/* DIVS */
 
 body {
 	margin: 0;
@@ -6,6 +6,39 @@ body {
 	font-family: sans-serif;
 }
 
+#blank {
+	clear: both;
+	width: auto;
+	height: 200px;
+}
+
+#section {
+	background-color: #f2f2f2;
+	border: 1px solid #cecece;
+	padding: 5px;
+	margin: 10px;
+	box-shadow: 1px 1px 5px #cecece;
+	overflow: hidden;
+}
+
+#section.left {
+	float: left;
+	width: 45%;
+	max-width: 45%;
+}
+
+#section.right {
+	float: right;
+	width: 45%;
+	max-width: 45%;
+}
+
+#section.middle {
+	clear: both;
+	width: auto;
+}
+
+/* TOP BAR */
 #nav {
 }
 
@@ -50,32 +83,6 @@ body {
 #nav li a:visited {
 	color: #ffffff;
 	text-decoration: none;
-}
-
-#section {
-	background-color: #f2f2f2;
-	border: 1px solid #cecece;
-	padding: 5px;
-	margin: 10px;
-	box-shadow: 1px 1px 5px #cecece;
-	overflow: hidden;
-}
-
-#section.left {
-	float: left;
-	width: 45%;
-	max-width: 45%;
-}
-
-#section.right {
-	float: right;
-	width: 45%;
-	max-width: 45%;
-}
-
-#section.middle {
-	clear: both;
-	width: auto;
 }
 
 
@@ -125,7 +132,7 @@ body {
 	to{opacity: 1;}
 }
 
-/* Images */
+/* IMAGES */
 
 img {
 	display: block;
@@ -171,7 +178,12 @@ img:hover.zoom {
 
 }
 
-/* Tables */
+img.center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* TABLES */
 
 table {
 	width: 100%;
