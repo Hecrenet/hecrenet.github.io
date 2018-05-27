@@ -23,6 +23,7 @@ body {
 	/* Animation CSS */
 	position: relative;
 	animation-fill-mode: forwards;
+	animation-duration: 1s;
  	animation-name: slide;
   	opacity: 0;
 }
