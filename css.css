@@ -82,6 +82,7 @@ body {
 #nav .moveRight {
 	position: relative;
 	left: 65px;
+	/* width: 10%; */
 }
 
 #nav ul {
@@ -96,6 +97,7 @@ body {
 #nav img {
 	border: none;
 	vertical-align: middle;
+	width: 50%;
 }
 
 #nav li {
@@ -170,7 +172,7 @@ img {
 	display: block;
 	margin: 0;
 	padding: 0;
-	width: 50%;
+	width: 100%;
 	object-fit: fill;
 }
 
