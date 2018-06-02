@@ -53,20 +53,20 @@ body {
 /* CARDS */
 
 .card {
-    	box-shadow: 4px 8px 5px #cecece;
+    	box-shadow: 2px 4px 5px #cecece;
     	transition: 0.3s;
     	border-radius: 5px;
+    	background-color: #ffffff;
+    	width: 20%;
 }
 
 .card img {
     	border-radius: 5px 5px 0 0;
+    	width: 100%;
 }
 
 .card:hover {
-	box-shadow: 8px 16px #cecece;
-
-.container {
-	8px;
+	box-shadow: 4px 8px 5px #cecece;
 }
 
 /* TOP BAR */
