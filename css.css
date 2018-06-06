@@ -67,6 +67,11 @@ body {
     	width: 100%;
 }
 
+.cardContainer {
+	text-align: center;
+	padding-right: 20px;
+}
+
 .card:hover {
 	box-shadow: 4px 8px 5px #cecece;
 }
@@ -226,8 +231,7 @@ table {
 	margin-top: 10px;
 	margin-left: auto;
 	margin-right: auto;
-	float: none;
-	
+	float: none;	
 	border: 1px solid #000000;
 }
 
