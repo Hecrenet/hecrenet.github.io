@@ -186,7 +186,7 @@ img {
 img.zoom {
 
 	border-radius: 10px;
-
+	width: auto;
 	display: block;
 	margin-left: auto;
 	margin-right:auto;
