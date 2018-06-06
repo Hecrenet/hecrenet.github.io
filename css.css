@@ -18,6 +18,7 @@ body {
 	border-radius: 5px;
 	padding: 5px;
 	margin: 10px;
+	transition: 3s;
 	box-shadow: 1px 1px 5px #cecece;
 	overflow: hidden;
 	
@@ -27,6 +28,10 @@ body {
 	animation-duration: 1s;
  	animation-name: slide;
   	opacity: 0;
+}
+
+#section:hover {
+	box-shadow: 5px 5px 5px #cecece;
 }
 
 #section.left {
