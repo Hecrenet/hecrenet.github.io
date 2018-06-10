@@ -57,31 +57,34 @@ body {
 }
 
 .col-container {
-    
+    overflow: hidden;
 }
 
 .col {
+	float: left;
 	width: 20%;
 	margin: 2%;
+	clear: none;
+	overflow: visible;
 }
 
 @media only screen and (max-width: 600px) {
     .col { 
         display: block;
-        width: 100%;
+        clear: both;
+        width: auto;
     }
-}
+} 
 
 /* CARDS */
 
 .card {
     	box-shadow: 2px 4px 5px #cecece;
-   	transition: 0.3s;
+		transition: 0.3s;
     	border-radius: 5px;
     	background-color: #ffffff;
-    	width: 20%;
+    	width: 100%;
     	float: left;
-    	margin: 2%;
 }
 
 .card img {
