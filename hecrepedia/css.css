@@ -69,12 +69,24 @@ body {
 	overflow: visible;
 }
 
+
+/* MEDIA QUERY */
 @media only screen and (max-width: 600px) {
-    .col { 
-        display: block;
-        clear: both;
-        width: auto;
-    }
+	.col { 
+        	display: block;
+        	clear: both;
+		width: auto;
+	}
+	
+	#section.left {
+		width: auto;
+		clear: both;
+	}
+	
+	#section.right {
+		width: auto;
+		clear: both;
+	}
 } 
 
 /* CARDS */
@@ -274,7 +286,7 @@ td:nth-child(odd) {
 }
 
 table, th, td {
-	border: 1 px solid #cecece;
+	border: 1px solid #cecece;
 	border-collapse: collapse;
 }
 
