@@ -1,17 +1,12 @@
 /* DIVS */
-
 body {
 	margin: 0;
 	background: #ffffff;
 	font-family: sans-serif;
 }
 
-#blank {
-	clear: both;
-	width: auto;
-	height: 200px;
-}
-
+/* Sections */
+/* The boxes in tabcontent that help with organization */
 #section {
 	background-color: #f2f2f2;
 	border: 1px solid #cecece;
@@ -23,7 +18,7 @@ body {
 	overflow: hidden;
 	top: 200px;
 	
-	/* Animation CSS */
+	/* Animation */
 	position: relative;
 	animation-fill-mode: forwards;
 	animation-duration: 1s;
@@ -52,11 +47,8 @@ body {
 	width: auto;
 }
 
-@keyframes slide {
-	0% {top: 200px; opactiy: 0;}
-	100% {top: 0px; opacity: 1;}
-}
-
+/* Columns */
+/* Mainly for the Hecredex to help with mobile and computer organization */
 .col-container {
     overflow: hidden;
 }
@@ -69,28 +61,8 @@ body {
 	overflow: visible;
 }
 
-
-/* MEDIA QUERY */
-@media only screen and (max-width: 600px) {
-	.col { 
-        	display: block;
-        	clear: both;
-		width: auto;
-	}
-	
-	#section.left {
-		width: auto;
-		clear: both;
-	}
-	
-	#section.right {
-		width: auto;
-		clear: both;
-	}
-} 
-
-/* CARDS */
-
+/* Cards */
+/* A fancy way to have an image with caption */
 .card {
     	box-shadow: 2px 4px 5px #cecece;
 		transition: 0.3s;
@@ -114,8 +86,8 @@ body {
 	box-shadow: 4px 8px 5px #cecece;
 }
 
-/* TOP BAR */
-
+/* NAVIGATION */
+/* Topnav */
 #nav {
 }
 
@@ -166,7 +138,6 @@ body {
 
 
 /* Navigation Tabs */
-
 .tab {
 	margin: 2%;
 	margin-bottom: 0;
@@ -208,13 +179,7 @@ body {
 	box-shadow: 1px 1px 5px #cecece;
 }
 
-@keyframes fadeEffect {
-	from{opacity: 0;}
-	to{opacity: 1;}
-}
-
 /* IMAGES */
-
 img {
 	display: block;
 	margin: 0;
@@ -265,7 +230,6 @@ img.center {
 }
 
 /* TABLES */
-
 table {
 	width: 100%;
 	margin-top: 10px;
@@ -292,7 +256,6 @@ table, th, td {
 
 
 /* LINKS */
-
 a:link {
 	color: #000000;
 	text-decoration: underline;
@@ -311,7 +274,6 @@ a:visited {
 
 
 /* TEXT */
-
 h1{
 	margin: 2%;
 }
@@ -338,7 +300,6 @@ p {
 .tooltip {
     	position: relative;
     	display: inline-block;
-	animation: 0.2s;
 	text-decoration: underline;
 }
 
@@ -367,7 +328,7 @@ p {
     	margin-left: -5px;
     	border-width: 5px;
     	border-style: solid;
-    	border-color: #000000 transparent transparent transparent;
+    	border-color: #3a3a3a transparent transparent transparent;
 }
 
 .tooltip:hover .tooltiptext {
@@ -377,8 +338,37 @@ p {
 	animation-fill-mode: forwards;
 }
 
+/* ANIMATIONS */
+@keyframes fadeEffect {
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+
 @keyframes fadeIn {
 	0% {opacity: 0;}
 	100% {opacity: 1;}
 }
 
+@keyframes slide {
+	0% {top: 200px; opactiy: 0;}
+	100% {top: 0px; opacity: 1;}
+}
+
+/* MEDIA QUERY */
+@media only screen and (max-width: 600px) {
+	.col { 
+        	display: block;
+        	clear: both;
+		width: auto;
+	}
+	
+	#section.left {
+		width: auto;
+		clear: both;
+	}
+	
+	#section.right {
+		width: auto;
+		clear: both;
+	}
+} 
