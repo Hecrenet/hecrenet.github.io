@@ -21,6 +21,7 @@ body {
 	transition: 0.5s;
 	box-shadow: 1px 1px 5px #cecece;
 	overflow: hidden;
+	top: 200px;
 	
 	/* Animation CSS */
 	position: relative;
