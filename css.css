@@ -2,11 +2,18 @@
 body {
 	background-image: url("images/misc/starry-night.gif");
 	background-size: cover;
+	margin: 0;
+	padding: 0;
 }
 
 /* DIVS */
 #section {
 	
+}
+
+/* NAVIGATION */
+#nav ul li {
+	background-color: #ffffff;
 }
 
 /* TABS */
@@ -36,7 +43,7 @@ body {
 
 .tabcontent {
     	display: none;
-   	padding: 6px;
+   	padding: 10px;
     	border-top: none;
 	color: #ffffff;
 	border-radius: 0 0 5px 5px;
