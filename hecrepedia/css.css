@@ -301,6 +301,7 @@ p {
     	position: relative;
     	display: inline-block;
 	text-decoration: underline;
+	cursor: pointer;
 }
 
 .tooltip .tooltiptext {
@@ -318,6 +319,7 @@ p {
     	bottom: 150%;
     	left: 50%;
     	margin-left: -60px;
+	cursor: default;
 }
 
 .tooltip .tooltiptext::after {
