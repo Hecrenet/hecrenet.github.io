@@ -22,7 +22,7 @@ This is the website of the Hecretary Bird Association.
   + The Hecredex, a 100% non-wannabe Pokedex
 * Games (Soon to come)
 * Entertainment
-  + A historical play (Soon to come)
+  + A historical play (Very soon to come)
   + A novel (Soon to come)
   + A movie (Less Soon to come)
 * Political Stuff?! (Soon to come)
