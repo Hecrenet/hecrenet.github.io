@@ -33,13 +33,11 @@ body {
 #section.left {
 	float: left;
 	width: 45%;
-	max-width: 45%;
 }
 
 #section.right {
 	float: right;
 	width: 45%;
-	max-width: 45%;
 }
 
 #section.middle {
