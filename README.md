@@ -7,6 +7,15 @@ This is the website of the Hecretary Bird Association.
 
 ***
 
+## Devloper Stuff
+### For HBA Members 
+* If you are going to edit any of the css, make sure you edit the back-ups first. Then compress it and put it in the css that's being used
+* If you have nothing else to do, figure out how to make our pages faster
+  + But don't compress any HTML files
+  
+
+***
+
 ## Alternative Languages:
 - [Zulu](https://translate.google.com/translate?sl=en&tl=zu&u=hecretary-bird.github.io)
 - [Spanish](https://translate.google.com/translate?sl=en&tl=es&u=hecretary-bird.github.io)
