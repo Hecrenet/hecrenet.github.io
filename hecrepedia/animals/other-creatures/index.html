@@ -1,51 +1,60 @@
 <!DOCTYPE html>
 <html>
-	<head>
+<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121185448-1"></script>
+	<script>
+  		window.dataLayer = window.dataLayer || [];
+  		function gtag(){dataLayer.push(arguments);}
+  		gtag('js', new Date());
+		gtag('config', 'UA-121185448-1');
+	</script>
+	
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 		<title>Other Creatures</title>
 		<link rel="stylesheet" type="text/css" href="/hecrepedia/css.css">
 		<script type="text/javascript" src="/hecrepedia/js.js"></script>
-	</head>
-	<body>
-		<div id="nav">
-			<ul>
-				<li style="float:right" class="moveRight"><a href="/index.html"><img src="/images/birds/legendary/hbird/hbird-face.PNG" alt="Hecretary Bird's Face" width="25%"></a></li>
-				<li style="float:left" class="moveDown"><a href="/hecrepedia/index.html">The Official Hecrepedia</a></li>
-			</ul>
-		</div>
+</head>
+<body>
+	<div id="nav">
+		<ul>
+			<li style="float:right" class="moveRight"><a href="/index.html"><img src="/images/birds/legendary/hbird/hbird-face.PNG" alt="Hecretary Bird's Face" width="25%"></a></li>
+			<li style="float:left" class="moveDown"><a href="/hecrepedia/index.html">The Official Hecrepedia</a></li>
+		</ul>
+	</div>
 
-		<h1>Other Creatures</h1>
+	<h1>Other Creatures</h1>
 
-		<!--Tab Buttons-->
-		<div class="tab">
-  			<button class="tablinks" onclick="openTab(event, 'General')" id="defaultOpen">General</button>
-  			<button class="tablinks" onclick="openTab(event, 'Creatures')">Creautres</button>
-		</div>
-		
-		<!-- General Content -->
-		<div id="General" class="tabcontent">
-			<div id="blank"></div>
-			<div id="section" class="middle" style="animation-delay: 0.25s">
-				<h2>What are these?</h2>
-				<p>These are the other creatures that exist in the Hecresphere.</p>
-        			<p>Some may be strong, but these creatures are all legendary and are not as famous as the Hecretary Birds. They are infamous for staying neutral.</p>
-			</div>
-		</div>
+	<!--Tab Buttons-->
+	<div class="tab">
+		<button class="tablinks" onclick="openTab(event, 'General')" id="defaultOpen">General</button>
+		<button class="tablinks" onclick="openTab(event, 'Creatures')">Creautres</button>
+	</div>
 
-		<script>
-			document.getElementById("defaultOpen").click();
-		</script>
-		
-		<!-- Creatures Content -->
-		<div id="Creatures" class="tabcontent">
-			<div id="blank"></div>
-			<div id="section" class="left" style="animation-delay: 0.25s">
-				<h2>Firey Sharekhan</h2>
-			</div>
-      			<div id="section" class="right" style="animation-delay: 0.25s">
-        		<h2>Waterpotamus</h2>
-        		<a href="waterpotamus.html"><img src="/images/other-creatures/waterpotamus/waterpotamus.jpg" alt="Waterpotamus" class="center"></a>
-     			 </div>
+	<!-- General Content -->
+	<div id="General" class="tabcontent">
+		<div id="blank"></div>
+		<div id="section" class="middle" style="animation-delay: 0.25s">
+			<h2>What are these?</h2>
+			<p>These are the other creatures that exist in the Hecresphere.</p>
+			<p>Some may be strong, but these creatures are all legendary and are not as famous as the Hecretary Birds. They are infamous for staying neutral.</p>
 		</div>
-	</body>
+	</div>
+
+	<script>
+		document.getElementById("defaultOpen").click();
+	</script>
+
+	<!-- Creatures Content -->
+	<div id="Creatures" class="tabcontent">
+		<div id="blank"></div>
+		<div id="section" class="left" style="animation-delay: 0.25s">
+			<h2>Firey Sharekhan</h2>
+		</div>
+		<div id="section" class="right" style="animation-delay: 0.25s">
+		<h2>Waterpotamus</h2>
+		<a href="waterpotamus.html"><img src="/images/other-creatures/waterpotamus/waterpotamus.jpg" alt="Waterpotamus" class="center"></a>
+		 </div>
+	</div>
+</body>
 </html>
