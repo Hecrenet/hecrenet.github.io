@@ -364,16 +364,16 @@ p {
 	
 	#section.left {
 		width: auto;
-		clear: both;
+		float: none;
 	}
 	
 	#section.right {
 		width: auto;
-		clear: both;
+		float: none;
 	}
 	
 	.tab button {
-		width: auto;
+		width: 100%;
 		clear: both;
 	}
 } 
