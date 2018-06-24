@@ -371,4 +371,9 @@ p {
 		width: auto;
 		clear: both;
 	}
+	
+	.tab button {
+		width: auto;
+		clear: both;
+	}
 } 
