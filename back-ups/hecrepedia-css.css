@@ -225,6 +225,7 @@ img:hover.zoom {
 img.center {
 	margin-left: auto;
 	margin-right: auto;
+	wdith: -webkit-fill-available;
 }
 
 /* TABLES */
