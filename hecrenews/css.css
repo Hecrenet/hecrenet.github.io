@@ -19,8 +19,13 @@ body {margin: 0;}
     padding: 0;
 }
 #nav li {
-    display: inline;
-    float: left;
+    	display: inline;
+    	float: left;
+	transition: 0.3s;
+}
+#nav li.blank {
+	display: none;
+	width: 100%;
 }
 #nav ul {
 	margin: 0;
@@ -43,19 +48,20 @@ body {margin: 0;}
   	#nav li.icon {
     		float: right;
     		display: block;
+		padding: 14px 20x;
   	}
+	#nav li.blank {display: none;}
 	#nav.responsive {position: relative;}
 	#nav.responsive li.icon {
 		position: absolute;
-		right: 50%px;
-		top: 20px;
+		right: 41%;
+		top: 20;
 	}
 	#nav.responsive li {
 		float: none;
 		display: block;
 		text-align: center;
 	}
-	#nav.responsive li:nth-child(first) {
-		display: none;
-	}
+	#nav.responsive li.blank {display: block;}
+	#nav.responsive li:nth-child(first) {display: none;}
 }
