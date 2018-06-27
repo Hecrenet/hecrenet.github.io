@@ -1,4 +1,4 @@
-function myFunction() {
+function openNav() {
     	var x = document.getElementById("nav");
     	if (x.className === "nav") {
         	x.className += " responsive";
