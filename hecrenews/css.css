@@ -37,18 +37,18 @@ body {margin: 0;}
 
 /* MOBILE */
 @media screen and (max-width: 600px) {
-  	#nav a:not(:first-child) {display: none;}
-  		#nav a.icon {
+  	#nav li:not(:first-child) {display: none;}
+  	#nav li.icon {
     		float: right;
     		display: block;
   	}
 	#nav.responsive {position: relative;}
-	#nav.responsive a.icon {
+	#nav.responsive li.icon {
 		position: absolute;
 		right: 0;
 		top: 0;
 	}
-	#nav.responsive a {
+	#nav.responsive li {
 		float: none;
 		display: block;
 		text-align: left;
