@@ -1,11 +1,25 @@
 body {margin: 0;}
 
 /* NAV */
-#nav li a {display: block}
-#nav li {display: inline}
+#nav li a, #nav img {
+    display: block;
+    text-decoration: none !important;
+    color: #fff !important;
+    font-family: sans-serif;
+    margin: 0 10px ;
+}
+#nav li:nth-child(1) a, #nav li:nth-child(1) img {
+    margin-left: 0;
+}
+#nav li {
+    display: inline;
+    float: left;
+}
 #nav ul {
 	margin: 0;
 	padding: 0;
+	overflow: hidden;
+	background-color: #3a3a3a;
 }
 #nav ul li {list-style: none;}
-#nav img {height: 200px;}
+#nav a img {height: 80px;}
