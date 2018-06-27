@@ -14,7 +14,7 @@ body {margin: 0;}
 #nav a:hover {
     background-color: #000;
 }
-#nav li:nth-child(1) a, #nav li:nth-child(1) img {
+#nav li:nth-child(2) a, #nav li:nth-child(2) img {
     margin-left: 0;
     padding: 0;
 }
@@ -44,7 +44,7 @@ body {margin: 0;}
 
 /* MOBILE */
 @media screen and (max-width: 600px) {
-  	#nav li:not(:first-child) {display: none;}
+  	#nav li:not(:nth-child(2)) {display: none;}
   	#nav li.icon {
     		float: right;
     		display: block;
@@ -63,5 +63,5 @@ body {margin: 0;}
 		text-align: center;
 	}
 	#nav.responsive li.blank {display: block;}
-	#nav.responsive li:nth-child(first) {display: none;}
+	#nav.responsive li:nth-child(2) {display: none;}
 }
