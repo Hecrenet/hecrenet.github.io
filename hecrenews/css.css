@@ -14,7 +14,7 @@ body {margin: 0;}
 #nav a:hover {
     background-color: #000;
 }
-#nav li:nth-child(2) a, #nav li:nth-child(2) img {
+#nav li:first-child a, #nav li:first-child img {
     margin-left: 0;
     padding: 0;
 }
@@ -44,17 +44,17 @@ body {margin: 0;}
 
 /* MOBILE */
 @media screen and (max-width: 600px) {
-  	#nav li:not(:nth-child(2)) {display: none;}
+  	#nav li:not(:first-child) {display: none;}
   	#nav li.icon {
     		float: right;
     		display: block;
-		padding: 14px 20x;
+		padding: 14px 20px;
   	}
 	#nav li.blank {display: none;}
 	#nav.responsive {position: relative;}
 	#nav.responsive li.icon {
 		position: absolute;
-		right: 41%;
+		right: 14;
 		top: 20;
 	}
 	#nav.responsive li {
@@ -63,5 +63,5 @@ body {margin: 0;}
 		text-align: center;
 	}
 	#nav.responsive li.blank {display: block;}
-	#nav.responsive li:nth-child(2) {display: none;}
+	#nav.responsive li:first-child {display: none;}
 }
