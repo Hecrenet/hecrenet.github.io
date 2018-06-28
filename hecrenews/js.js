@@ -10,6 +10,7 @@ function addNewNews() {
 		anchor = document.createElement("a");
 		anchor.href = newNewsLinks[i];
 		node = document.createTextNode(newNewsTitles[i]);
+		anchor.appendChild(node);
 		
 		element.appendChlid(anchor);
 	}
