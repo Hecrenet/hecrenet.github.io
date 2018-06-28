@@ -13,7 +13,7 @@ function addNewNews() {
 		node = document.createTextNode(newNewsTitles[i]);
 		anchor.appendChild(node);
 		
-		element.appendChlid(anchor);
+		element.appendChild(anchor);
 	}
 }
 
