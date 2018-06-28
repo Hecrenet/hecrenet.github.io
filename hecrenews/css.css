@@ -61,13 +61,13 @@ body {margin: 0;}
 	overflow: hidden;
 }
 
-#col {
+.col {
 	width: 30%;
 	float: left;
 	text-align: center;
 }
 
-#col:not(last-child) {
+.col:not(last-child) {
 	margin-right: 3%;
 }
 
