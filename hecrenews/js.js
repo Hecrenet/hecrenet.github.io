@@ -6,7 +6,6 @@ function addNewNews() {
 	var anchor;
 	var node;
 	var element = document.getElementById("colOne");
-	console.log(element);
 	for(var i = 0; i < newNewsLinks.length; i++) {
 		anchor = document.createElement("a");
 		anchor.href = newNewsLinks[i];
