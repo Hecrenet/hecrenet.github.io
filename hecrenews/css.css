@@ -42,6 +42,12 @@ body {margin: 0;}
 	font-size: 32px;
 }
 
+/* FOOTER */
+#footer {
+	color: #fff;
+	background-color: #0009;
+}
+
 /* MOBILE */
 @media screen and (max-width: 600px) {
   	#nav li:not(:first-child) {display: none;}
