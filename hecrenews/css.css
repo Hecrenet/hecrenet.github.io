@@ -42,6 +42,10 @@ body {margin: 0;}
 	font-size: 32px;
 }
 
+/* ARTICLE */ {
+	font-family: sans-serif;
+}
+
 /* FOOTER */
 #footer {
 	color: #fff;
@@ -50,12 +54,16 @@ body {margin: 0;}
 	width: 100%
 }
 
+.col-container {
+	overflow: hidden;
+}
+
 #col {
 	width: 30%;
 }
 
 #col:not(last-child) {
-	margin-right: 5%;
+	margin-right: 3%;
 }
 
 /* MOBILE */
