@@ -57,19 +57,22 @@ body {margin: 0;}
 	width: 100%
 }
 
-.col-container {
-	overflow: hidden;
-}
+.col-container {overflow: hidden;}
 
 .col {
 	width: 30%;
 	float: left;
 	text-align: center;
+	display: table;
 }
 
-.col:not(last-child) {
-	margin-right: 3%;
+.col a {
+	color: #fff !important;
+	display: table-row;
+	height: 40px;
 }
+
+.col:not(last-child) {margin-right: 3%;}
 
 /* MOBILE */
 @media screen and (max-width: 600px) {
