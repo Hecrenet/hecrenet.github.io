@@ -9,7 +9,8 @@ function addNewNews() {
 	for(var i = 0; i < newNewsLinks.length; i++) {
 		anchor = document.createElement("a");
 		anchor.href = newNewsLinks[i];
-		node = newNewsTitles[i];
+		node = document.createTextNode(newNewsTitles[i]);
+		
 		element.appendChlid(anchor);
 	}
 }
