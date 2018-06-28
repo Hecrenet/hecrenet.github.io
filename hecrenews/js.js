@@ -1,5 +1,6 @@
 var newNewsLinks = ["/hecrenews/index.html", "/index.html"];
 var newNewsTitles = ["Test", "2nd Anchor Test"];
+var newNewsImages= ["", ""];
 addNewNews();
 
 function addNewNews() {
