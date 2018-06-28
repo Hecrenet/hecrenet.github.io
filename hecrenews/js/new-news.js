@@ -35,6 +35,6 @@ function addCardNewNews() {
 		anchor.href = newNewsLinks[i];
 		node = document.createTextNode(newNewsTitles[i]);
 		anchor.appendChild(node);
-		element[i].appendChild(anchor);
+		elements[i].appendChild(anchor);
 	}
 }
