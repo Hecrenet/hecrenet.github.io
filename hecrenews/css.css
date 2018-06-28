@@ -42,15 +42,17 @@ body {margin: 0;}
 	font-size: 32px;
 }
 
-/* ARTICLE */ {
+/* ARTICLE */ 
+#article {
 	font-family: sans-serif;
 	width: 70%;
+	margin: 2%;
 }
 
 /* FOOTER */
 #footer {
 	color: #fff;
-	background-color: #0009;
+	background-color: #3a3a3a;
 	font-family: sans-serif;
 	width: 100%
 }
@@ -61,6 +63,8 @@ body {margin: 0;}
 
 #col {
 	width: 30%;
+	float: left;
+	text-align: center;
 }
 
 #col:not(last-child) {
