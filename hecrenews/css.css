@@ -54,13 +54,14 @@ body {margin: 0;}
 	100% {top: 0; opacity: 1;}	
 }
 
-/* MOBILE */
-@media screen and (max-width: 600px) {
-	/* Idle Phone Nav */
+/* RESPONSIVE WEB DESIGN */
+/* Navigation */
+@media screen and (max-width: 868px) {
+	/* Idle Nav */
   	#nav li:not(:first-child) {display: none;}
   	#nav li.icon {float: right; display: block; padding: 14px 20px;}
 	#nav li.blank {display: none;}
-	/* Open Phone Nav */
+	/* Open Nav */
 	#nav.responsive {position: relative;}
 	#nav.responsive li.icon {position: absolute; right: 0; top: 0;}
 	#nav.responsive li {float: none; display: block; text-align: center;}
