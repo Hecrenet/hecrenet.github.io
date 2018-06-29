@@ -21,9 +21,7 @@ var newsTitles = [
 	["No News :(", "No News :(", "No News :(", "No News :(", "No News :("], //Food [7][x]
 	["No News :(", "No News :(", "No News :(", "No News :(", "No News :("] //Travel [8][x]
 ];
-var newNewsImage = "/images/birds/legendary/hbird/hbird.jpg";
-document.getElementById("latest-news").src = newNewsImage;
-
+var newNewsImages = ["/images/birds/legendary/hbird/hbird.jpg", "#", "#", "#", "#", "#", "#", "#", "#"];
 
 //DON'T CHANGE BOTTOM CODE
 function addColNews(category, divName) {
@@ -38,6 +36,7 @@ function addColNews(category, divName) {
 }
 function addCardNews(category) {
 	var anchor, node, elements = document.getElementsByClassName(category + "-news");
+	document.getElementById(category + "-news").src = newNewsImages[category];
 	for(var i = 0; i < newsLinks.length; i++) {
 		anchor = document.createElement("a");
 		anchor.href = newsLinks[category][i];
