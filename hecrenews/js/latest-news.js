@@ -22,7 +22,7 @@ var newsTitles = [
 	["No News :(", "No News :(", "No News :(", "No News :(", "No News :("] //Travel [8][x]
 ];
 var newNewsImage = "/images/birds/legendary/hbird/hbird.jpg";
-document.getElementById("new-news").src = newNewsImage;
+document.getElementById("latest-news").src = newNewsImage;
 
 
 //DON'T CHANGE BOTTOM CODE
