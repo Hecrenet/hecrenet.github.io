@@ -25,7 +25,7 @@ var newNewsImages = [
 	"/images/birds/legendary/hbird/hbird.jpg", //New News
 	"#", //Mundande
 	"#", //Gossip
-	"#", //Political
+	"http://static.politifact.com.s3.amazonaws.com/politifact/photos/AP_FLCO101_CAMPAIGN_2016_TR.jpg", //Political
 	"#", //Economics
 	"#", //Technology
 	"#", //Fashion
