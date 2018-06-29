@@ -1,6 +1,6 @@
 //Init Arrays
 var newsLinks = [
-	["/hecrenews/template.html", "#", "#", "#", "#"] //New News [0][x]
+	["/hecrenews/template.html", "#", "#", "#", "#"], //New News [0][x]
 	["#", "#", "#", "#", "#"], //Mundane [1][x]
 	["#", "#", "#", "#", "#"], //Gossip [2][x]
 	["#", "#", "#", "#", "#"], //Political [3][x]
@@ -21,9 +21,18 @@ var newsTitles = [
 	["No News :(", "No News :(", "No News :(", "No News :(", "No News :("], //Food [7][x]
 	["No News :(", "No News :(", "No News :(", "No News :(", "No News :("] //Travel [8][x]
 ];
-var newNewsImages = ["/images/birds/legendary/hbird/hbird.jpg", "#", "#", "#", "#", "#", "#", "#", "#"];
+var newNewsImages = [
+	"/images/birds/legendary/hbird/hbird.jpg", //New News
+	"#", //Mundande
+	"#", //Gossip
+	"#", //Political
+	"#", //Economics
+	"#", //Technology
+	"#", //Fashion
+	"#", //Food
+	"#" //Travel
+];
 
-console.log(newsLinks[0][0]);
 
 //DON'T CHANGE BOTTOM CODE
 function addColNews(category, divName) {
@@ -41,7 +50,7 @@ function addCardNews(category) {
 	document.getElementById(category + "-news").src = newNewsImages[category];
 	for(var i = 0; i < newsLinks.length; i++) {
 		anchor = document.createElement("a");
-		anchor.href = newsLinks[0][i];
+		anchor.href = newsLinks[category][i];
 		node = document.createTextNode(newsTitles[category][i]);
 		anchor.appendChild(node);
 		if (i > 0) {
