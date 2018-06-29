@@ -25,7 +25,7 @@ var newNewsImage = "/images/birds/legendary/hbird/hbird.jpg";
 
 
 //DON'T CHANGE BOTTOM CODE
-function addColNewNews(category, divName) {
+function addColNews(category, divName) {
 	var anchor, node, element = document.getElementById(divName);
 	for(var i = 0; i < newNewsLinks.length; i++) {
 		anchor = document.createElement("a");
@@ -35,7 +35,7 @@ function addColNewNews(category, divName) {
 		element.appendChild(anchor);
 	}
 }
-function addCardNewNews(category) {
+function addCardNews(category) {
 	var anchor, node, elements = document.getElementsByClassName(category + "-news");
 	document.getElementById("new-news").src = newNewsImage;
 	for(var i = 0; i < newNewsLinks.length; i++) {
