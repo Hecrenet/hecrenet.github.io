@@ -12,7 +12,7 @@ body {margin: 0;}
 #nav .icon {display: none; cursor: pointer; color: #fff; font-size: 32px;}
 
 /* CARDS */
-#card {margin: 2%; font-family: sans-serif; border: 1px solid #cecece; border-radius: 5px; box-shadow: 3px 3px 10px #cecece;}
+#card {margin: 2%; font-family: sans-serif; border: 1px solid #cecece; border-radius: 5px; box-shadow: 3px 3px 10px #cecece; position: relative; top: 200px; opacity: 0; animation-name: slideUp; animation: duration: 1s;}
 #card h1 {text-align: center;}
 #card ul {list-style: none; margin: 0; padding: 0;}
 #card img {width: 90%; display: block; margin: auto;}
@@ -47,6 +47,12 @@ body {margin: 0;}
 }
 
 .col:not(last-child) {margin-right: 3%;}
+
+/* ANIMATIONS */
+@keyframes slideUp {
+	0% {top: 200px; opacity: 0;}
+	100% {top: 0; opacity: 1;}	
+}
 
 /* MOBILE */
 @media screen and (max-width: 600px) {
