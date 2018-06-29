@@ -31,7 +31,7 @@ function addColNews(category, divName) {
 	for(var i = 0; i < newsLinks.length; i++) {
 		anchor = document.createElement("a");
 		anchor.href = newsLinks[category][i];
-		node = document.createTextNode(newsTitles[category][i]]);
+		node = document.createTextNode(newsTitles[category][i]);
 		anchor.appendChild(node);
 		element.appendChild(anchor);
 	}
