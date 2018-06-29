@@ -37,7 +37,7 @@ var newNewsImages = [
 //DON'T CHANGE BOTTOM CODE
 function addColNews(category, divName) {
 	var anchor, node, element = document.getElementById(divName);
-	for(var i = 0; i < newsLinks.length; i++) {
+	for(var i = 0; i < element.length; i++) {
 		anchor = document.createElement("a");
 		anchor.href = newsLinks[category][i];
 		node = document.createTextNode(newsTitles[category][i]);
@@ -48,7 +48,7 @@ function addColNews(category, divName) {
 function addCardNews(category) {
 	var anchor, node, elements = document.getElementsByClassName(category + "-news");
 	document.getElementById(category + "-news").src = newNewsImages[category];
-	for(var i = 0; i < newsLinks.length; i++) {
+	for(var i = 0; i < elements.length; i++) {
 		anchor = document.createElement("a");
 		anchor.href = newsLinks[category][i];
 		node = document.createTextNode(newsTitles[category][i]);
@@ -56,7 +56,7 @@ function addCardNews(category) {
 		if (i > 0) {
 			console.log(i);
 			console.log(elements[i]);
-			elements[i].appendChild(anchor);
+			elements[i - 1].appendChild(anchor);
 		} else {
 			document.getElementById("latest-news").appendChild(anchor);
 		}
