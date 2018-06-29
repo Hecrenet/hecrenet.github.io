@@ -56,7 +56,7 @@ function addCardNews(category) {
 		if (i > 0) {
 			console.log(i);
 			console.log(elements[i]);
-			elements[i - 1].appendChild(anchor);
+			elements[i].appendChild(anchor);
 		} else {
 			document.getElementById("latest-news").appendChild(anchor);
 		}
