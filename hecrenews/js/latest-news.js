@@ -22,6 +22,7 @@ var newsTitles = [
 	["No News :(", "No News :(", "No News :(", "No News :(", "No News :("] //Travel [8][x]
 ];
 var newNewsImage = "/images/birds/legendary/hbird/hbird.jpg";
+document.getElementById("new-news").src = newNewsImage;
 
 
 //DON'T CHANGE BOTTOM CODE
@@ -37,7 +38,6 @@ function addColNews(category, divName) {
 }
 function addCardNews(category) {
 	var anchor, node, elements = document.getElementsByClassName(category + "-news");
-	document.getElementById("new-news").src = newNewsImage;
 	for(var i = 0; i < newNewsLinks.length; i++) {
 		anchor = document.createElement("a");
 		anchor.href = newNewsLinks[category][i];
