@@ -1,5 +1,5 @@
-var newNewsLinks = ["/hecrenews/index.html", "/index.html"];
-var newNewsTitles = ["Test", "2nd Anchor Test"];
+var newNewsLinks = ["/hecrenews/template.html", "#", "#", "#", "#"];
+var newNewsTitles = ["Template", "No News :(", "No News :(", "No News :(", "No News :("];
 var newNewsImage = "/images/birds/legendary/hbird/hbird.jpg";
 
 //For every article
