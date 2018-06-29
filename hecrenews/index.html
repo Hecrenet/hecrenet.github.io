@@ -13,7 +13,7 @@
     		}
 	}
 	</script>
-	<script type="text/javascript" src="/hecrenews/js/new-news.js"></script>
+	<script type="text/javascript" src="/hecrenews/js/latest-news.js"></script>
 </head>
 <body>
 	<div id="nav" class="nav">
@@ -31,7 +31,8 @@
 			<!-- Add more if apporpriate, I have not added all categories, do this before we start working on the website -->
 		</ul>
 	</div>
-	<div id="card" style="width: 25%" style="animation-delay: 0.25s">
+	<!-- Latest Articles -->
+	<div id="card" class="vertical" style="width: 25%" style="animation-delay: 0.25s">
 		<h1>New News</h1>
 		<ul>
 			<li class="new-news"><div id="latest-news"><img id="new-news"></div></li>
@@ -45,9 +46,25 @@
 			<li class="new-news"></li>
 		</ul>
 	</div>
+	<!-- Politics -->
+	<div id="card" class="horizontal" style="width: 50%" style="animation-delay: 0.25s">
+		<h1>Catch Up on Politics</h1>
+		<ul>
+			<li class="political-news"><div id="latest-news"><img id="new-news"></div></li>
+			<hr>
+			<li class="political-news"></li>
+			<hr>
+			<li class="political-news"></li>
+			<hr>
+			<li class="political-news"></li>
+			<hr>
+			<li class="political-news"></li>
+		</ul>
+	</div>
 	<div id="footer">
 		<p class="disclaimer">All content in the Hecrenews is satrical, and not meant to be taken seriously. All content in the Hecrenews falls under the CC License.</p>
 	</div>
 	<script type="text/javascript">addCardNewNews();</script>
+	<script type="text/javascript">addCardPoliticalNews();</script>
 </body>
 </html>
