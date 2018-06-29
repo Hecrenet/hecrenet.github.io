@@ -28,7 +28,9 @@ body {margin: 0;}
 	color: #fff;
 	background-color: #3a3a3a;
 	font-family: sans-serif;
-	width: 100%
+	width: 100%;
+	position: absolute;
+	top: 100%;
 }
 
 .col-container {overflow: hidden;}
@@ -47,6 +49,8 @@ body {margin: 0;}
 }
 
 .col:not(last-child) {margin-right: 3%;}
+
+.disclaimer {text-align: center;}
 
 /* ANIMATIONS */
 @keyframes slideUp {
