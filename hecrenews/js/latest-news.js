@@ -28,20 +28,20 @@ document.getElementById("new-news").src = newNewsImage;
 //DON'T CHANGE BOTTOM CODE
 function addColNews(category, divName) {
 	var anchor, node, element = document.getElementById(divName);
-	for(var i = 0; i < newNewsLinks.length; i++) {
+	for(var i = 0; i < newsLinks.length; i++) {
 		anchor = document.createElement("a");
-		anchor.href = newNewsLinks[category][i];
-		node = document.createTextNode(newNewsTitles[category][i]]);
+		anchor.href = newsLinks[category][i];
+		node = document.createTextNode(newsTitles[category][i]]);
 		anchor.appendChild(node);
 		element.appendChild(anchor);
 	}
 }
 function addCardNews(category) {
 	var anchor, node, elements = document.getElementsByClassName(category + "-news");
-	for(var i = 0; i < newNewsLinks.length; i++) {
+	for(var i = 0; i < newsLinks.length; i++) {
 		anchor = document.createElement("a");
-		anchor.href = newNewsLinks[category][i];
-		node = document.createTextNode(newNewsTitles[category][i]);
+		anchor.href = newsLinks[category][i];
+		node = document.createTextNode(newsTitles[category][i]);
 		anchor.appendChild(node);
 		if (i > 0) {
 			elements[i].appendChild(anchor);
