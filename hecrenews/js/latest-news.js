@@ -54,8 +54,6 @@ function addCardNews(category) {
 		node = document.createTextNode(newsTitles[category][i]);
 		anchor.appendChild(node);
 		if (i > 0) {
-			console.log(i);
-			console.log(elements[i]);
 			elements[i].appendChild(anchor);
 		} else {
 			document.getElementById("latest-news").appendChild(anchor);
