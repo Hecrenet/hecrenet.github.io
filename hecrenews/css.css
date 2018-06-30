@@ -29,8 +29,8 @@ body {margin: 0;}
 	background-color: #3a3a3a;
 	font-family: sans-serif;
 	width: 100%;
-	position: absolute;
-	top: 100%;
+	clear: both;
+	padding: 5px;
 }
 
 .col-container {overflow: hidden;}
