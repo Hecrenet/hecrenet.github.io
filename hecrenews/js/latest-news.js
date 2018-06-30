@@ -47,7 +47,7 @@ function addColNews(category, divName) {
 }
 function addCardNews(category) {
 	var anchor, node, elements = document.getElementsByClassName(category + "-news");
-	document.getElementById(category + "-news").src = newNewsImages[category];
+	document.getElementById(category + "-latest").src = newNewsImages[category];
 	for(var i = 0; i < elements.length; i++) {
 		anchor = document.createElement("a");
 		anchor.href = newsLinks[category][i];
@@ -56,7 +56,7 @@ function addCardNews(category) {
 		if (i > 0) {
 			elements[i].appendChild(anchor);
 		} else {
-			document.getElementById(category + "-latest").appendChild(anchor);
+			document.getElementById(category + "-news").appendChild(anchor);
 		}
 	}
 }
