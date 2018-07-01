@@ -23,6 +23,7 @@ body {margin: 0;}
 .card.horizontal .card-left {float: left; width: 50%;}
 .card.horizontal .card-right {float: right; width: 50%;}
 .card h1 {margin-left: 5px;}
+.card.horizontal {float: right; margin-right: 18%}
 
 /* ARTICLE */ 
 #article {font-family: sans-serif; width: 70%; margin: 2%;}
