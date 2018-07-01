@@ -22,6 +22,7 @@ body {margin: 0;}
 .card.horizontal li {display: inline;}
 .card.horizontal .card-left {float: left; width: 50%;}
 .card.horizontal .card-right {float: right; width: 50%;}
+.card h1 {margin-left: 5px;}
 
 /* ARTICLE */ 
 #article {font-family: sans-serif; width: 70%; margin: 2%;}
