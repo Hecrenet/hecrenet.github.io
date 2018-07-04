@@ -53,12 +53,12 @@ function addTitlesAndImages() {
 	for (var row = 0; row < newsLinks.length; row++) {
 		//Image Links
 		$.ajax({url: newsLinks[row][0], type: "get", async: false, success: function(data){
-			newNewsImages[row] = $($(data).find("#thumbnail"))[0].src;
+			newNewsImages[row] = $($(data).find("#thumbnail")[0]).src;
 		}});
 		for (var column = 0; column < newsLinks[row].length; column++) {
 			//Titles
 			$.ajax({url: newsLinks[row][column], type: "get", async: false, success: function(data){
-				newsTitles[row][column] = $($(data).find("#title"))[0].textContent;
+				newsTitles[row][column] = $($(data).find("#title")[0]).textContent;
 			}});
 		}
 	}
