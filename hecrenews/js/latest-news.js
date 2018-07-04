@@ -1,4 +1,4 @@
-//Init Arrays
+//This is the only thing you change, or you might break the Hecrenews (unless your Arjvik, but the code shouldn't need changing)
 var newsLinks = [
 	["/hecrenews/template.html", "#", "#", "#", "#"], //New News [0][x]
 	["#", "#", "#", "#", "#"], //Mundane [1][x]
@@ -10,41 +10,25 @@ var newsLinks = [
 	["#", "#", "#", "#", "#"], //Food [7][x]
 	["#", "#", "#", "#", "#"] //Travel [8][x]
 ];
-var newsTitles = [
-	["Template", "No News :(", "No News :(", "No News :(", "No News :("], //New News [0][x]
-	["No News :(", "No News :(", "No News :(", "No News :(", "No News :("], //Mundane [1][x]
-	["No News :(", "No News :(", "No News :(", "No News :(", "No News :("], //Gossip [2][x]
-	["No News :(", "No News :(", "No News :(", "No News :(", "No News :("], //Political [3][x]
-	["No News :(", "No News :(", "No News :(", "No News :(", "No News :("], //Economics [4][x]
-	["No News :(", "No News :(", "No News :(", "No News :(", "No News :("], //Technology [5][x]
-	["No News :(", "No News :(", "No News :(", "No News :(", "No News :("], //Fashion [6][x]
-	["No News :(", "No News :(", "No News :(", "No News :(", "No News :("], //Food [7][x]
-	["No News :(", "No News :(", "No News :(", "No News :(", "No News :("] //Travel [8][x]
-];
-var newNewsImages = [
-	"/images/birds/legendary/hbird/hbird.jpg", //New News
-	"#", //Mundande
-	"#", //Gossip
-	"http://static.politifact.com.s3.amazonaws.com/politifact/photos/AP_FLCO101_CAMPAIGN_2016_TR.jpg", //Political
-	"#", //Economics
-	"#", //Technology
-	"#", //Fashion
-	"#", //Food
-	"#" //Travel
-];
+//UNDER HERE IS THE SHTUFF YOU DON'T TOUCH
+addJQuery();
+
+var newsTitles = [["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""]];
+var newNewsImages = ["", "", "", "", "", "", "", "", "",];
 
 
-//DON'T CHANGE BOTTOM CODE
 function addColNews(category, divName) {
-	var anchor, node, element = document.getElementById(divName);
+	var anchor, node, element = $("#divName");
 	for(var i = 0; i < element.length; i++) {
+		//$($(element)[0]).append("<a href=" + newsLinks[category][i] + ">" + newsTitles[category][i] + "</a>");
 		anchor = document.createElement("a");
 		anchor.href = newsLinks[category][i];
 		node = document.createTextNode(newsTitles[category][i]);
 		anchor.appendChild(node);
-		element.appendChild(anchor);
+		element[0].appendChild(anchor);
 	}
 }
+
 function addCardNews(category) {
 	var anchor, node, elements = document.getElementsByClassName(category + "-news");
 	document.getElementById(category + "-latest").src = newNewsImages[category];
@@ -59,4 +43,11 @@ function addCardNews(category) {
 			document.getElementById(category + "-news").appendChild(anchor);
 		}
 	}
+}
+
+function addJQuery() {
+	var script = document.createElement("script");
+	script.src = "jquery.js";
+	script.type = "text/javacsript";
+	document.getElementsByTagName("head")[0].appendChild(script);
 }
