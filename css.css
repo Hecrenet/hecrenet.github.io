@@ -23,5 +23,5 @@ body {background-image: url("images/misc/starry-night.gif"); background-size: co
 .appCardImg img {border-radius: 50%; width: 45%; display: block; margin: auto; padding: 10px;}
 .appCardText {padding: 0 5px;}
 .appCardText p {float: left; margin-left: 33%}
-.appCardText .dropDown {position: absolute;}
+.appCardText .dropDown {position: absolute; cursor: pointer;}
 .info {display: none;}
