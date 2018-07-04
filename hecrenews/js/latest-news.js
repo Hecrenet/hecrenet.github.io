@@ -55,7 +55,7 @@ function addTitlesAndImages() {
 		$.ajax({url: newsLinks[row][0], type: "get", async: false, success: function(data){
 			newNewsImages[row] = $($(data).find("#thumbnail"))[0].src;
 		}});
-		for (var column = 0; column < newLinks[row].length; column++;) {
+		for (var column = 0; column < newLinks[row].length; column++) {
 			//Titles
 			$.ajax({url: newsLinks[row][column], type: "get", async: false, success: function(data){
 				newsTitles[row][column] = $($(data).find("#title"))[0].textContent;
