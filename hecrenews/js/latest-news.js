@@ -60,5 +60,6 @@ function addTitlesAndImages() {
 			$.ajax({url: newsLinks[row][column], type: "get", async: false, success: function(data){
 				newsTitles[row][column] = $($(data).find("#title"))[0].textContent;
 			}});
+		}
 	}
 }
