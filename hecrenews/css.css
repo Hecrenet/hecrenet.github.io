@@ -29,42 +29,18 @@ body {margin: 0;}
 #article {font-family: sans-serif; width: 70%; margin: 2%;}
 
 /* FOOTER */
-#footer {
-	color: #fff;
-	background-color: #3a3a3a;
-	font-family: sans-serif;
-	width: 100%;
-	clear: both;
-	padding: 5px;
-}
-
+#footer {color: #fff; background-color: #3a3a3a; font-family: sans-serif; width: 100%; clear: both; padding: 5px; position: relative; top: 100px;}
 .col-container {overflow: hidden;}
-
-.col {
-	width: 30%;
-	float: left;
-	text-align: center;
-	display: table;
-}
-
-.col a {
-	color: #fff !important;
-	display: table-row;
-	height: 40px;
-}
-
+.col {width: 30%; float: left; text-align: center; display: table;}
+.col a {color: #fff !important; display: table-row; height: 40px;}
 .col:not(last-child) {margin-right: 3%;}
-
 .disclaimer {text-align: center;}
 
 /* GENERIC CLASSES */
 .center {text-align: center;}
 
 /* ANIMATIONS */
-@keyframes slideUp {
-	0% {top: 200px; opacity: 0;}
-	100% {top: 0; opacity: 1;}	
-}
+@keyframes slideUp {0% {top: 200px; opacity: 0;}100% {top: 0; opacity: 1;}	}
 
 /* RESPONSIVE WEB DESIGN */
 /* Navigation */
