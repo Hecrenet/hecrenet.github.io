@@ -41,6 +41,12 @@ function addCardNews(category) {
 	}
 }
 
+function addNewestNews() {
+	for (var i = 0; i < newLinks[0].length; i++) {
+		$("#newNewsDiv").append("<div class=\"news-card\"><div class=\"newsImg\"></div><div class=\"newsTxt\"></div></div>\");
+	}
+}
+
 //FUNCTIONS THAT GET USED
 function addJQuery() {
 	var script = document.createElement("script");
