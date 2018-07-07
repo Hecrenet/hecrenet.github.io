@@ -50,7 +50,7 @@ function addCardNewsTwo(category, title) {
 	var newsTxt = $(".newsTxt");
 	for (var i = 0; i < newsLinks[0].length; i++) {
 		$(".needImage")[i].src = newNewsImages[category][i];
-		$(".needTxt")[i].text(newsTitles[category][i]);
+		$($(".needTxt")[i]).text(newsTitles[category][i]);
 	}
 	
 }
