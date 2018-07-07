@@ -14,7 +14,7 @@ var newsLinks = [
 addJQuery();
 
 var newsTitles = [["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""]];
-var newNewsImages = ["", "", "", "", "", "", "", "", "",];
+var newNewsImages = [["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""]];
 
 addTitlesAndImages();
 
@@ -27,7 +27,7 @@ function addColNews(category, divName) {
 
 function addCardNews(category) {
 	var anchor, node, elements = document.getElementsByClassName(category + "-news");
-	document.getElementById(category + "-latest").src = newNewsImages[category];
+	document.getElementById(category + "-latest").src = newNewsImages[category][0];
 	for(var i = 0; i < elements.length; i++) {
 		anchor = document.createElement("a");
 		anchor.href = newsLinks[category][i];
@@ -41,10 +41,17 @@ function addCardNews(category) {
 	}
 }
 
-function addNewestNews() {
-	for (var i = 0; i < newLinks[0].length; i++) {
-		$("#newNewsDiv").append("<div class=\"news-card\"><div class=\"newsImg\"></div><div class=\"newsTxt\"></div></div>\");
+function addCardNewsTwo(category) {
+	for (var i = 0; i < newsLinks[0].length; i++) {
+		$(".newNewsDiv[category]").append("<div class=\"news-card\"><div class=\"newsImg\"></div><div class=\"newsTxt\"></div></div>");
 	}
+	var newsImg = $(".newNewsDiv[category] .newsImg");
+	var newsTxt = $(".newNewsDiv[category[ .newsTxt");
+	for (var i = 0; i < newsLinks[0].length; i++) {
+		$("newsImg[i]").append("<img src=" + newNewsImages[category][i] + ">");
+		$("newsTxt[i]").append("<p>" + newsTitles + "</p>");
+	}
+	
 }
 
 //FUNCTIONS THAT GET USED
@@ -57,14 +64,10 @@ function addJQuery() {
 
 function addTitlesAndImages() {
 	for (var row = 0; row < newsLinks.length; row++) {
-		//Image Links
-		$.ajax({url: newsLinks[row][0], type: "get", async: false, success: function(data){
-			newNewsImages[row] = $(data).filter("#thumbnail")[0].src;
-		}});
 		for (var column = 0; column < newsLinks[row].length; column++) {
-			//Titles
 			$.ajax({url: newsLinks[row][column], type: "get", async: false, success: function(data){
 				newsTitles[row][column] = $(data).filter("#title")[0].textContent;
+				newNewsImages[row][column] = $(data).filter("#thumbnail")[0].src;
 			}});
 		}
 	}
