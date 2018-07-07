@@ -49,8 +49,8 @@ function addCardNewsTwo(category, title) {
 	var newsImg = $(".newsImg");
 	var newsTxt = $(".newsTxt");
 	for (var i = 0; i < newsLinks[0].length; i++) {
-		$(".newsImg[i]").append("<img src=" + newNewsImages[category][i] + ">");
-		$(".newsTxt[i]").append("<p>" + newsTitles[category][i] + "</p>");
+		$(".newsImg")[i].append("<img src=" + newNewsImages[category][i] + ">");
+		$(".newsTxt")[i].append("<p>" + newsTitles[category][i] + "</p>");
 	}
 	
 }
