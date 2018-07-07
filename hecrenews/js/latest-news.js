@@ -44,13 +44,13 @@ function addCardNews(category) {
 function addCardNewsTwo(category, title) {
 	$("#newNewsDiv").append("<h1>" + title + "</h1>");
 	for (var i = 0; i < newsLinks[0].length; i++) {
-		$("#newNewsDiv").append("<div class=\"news-card\"><div class=\"newsImg\"></div><div class=\"newsTxt\"></div></div>");
+		$("#newNewsDiv").append("<div class='news-card'><div class='newsImg'><img></div><div class='newsTxt'><p></p></div></div>');
 	}
 	var newsImg = $(".newsImg");
 	var newsTxt = $(".newsTxt");
 	for (var i = 0; i < newsLinks[0].length; i++) {
-		$(".newsImg")[i].append("<img src=" + newNewsImages[category][i] + ">");
-		$(".newsTxt")[i].append("<p>" + newsTitles[category][i] + "</p>");
+		$(".newsImg")[i] $("img").src = newNewsImages[category][i];
+		$(".newsTxt")[i] $("p").text(newsTitles[category][i]);
 	}
 	
 }
