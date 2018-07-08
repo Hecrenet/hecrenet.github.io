@@ -24,6 +24,14 @@ body {margin: 0;}
 .card.horizontal .card-right {float: right; width: 50%;}
 .card h1 {margin-left: 5px;}
 .card.horizontal {float: right; margin-right: 18%}
+/* News Cards */
+#newNewsDiv {font-family: sans-serif; overflow: hidden; border-radius: 5px; margin: 2%; padding: 2%; border: 1px solid #cecece; color: #000 !important;}
+.news-card {width: 28%; float: left; margin: 4%; margin-bottom: 0; overflow: hidden; border-radius: 5px;  box-shadow: 0px 5px 5px #cecece;}
+.news-card:not(:nth-of-type(1)):not(:nth-of-type(4)) {margin-left: 0;}
+.newsImg {border-radius: 5px 5px 0 0; border: 1px solid #cecece; border-bottom: none;}
+.newsImg img {width: 100%; border-radius: 5px 5px 0 0; display: block;}
+.newsTxt {border: 1px solid #cecece; border-radius: 0 0 5px 5px; background-color: #fff;}
+.newsTxt * {text-align: center;}
 
 /* ARTICLE */ 
 #article {font-family: sans-serif; width: 70%; margin: 2%;}
