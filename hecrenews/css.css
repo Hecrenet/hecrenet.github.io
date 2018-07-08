@@ -4,6 +4,7 @@ body {margin: 0; background-color: #f5f5f5}
 /* General Style */
 #nav li a, #nav img {display: block; text-decoration: none !important; color: #fff !important; font-family: sans-serif; margin: 0; padding: 0 20px; height: 80px; line-height: 5;}
 #nav li:hover {background-color: #000;}
+#nav li {display: inline; float: left; transition: 0.3s;}
 #nav li:first-child a, #nav li:first-child img {margin-left: 0; padding: 0;}
 #nav ul {margin: 0; padding: 0; overflow: hidden; background-color: #3a3a3a;}
 #nav ul li {list-style: none;}
@@ -47,10 +48,6 @@ body {margin: 0; background-color: #f5f5f5}
 @keyframes slideUpRotate {0%{top: 500px; opacity: 0; transform: rotate(-90deg);} 100%{top: 0; opacity: 1; transform: rotate(0deg);}}
 
 /* RESPONSIVE WEB DESIGN */
-/* Phones */
-@media only screen and (max-width: 600px) {
-
-}
 /* Portrait Tablets and Big Landscape Phones */
 @media only screen and (min-width: 600px) {
 
@@ -61,6 +58,6 @@ body {margin: 0; background-color: #f5f5f5}
 }
 /* Computers */
 @media only screen and (min-width: 992px) {
-	#nav .icon {display: none;}
-	#nav li {display: inline; float: left; transition: 0.3s;}
+	#nav .icon {display: none !important;}
+	
 }
