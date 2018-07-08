@@ -25,29 +25,13 @@ function addColNews(category, divName) {
 	}
 }
 
-function addCardNews(category) {
-	var anchor, node, elements = document.getElementsByClassName(category + "-news");
-	document.getElementById(category + "-latest").src = newNewsImages[category][0];
-	for(var i = 0; i < elements.length; i++) {
-		anchor = document.createElement("a");
-		anchor.href = newsLinks[category][i];
-		node = document.createTextNode(newsTitles[category][i]);
-		anchor.appendChild(node);
-		if (i > 0) {
-			elements[i].appendChild(anchor);
-		} else {
-			document.getElementById(category + "-news").appendChild(anchor);
-		}
-	}
-}
-
-function addCardNewsTwo(category, title) {
-	$("#newNewsDiv").append("<h1>" + title + "</h1>");
+function addCardNews(category, title, divName) {
+	$(divName).append("<h1>" + title + "</h1>");
 	for (var i = 0; i < newsLinks[0].length; i++) {
-		$("#newNewsDiv").append("<div class='news-card'><div class='newsImg'><img class='needImage'></div><div class='newsTxt'><p class='needTxt'></p></div></div>");
+		$(divName).append("<div class='news-card'><div class='newsImg'><img class='needImage'></div><div class='newsTxt'><p class='needTxt'></p></div></div>");
 	}
-	var newsImg = $(".newsImg");
-	var newsTxt = $(".newsTxt");
+	var newsImg = $("divName .newsImg");
+	var newsTxt = $("divName .newsTxt");
 	for (var i = 0; i < newsLinks[0].length; i++) {
 		$(".needImage")[i].src = newNewsImages[category][i];
 		$($(".needTxt")[i]).text(newsTitles[category][i]);
