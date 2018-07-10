@@ -37,7 +37,7 @@ function addCardNews(category, title, divName,) {
 $(function() {
 	$("#navPlaceholder").load("/hecrenews/nav.html");
 	for (var i = 0; i < $(".news-card").length; i++) {
-		$(".news-card")[i].style.animationDelay = String(i + 1/4) + "s";
+		$(".news-card")[i].style.animationDelay = String((i + 1)/4) + "s";
 	}
 });
 
