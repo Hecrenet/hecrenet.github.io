@@ -29,8 +29,8 @@ function addCardNews(category, title, divName,) {
 	for (var i = 0; i < newsLinks[0].length; i++) {
 		$(divName + " .needImage")[i].src = newNewsImages[category][i];
 		$($(divName + " .needTxt")[i]).text(newsTitles[category][i]);
-		$(divName + " .needLink")[i * 2].href = newsLinks[i];
-		$(divName + " .needLink")[i * 2 + 1].href = newsLinks[i];
+		$(divName + " .needLink")[i * 2].href = newsLinks[category][i];
+		$(divName + " .needLink")[i * 2 + 1].href = newsLinks[category][i];
 	}
 	
 }
