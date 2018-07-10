@@ -35,7 +35,7 @@ function addCardNews(category, title, divName,) {
 
 //FUNCTIONS THAT GET USED
 $(function() {
-	$("#nav-placeholder").load("nav.html");
+	$("#navPlaceholder").load("/hecrenews/nav.html");
 });
 
 function addTitlesAndImages() {
