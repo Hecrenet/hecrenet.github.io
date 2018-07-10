@@ -20,15 +20,17 @@ addTitlesAndImages();
 
 //FUNCTIONS THAT GET CALLED FROM HTML
 function addCardNews(category, title, divName,) {
-	$(divName).append("<h1>" + title + "</h1>");
-	for (var i = 0; i < newsLinks[0].length; i++) {
-		$(divName).append("<div class='news-card'><div class='newsImg'><img class='needImage'></div><div class='newsTxt'><p class='needTxt'></p></div></div>");
+	if (title != "") {
+		$(divName).append("<h1>" + title + "</h1>");
 	}
-	var newsImg = $("divName .newsImg");
-	var newsTxt = $("divName .newsTxt");
 	for (var i = 0; i < newsLinks[0].length; i++) {
-		$(".needImage")[i].src = newNewsImages[category][i];
-		$($(".needTxt")[i]).text(newsTitles[category][i]);
+		$(divName).append("<div class='news-card'><div class='newsImg'><a class='needLink'><img class='needImage'></a></div><div class='newsTxt'><a class='needTxt needLink'></p></div></div>");
+	}
+	for (var i = 0; i < newsLinks[0].length; i++) {
+		$("divName .needImage")[i].src = newNewsImages[category][i];
+		$($("divName .needTxt")[i]).text(newsTitles[category][i]);
+		$("divName .needLink")[i * 2].href = newsLinks[i];
+		$("divName .needLink")[i * 2 + 1].href = newsLinks[i];
 	}
 	
 }
