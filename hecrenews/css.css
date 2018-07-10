@@ -25,7 +25,9 @@ body {margin: 0; background-color: #f5f5f5}
 .newsImg img {width: 100%; border-radius: 5px 5px 0 0; display: block;}
 .newsTxt {border: 1px solid #fff; border-top: 1px solid #cecece; border-radius: 0 0 5px 5px; background-color: #fff; color: #000; transition: 0.3s;}
 .newsTxt:hover {background-color: #f55; color: #fff; border: 1px solid #f55}
-.newsTxt * {text-align: center;}
+.newsTxt {text-align: center;}
+.newsTxt a {color: #000; text-decoration: none; transition: 0.3s}
+.newsTxt:hover a {color: #fff}
 
 /* ARTICLE */ 
 #article {font-family: sans-serif; width: 70%; margin: 2%;}
