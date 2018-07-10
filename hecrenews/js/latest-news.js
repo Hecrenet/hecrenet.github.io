@@ -11,8 +11,6 @@ var newsLinks = [
 	["/hecrenews/nothing.html", "/hecrenews/nothing.html", "/hecrenews/nothing.html", "/hecrenews/nothing.html", "/hecrenews/nothing.html"] //Travel [8][x]
 ];
 //UNDER HERE IS THE SHTUFF YOU DON'T TOUCH
-addJQuery();
-
 var newsTitles = [["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""]];
 var newNewsImages = [["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""]];
 
@@ -36,12 +34,9 @@ function addCardNews(category, title, divName,) {
 }
 
 //FUNCTIONS THAT GET USED
-function addJQuery() {
-	var script = document.createElement("script");
-	script.src = "jquery.js";
-	script.type = "text/javacsript";
-	document.getElementsByTagName("head")[0].appendChild(script);
-}
+$(function() {
+	$("#nav-placeholder").load("nav.html");
+});
 
 function addTitlesAndImages() {
 	for (var row = 0; row < newsLinks.length; row++) {
