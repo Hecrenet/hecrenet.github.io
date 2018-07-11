@@ -24,28 +24,24 @@
 		</ul>
 	</div>
 
-	<h1>Snock Snaxe</h1>
+	<h1 id="infoName">Snock Snaxe</h1>
 	<p>/snokss ssnaks/</p>
 
 	<!--Tab Buttons-->
 	<div class="tab">
-		<button class="tablinks" onclick="openTab(event, 'Bio')" id="defaultOpen">Bio</button>
-		<button class="tablinks" onclick="openTab(event, 'Personality')">Personality</button>
-		<button class="tablinks" onclick="openTab(event, 'History')">History</button>
-		<button class="tablinks" onclick="openTab(event, 'Powers')">Powers</button>
-		<button class="tablinks" onclick="openTab(event, 'Trivia')">Trivia</button>
+		<script type="text/javascript">addTabs("Bio", "Personality", "History", "Powers", "Trivia");</script>
 	</div>
 
 	<!-- Bio Content -->
 	<div id="Bio" class="tabcontent">
 		<div id="section" class="left" style="animation-delay: 0.25s">
 			<h2>Who?</h2>
-			<p>"Snock Snaxe is fun to say, but getting bitten by one isn't." -unknown</p>
+			<p id="info">"Snock Snaxe is fun to say, but getting bitten by one isn't." -unknown</p>
 			<p>The Snock Snaxe is a Snaxe that camouflages as a sock and then attacks unknowing victims.</p>
 		</div>
 		<div id="section" class="right" style="animation-delay: 0.25s">
 			<h2>Quick Facts</h2>
-			<img src="/images/snaxe/minor/snock-snaxe/snock-snaxe.png" alt="Snock Snaxe" width=80%>
+			<img src="/images/snaxe/minor/snock-snaxe/snock-snaxe.png" id="infoImg" alt="Snock Snaxe" width=80%>
 			<!-- Some of the table elements have tooltips, resulting in the many divs and spans -->
 			<table border="1">
 				<tr>
