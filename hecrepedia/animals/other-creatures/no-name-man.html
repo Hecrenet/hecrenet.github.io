@@ -25,28 +25,23 @@
 		</ul>
 	</div>
 
-	<h1>No Name Man</h1>
+	<h1 id="infoName">No Name Man</h1>
 	<p>/noh naym man/</p>
 
 	<!--Tab Buttons-->
 	<div class="tab">
-		<button class="tablinks" onclick="openTab(event, 'Bio')" id="defaultOpen">Bio</button>
-		<button class="tablinks" onclick="openTab(event, 'Personality')">Personality</button>
-		<button class="tablinks" onclick="openTab(event, 'History')">History</button>
-		<button class="tablinks" onclick="openTab(event, 'Powers')">Powers</button>
-		<button class="tablinks" onclick="openTab(event, 'Trivia')">Trivia</button>
-		<button class="tablinks" onclick="openTab(event, 'Gallery')">Gallery</button>
+		<script type="text/javascript">addTabs("Bio", "Personality", "History", "Powers", "Trivia", "Gallery");</script>
 	</div>
 
 	<!-- Bio Content -->
 	<div id="Bio" class="tabcontent">
 		<div id="section" class="left" style="animation-delay: 0.25s">
 			<h2>Who?</h2>
-			<p>No Name Man is a legendary man who is said to take down armies with a single glare.</p>
+			<p id="info">No Name Man is a legendary man who is said to take down armies with a single glare.</p>
 		</div>
 		<div id="section" class="right" style="animation-delay: 0.25s">
 			<h2>Quick Facts</h2>
-			<img src="/images/other-creatures/no-name-man/no-name-man.png" alt="No Name Man" width=80% class="zoom center">
+			<img src="/images/other-creatures/no-name-man/no-name-man.png" id="infoImg" alt="No Name Man" width=80% class="zoom center">
 			<table border="1">
 				<tr>
 					<td>Name</td>
