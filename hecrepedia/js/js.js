@@ -7,7 +7,7 @@ function addCards(divName, ...links) {
 			name = $(data).filter("#infoName")[0].textContent;
 			info = $(data).find("#info")[0].textContent;
 		}});
-		$(divName).append("<div class='card'><a href='" + links[i] + "'><img src='" + image + "'></a><div class='cardContainer'><p>" + name + "</p></div></div>");
+		$(divName).append("<div class='card'><a href='" + links[i] + "'><img src='" + image + "'></a><div class='cardContainer'><p><b>" + name + "</b></p></div></div>");
 	}
 }
 
