@@ -9,11 +9,12 @@ This is the website of the Hecretary Bird Association.
 
 ## Developer Stuff
 ### For HBA Members 
-* If you are going to edit any of the css, make sure you edit the back-ups first. Then compress it and put it in the css that's being used
 * If you have nothing else to do, figure out how to make our pages faster
-  + But don't compress any HTML files
+  + Note that figure out doesn't mean that you actually enforce the change, ask a tech admin first
+* If you are a manager of something and forgot how to do something...
+  + Test it out in chrome with inspect tool
+  + Ask a tech person in the HBA (currently 2)
   
-
 ***
 
 ## Alternative Languages:
