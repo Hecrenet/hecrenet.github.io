@@ -24,28 +24,23 @@
 		</ul>
 	</div>
 
-	<h1>Bearded Snaxe</h1>
+	<h1 id="infoName">Bearded Snaxe</h1>
 	<p>/hek-ree-TAY-ree b&#x0259rd/</p>
 
 	<!--Tab Buttons-->
 	<div class="tab">
-		<button class="tablinks" onclick="openTab(event, 'Bio')" id="defaultOpen">Bio</button>
-		<button class="tablinks" onclick="openTab(event, 'Personality')">Personality</button>
-		<button class="tablinks" onclick="openTab(event, 'History')">History</button>
-		<button class="tablinks" onclick="openTab(event, 'Powers')">Powers</button>
-		<button class="tablinks" onclick="openTab(event, 'Trivia')">Trivia</button>
+		<script type="text/javascript">addTabs("Bio", "Personality", "History", "Powers", "Trivia");</script>
 	</div>
 
 	<!-- Bio Content -->
 	<div id="Bio" class="tabcontent">
 		<div id="section" class="left" style="animation-delay: 0.25s">
 			<h2>Who?</h2>
-			<p>The Bearded Snaxe is notorius for its vicious beard.</p>
-			<p>Foes also never expect it to take flight</p>
+			<p id="info">The Bearded Snaxe is notorius for its vicious beard. Foes also never expect it to take flight</p>
 		</div>
 		<div id="section" class="right" style="animation-delay: 0.25s">
 			<h2>Quick Facts</h2>
-			<img src="/images/snaxe/minor/bearded-snaxe/bearded-snaxe." alt="Bearded Snaxe" width=80% class="zoom">
+			<img src="/images/snaxe/minor/bearded-snaxe/bearded-snaxe." id="infoImg" alt="Bearded Snaxe" width=80% class="zoom">
 			<table border="1">
 				<tr>
 					<td>Name</td>
