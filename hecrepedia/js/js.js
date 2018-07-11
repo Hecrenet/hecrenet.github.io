@@ -1,3 +1,7 @@
+//Add Cards 
+function addCards(...links) {
+    
+}
 
 //Add Tabs
 function addTabs(...names) {
