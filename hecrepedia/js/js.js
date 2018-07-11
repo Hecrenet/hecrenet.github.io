@@ -4,8 +4,8 @@ function addCards(divName, ...links) {
 	for (var i = 0; i < links.length; i++) {
 		$.ajax({url: links[i], type: "get", async: false, success: function(data){
 			image = $(data).find("#infoImg")[0].src;
-			name = $(data).find("#infoName")[0].textContent;
-			info = $(data).find("#info")[0].textContent;
+			name = $(data).filter("#infoName")[0].textContent;
+			info = $(data).filter("#info")[0].textContent;
 		}});
 		$(divName).append("<a href='" + links[i] + "'><img src='" + image + "'></a><div class='cardContainer'><p>" + name + "</p></div>");
 	}
