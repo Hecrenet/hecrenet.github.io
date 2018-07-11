@@ -9,14 +9,9 @@ body {margin: 0; background: #fff; font-family: sans-serif;}
 #section.right {float: right; width: 45%;}
 #section.middle {clear: both; width: auto;}
 
-/* Columns */
-/* Mainly for the Hecredex to help with mobile and computer organization */
-.col-container {overflow: hidden;}
-.col {float: left; width: 20%; margin: 2%; clear: none; overflow: visible;}
-
 /* Cards */
 /* A fancy way to have an image with caption */
-.card {box-shadow: 2px 4px 5px #cecece; transition: 0.3s; border-radius: 5px; background-color: #ffffff; width: 100%; float: left;}
+.card {box-shadow: 2px 4px 5px #cecece; transition: 0.3s; border-radius: 5px; background-color: #ffffff; width: 20%; margin: 2% float: left;}
 .card img {border-radius: 5px 5px 0 0; width: 100%;}
 .cardContainer {text-align: center; padding-right: 20px;}
 .card:hover {box-shadow: 4px 8px 5px #cecece;}
