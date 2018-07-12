@@ -3,11 +3,11 @@ body {margin: 0; background: #fff; font-family: sans-serif;}
 
 /* Sections */
 /* The boxes in tabcontent that help with organization */
-#section {background-color: #f2f2f2; border: 1px solid #cecece; border-radius: 5px; padding: 5px; margin: 10px; transition: 0.5s; box-shadow: 1px 1px 5px #cecece; overflow: hidden; top: 200px; position: relative; animation-fill-mode: forwards; animation-duration: 1s; animation-name: slide; opacity: 0;}
-#section:hover {box-shadow: 3px 3px 5px #cecece;}
-#section.left {float: left; width: 45%;}
-#section.right {float: right; width: 45%;}
-#section.middle {clear: both; width: auto;}
+.section {background-color: #f2f2f2; border: 1px solid #cecece; border-radius: 5px; padding: 5px; margin: 10px; transition: 0.5s; box-shadow: 1px 1px 5px #cecece; overflow: hidden; top: 200px; position: relative; animation-fill-mode: forwards; animation-duration: 1s; animation-name: slide; opacity: 0;}
+.section:hover {box-shadow: 3px 3px 5px #cecece;}
+.section.left {float: left; width: 45%;}
+.section.right {float: right; width: 45%;}
+.section.middle {clear: both; width: auto;}
 
 /* Cards */
 /* A fancy way to have an image with caption */
