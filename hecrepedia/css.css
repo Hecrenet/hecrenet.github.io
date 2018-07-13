@@ -3,8 +3,8 @@ body {margin: 0; background: #fff; font-family: sans-serif;}
 
 /* Sections */
 /* The boxes in tabcontent that help with organization */
-.section {background-color: #f2f2f2; border: 1px solid #cecece; border-radius: 5px; padding: 5px; margin: 10px; transition: 0.5s; box-shadow: 1px 1px 5px #cecece; overflow: hidden; top: 200px; position: relative; animation-fill-mode: forwards; animation-duration: 1s; animation-name: slide; opacity: 0;}
-.section:hover {box-shadow: 3px 3px 5px #cecece;}
+.section {background-color: #f2f2f2; border: 1px solid #cecece; border-radius: 5px; padding: 5px; margin: 10px; transition: 0.5s; box-shadow: 1px 1px 5px #333; overflow: hidden; top: 200px; position: relative; animation-fill-mode: forwards; animation-duration: 1s; animation-name: slide; opacity: 0;}
+.section:hover {box-shadow: 3px 3px 5px #333;}
 .section.left {float: left; width: 45%;}
 .section.right {float: right; width: 45%;}
 .section.middle {clear: both; width: auto;}
@@ -33,7 +33,7 @@ body {margin: 0; background: #fff; font-family: sans-serif;}
 .tab button {background-color: inherit; float: left; border: none; outline: none; cursor: pointer; padding: 14px 16px; transition: 0.3s;}
 .tab button:hover {background-color: #ddd;}
 .tab button.active {background-color: #3a3a3a; color: #ffffff;}
-.tabcontent {margin: 2%; margin-top: 0; display: none; padding: 6px 12px; border: 1px solid #cecece; border-radius: 0 0 5px 5px; border-top: none; animation: fadeIn 1s; overflow: hidden; box-shadow: 1px 1px 5px #cecece;}
+.tabcontent {margin: 2%; margin-top: 0; display: none; padding: 6px 12px; border: 1px solid #cecece; border-radius: 0 0 5px 5px; border-top: none; animation: fadeIn 1s; overflow: hidden; box-shadow: 1px 1px 5px #cecece; background-color: #3a3a3a}
 
 /* IMAGES */
 img {display: block; margin: 0; padding: 0; width: 100%; object-fit: fill;}
