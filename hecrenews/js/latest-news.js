@@ -23,12 +23,12 @@ function addCardNews(category, title, divName,) {
 		$(divName).append("<h1>" + title + "</h1>");
 	}
 	for (var i = 0; i < newsLinks[0].length; i++) {
-		$(divName).append("<div class='news-card'><div class='newsImg'><div class='info'><a class='needLink'>Go to article</a>></div><a class='needLink'><img class='needImage'></a></div><div class='newsTxt'><a class='needTxt needLink'></p></div></div>");
+		$(divName).append("<div class='news-card'><div class='newsImg'><div class='info'><a class='needLink'>Go to article</a></div><a class='needLink'><img class='needImage'></a></div><div class='newsTxt'><a class='needTxt needLink'></p></div></div>");
 	}
 	for (var i = 0; i < newsLinks[0].length; i++) {
 		$(divName + " .needImage")[i].src = newNewsImages[category][i];
 		$($(divName + " .needTxt")[i]).text(newsTitles[category][i]);
-		$($(divName + ".info")[i]).append(newNewsInfo[category][i])
+		$($(divName + ".info")[i]).append("<p>" + newNewsInfo[category][i] + "</p>")
 		$(divName + " .needLink")[i * 3].href = newsLinks[category][i];
 		$(divName + " .needLink")[i * 3 + 1].href = newsLinks[category][i];
 		$(divName + " .needLink")[i * 3 + 2].href = newsLinks[category][i];
