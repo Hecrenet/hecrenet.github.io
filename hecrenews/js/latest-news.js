@@ -56,11 +56,11 @@ function addTitlesAndImagesAndInfo() {
 	}
 }
 
-function openNav() {
-	var x = document.getElementById("nav");
-	if (x.className === "nav") {
-		x.className += " responsive";
+function openId(idName) {
+	var x = $(idName);
+	if (x.className == "") {
+		x.className = "open";
 	} else {
-		x.className = "nav";
+		x.className = "";
 	}
 }
