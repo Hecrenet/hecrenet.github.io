@@ -31,9 +31,9 @@ body {margin: 0; background: #f5f5f5; font-family: sans-serif;}
 /* Navigation Tabs */
 .tab {margin: 2%; margin-bottom: 0; overflow: hidden; border-radius: 5px 5px 0 0; background-color: #ddd;}
 .tab button {background-color: inherit; float: left; border: none; outline: none; cursor: pointer; padding: 14px 16px; transition: 0.3s;}
-.tab button:hover {background-color: #444;}
+.tab button:hover {background-color: #444; color: #000}
 .tab button.active {background-color: #3a3a3a; color: #ffffff;}
-.tabcontent {margin: 2%; margin-top: 0; display: none; padding: 6px 12px; border-radius: 0 0 5px 5px; border-top: none; animation: fadeIn 1s; overflow: hidden; box-shadow: 1px 1px 5px #cecece; background-color: #3a3a3a}
+.tabcontent {margin: 2%; margin-top: 0; display: none; padding: 6px 12px; border-radius: 0 0 5px 5px; border-top: none; animation: fadeIn 1s; overflow: hidden; background-color: #3a3a3a}
 
 /* IMAGES */
 img {display: block; margin: 0; padding: 0; width: 100%; object-fit: fill;}
