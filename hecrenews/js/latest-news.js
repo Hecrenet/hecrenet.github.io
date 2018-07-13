@@ -82,15 +82,15 @@ $.fn.visible = function(partial) {
 
 function addScrollAnimation() {
 	var win = $(window);
-	var allMods = $(".card");
-	allMods.each(function(i, el) {
+	var $cards = $(".card");
+	$cards.each(function(i, el) {
 		var el = $(el);
 		if (el.visible(true)) {
 			el.addClass("already-visible"); 
 		} 
 	});
 	win.scroll(function(event) {
-	allMods.each(function(i, el) {
+	$cards.each(function(i, el) {
 		var el = $(el);
 		if (el.visible(true)) {
 			el.addClass("come-in"); 
