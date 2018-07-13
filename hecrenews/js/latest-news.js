@@ -1,16 +1,3 @@
-//Detect if element is in viewport plugin
-(function($) {
-/*
-* Copyright 2012, Digital Fusion
-* Licensed under the MIT license.
-* http://teamdf.com/jquery-plugins/license/
-* @author Sam Sehnert
-*/
-$.fn.visible = function(partial) {
-	var $t = $(this), $w = $(window), viewTop = $w.scrollTop(), viewBottom = viewTop + $w.height(), _top = $t.offset().top, _bottom = _top + $t.height(), compareTop = partial === true ? _bottom : _top, compareBottom = partial === true ? _top : _bottom;
-	return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
-};})(jQuery);
-
 //This is the only thing you change, or you might break the Hecrenews (unless your Arjvik, but the code shouldn't need changing)
 var newsLinks = [
 	["/hecrenews/nothing.html", "/hecrenews/nothing.html", "/hecrenews/nothing.html", "/hecrenews/nothing.html", "/hecrenews/nothing.html"], //New News [0][x]
@@ -29,8 +16,6 @@ var newNewsImages = [["","","","",""],["","","","",""],["","","","",""],["","","
 var newNewsInfo = [["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""]];
 
 addTitlesAndImagesAndInfo();
-
-addScrollAnimation();
 
 //FUNCTIONS THAT GET CALLED FROM HTML
 function addCardNews(category, title, divName,) {
@@ -78,17 +63,4 @@ function openNav() {
 	} else {
 		x.className = "nav";
 	}
-}
-
-function addScrollAnimation() {
-	var $waitlist = $('.on-waitlist');    
-	$(window).scroll(function(event) {
-		$waitlist.each(function(i, el) {
-			var $el = $waitlist.eq(i);
-			if ($el.visible(true)) {
-				$waitlist.splice(i, 1);
-				$el.addClass("come-in").removeClass('on-waitlist');
-			} 
-		});
-	});
 }
