@@ -19,7 +19,7 @@ body {margin: 0; background-color: #f5f5f5}
 
 /* CARDS */
 /* News Cards */
-.card-container {font-family: sans-serif; overflow: hidden; border-radius: 5px; margin: 2%; padding: 2%; border: 1px solid #cecece; color: #f5f5f5; background-color: #3a3a3a;}
+.card-container {font-family: sans-serif; overflow: hidden; border-radius: 5px; margin: 2%; padding: 2%; border: 1px solid #cecece; color: #f5f5f5; background-color: #3a3a3a; float: left}
 .news-card {width: 96%; float: left; margin: 2%; margin-bottom: 0; overflow: hidden; border-radius: 5px;  box-shadow: 0px 5px 5px #333; position: relative; top: 500px; opacity: 0; transform: rotate(-90deg); animation-name: slideUpRotate; animation-duration: 1s; animation-fill-mode: forwards;}
 .newsImg {border-radius: 5px 5px 0 0;}
 .newsImg img {width: 100%; border-radius: 5px 5px 0 0; display: block;}
