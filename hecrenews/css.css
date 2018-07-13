@@ -20,7 +20,7 @@ body {margin: 0; background-color: #f5f5f5}
 /* CARDS */
 /* News Cards */
 .card-container {font-family: sans-serif; overflow: hidden; border-radius: 5px; margin: 2%; padding: 2%; color: #f5f5f5; background-color: #3a3a3a; float: left}
-.news-card {width: 96%; float: left; margin: 2%; margin-bottom: 0; overflow: hidden; border-radius: 5px;  box-shadow: 0px 5px 5px #333; position: relative; top: 500px; opacity: 0; transform: rotate(-90deg); animation-name: slideUpRotate; animation-duration: 1s; animation-fill-mode: forwards;}
+.news-card {width: 96%; float: left; margin: 2%; margin-bottom: 0; overflow: hidden; border-radius: 5px;  box-shadow: 0px 5px 5px #333; position: relative; top: 500px; opacity: 0; transform: rotate(-90deg); animation: slideUpRotate 1s ease forwards;}
 .newsImg {border-radius: 5px 5px 0 0;}
 .newsImg img {width: 100%; border-radius: 5px 5px 0 0; display: block;}
 .newsTxt {border: 1px solid #fff; border-top: 1px solid #cecece; border-radius: 0 0 5px 5px; background-color: #fff; color: #000; transition: 0.3s; text-align: center; padding: 5%;}
@@ -31,6 +31,9 @@ body {margin: 0; background-color: #f5f5f5}
 .newsImg:hover .info {height: 100%;}
 .info a {color: #fff !important; position: absolute; bottom: 2%; right: 2%;}
 .info p {padding: 2%;}
+/* Slide in styling */
+.come-in {transform: translateY(150px); animation: come-in 0.8s ease forwards;}
+.come-in:nth-child(odd) {animation-duration: 0.6s;}
 
 /* ARTICLE */ 
 #article {font-family: sans-serif; width: 70%; margin: 2%; border: 3px solid #3a3a3a; border-radius: 5px;}
@@ -53,6 +56,7 @@ body {margin: 0; background-color: #f5f5f5}
 /* ANIMATIONS */
 @keyframes slideUp {0%{top: 200px; opacity: 0;} 100% {top: 0; opacity: 1;}}
 @keyframes slideUpRotate {0%{top: 500px; opacity: 0; transform: rotate(-90deg);} 100%{top: 0; opacity: 1; transform: rotate(0deg);}}
+@keyframes come-in {to {transform: translateY(0);}}
 
 /* RESPONSIVE WEB DESIGN */
 /* Portrait Tablets and Big Landscape Phones */
