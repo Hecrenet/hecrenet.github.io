@@ -34,6 +34,7 @@ body {margin: 0; background-color: #f5f5f5}
 /* Slide in styling */
 .come-in {transform: translateY(150px); animation: come-in 0.8s ease forwards;}
 .come-in:nth-child(odd) {animation-duration: 0.6s;}
+.already-visible {transform: translateY(0); animation: none;}
 
 /* ARTICLE */ 
 #article {font-family: sans-serif; width: 70%; margin: 2%; border: 3px solid #3a3a3a; border-radius: 5px;}
