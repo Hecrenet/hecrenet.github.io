@@ -13,8 +13,9 @@ var newsLinks = [
 //UNDER HERE IS THE SHTUFF YOU DON'T TOUCH
 var newsTitles = [["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""]];
 var newNewsImages = [["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""]];
+var newNewsInfo = [["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""]];
 
-addTitlesAndImages();
+addTitlesAndImagesAndInfo();
 
 //FUNCTIONS THAT GET CALLED FROM HTML
 function addCardNews(category, title, divName,) {
@@ -22,13 +23,15 @@ function addCardNews(category, title, divName,) {
 		$(divName).append("<h1>" + title + "</h1>");
 	}
 	for (var i = 0; i < newsLinks[0].length; i++) {
-		$(divName).append("<div class='news-card'><div class='newsImg'><a class='needLink'><img class='needImage'></a></div><div class='newsTxt'><a class='needTxt needLink'></p></div></div>");
+		$(divName).append("<div class='news-card'><div class='newsImg'><div class='info'><a class='needLink'>Go to article</a>></div><a class='needLink'><img class='needImage'></a></div><div class='newsTxt'><a class='needTxt needLink'></p></div></div>");
 	}
 	for (var i = 0; i < newsLinks[0].length; i++) {
 		$(divName + " .needImage")[i].src = newNewsImages[category][i];
 		$($(divName + " .needTxt")[i]).text(newsTitles[category][i]);
-		$(divName + " .needLink")[i * 2].href = newsLinks[category][i];
-		$(divName + " .needLink")[i * 2 + 1].href = newsLinks[category][i];
+		$($(divName + ".info")[i]).append(newNewsInfo[category][i])
+		$(divName + " .needLink")[i * 3].href = newsLinks[category][i];
+		$(divName + " .needLink")[i * 3 + 1].href = newsLinks[category][i];
+		$(divName + " .needLink")[i * 3 + 2].href = newsLinks[category][i];
 	}
 	
 }
@@ -41,12 +44,13 @@ $(function() {
 	}
 });
 
-function addTitlesAndImages() {
+function addTitlesAndImagesAndInfo() {
 	for (var row = 0; row < newsLinks.length; row++) {
 		for (var column = 0; column < newsLinks[row].length; column++) {
 			$.ajax({url: newsLinks[row][column], type: "get", async: false, success: function(data){
 				newsTitles[row][column] = $(data).filter("#title")[0].textContent;
 				newNewsImages[row][column] = $(data).filter("#thumbnail")[0].src;
+				newNewsInfo[row][column] = $(data).filter("#info")[0].textContent;
 			}});
 		}
 	}
