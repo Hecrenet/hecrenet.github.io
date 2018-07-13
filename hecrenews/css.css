@@ -26,6 +26,7 @@ body {margin: 0; background-color: #f5f5f5}
 .newsTxt {border: 1px solid #fff; border-top: 1px solid #cecece; border-radius: 0 0 5px 5px; background-color: #fff; color: #000; transition: 0.3s; text-align: center; padding: 5%;}
 .newsTxt:hover {background-color: #f55; color: #fff; border: 1px solid #f55}
 .newsTxt a {color: #000; text-decoration: none; transition: 0.3s}
+.newsTxt:hover a {color: #fff}
 .news-card .info {opacity: 0.8; transition: 0.5s; color: #fff; background-color: #000; position: absolute; bottom: 0; left: 0; right: 0; overflow: hidden; height: 0; border-radius: 5px;}
 .newsImg:hover .info {height: 100%;}
 .info a {color: #fff !important;}
