@@ -1,9 +1,10 @@
 body {margin: 0; background-color: #f5f5f5}
 
 /* NAV */
-#nav ul {list-style: none; padding: 0; margin: 0; background-color: #3a3a3a; overflow: auto; position: fixed; height: 100%; color: #fff;}
-#nav li {width: 80px; overflow: hidden}
-#nav img {width: 100%;}
+#nav ul {list-style: none; padding: 0; margin: 0; background-color: #3a3a3a; overflow: auto; position: fixed; height: 100%;}
+#nav li {width: 80px; overflow: hidden;}
+#nav a {color: #fff !important; text-decoration: none !important; font-size: 32px; display: block; text-align: center; margin-bottom: 10px}
+#nav img {width: 100%; display: block}
 .nav-content {display: none;}
 
 /* PAGE CONTENT */
