@@ -57,10 +57,6 @@ function addTitlesAndImagesAndInfo() {
 }
 
 function openId(idName) {
-	var x = $(idName);
-	if (x.className == "") {
-		x.className = "open";
-	} else {
-		x.className = "";
-	}
+	var x = $(idName)[0];
+	if (x.className == "") {x.className = "open";} else {x.className = "";}
 }
