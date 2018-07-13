@@ -81,19 +81,14 @@ $.fn.visible = function(partial) {
 };})(jQuery);
 
 function addScrollAnimation() {
-	var win = $(window);
-	var $cards = $(".card");
-	$cards.each(function(i, el) {
-		var el = $(el);
-		if (el.visible(true)) {
-			el.addClass("already-visible"); 
-		} 
+	var $waitlist = $('.on-waitlist');    
+	$(window).scroll(function(event) {
+		$waitlist.each(function(i, el) {
+			var $el = $waitlist.eq(i);
+			if ($el.visible(true)) {
+				$waitlist.splice(i, 1);
+				$el.addClass("come-in").removeClass('on-waitlist');
+			} 
+		});
 	});
-	win.scroll(function(event) {
-	$cards.each(function(i, el) {
-		var el = $(el);
-		if (el.visible(true)) {
-			el.addClass("come-in"); 
-		} 
-	});});
 }
