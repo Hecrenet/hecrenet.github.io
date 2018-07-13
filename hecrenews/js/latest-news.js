@@ -1,3 +1,16 @@
+//Detect if element is in viewport plugin
+(function($) {
+/*
+* Copyright 2012, Digital Fusion
+* Licensed under the MIT license.
+* http://teamdf.com/jquery-plugins/license/
+* @author Sam Sehnert
+*/
+$.fn.visible = function(partial) {
+	var $t = $(this), $w = $(window), viewTop = $w.scrollTop(), viewBottom = viewTop + $w.height(), _top = $t.offset().top, _bottom = _top + $t.height(), compareTop = partial === true ? _bottom : _top, compareBottom = partial === true ? _top : _bottom;
+	return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
+};})(jQuery);
+
 //This is the only thing you change, or you might break the Hecrenews (unless your Arjvik, but the code shouldn't need changing)
 var newsLinks = [
 	["/hecrenews/nothing.html", "/hecrenews/nothing.html", "/hecrenews/nothing.html", "/hecrenews/nothing.html", "/hecrenews/nothing.html"], //New News [0][x]
@@ -66,19 +79,6 @@ function openNav() {
 		x.className = "nav";
 	}
 }
-
-//Slide in when you scroll js
-(function($) {
-/*
-* Copyright 2012, Digital Fusion
-* Licensed under the MIT license.
-* http://teamdf.com/jquery-plugins/license/
-* @author Sam Sehnert
-*/
-$.fn.visible = function(partial) {
-	var $t = $(this), $w = $(window), viewTop = $w.scrollTop(), viewBottom = viewTop + $w.height(), _top = $t.offset().top, _bottom = _top + $t.height(), compareTop = partial === true ? _bottom : _top, compareBottom = partial === true ? _top : _bottom;
-	return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
-};})(jQuery);
 
 function addScrollAnimation() {
 	var $waitlist = $('.on-waitlist');    
