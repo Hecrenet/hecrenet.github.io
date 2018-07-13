@@ -17,6 +17,8 @@ var newNewsInfo = [["","","","",""],["","","","",""],["","","","",""],["","","",
 
 addTitlesAndImagesAndInfo();
 
+addScrollAnimation();
+
 //FUNCTIONS THAT GET CALLED FROM HTML
 function addCardNews(category, title, divName,) {
 	if (title != "") {
@@ -78,18 +80,20 @@ $.fn.visible = function(partial) {
 	return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
 };})(jQuery);
 
-var win = $(window);
-var allMods = $(".card");
-allMods.each(function(i, el) {
-	var el = $(el);
-	if (el.visible(true)) {
-		el.addClass("already-visible"); 
-	} 
-});
-win.scroll(function(event) {
-allMods.each(function(i, el) {
-	var el = $(el);
-	if (el.visible(true)) {
-		el.addClass("come-in"); 
-	} 
-});});
+function addScrollAnimation() {
+	var win = $(window);
+	var allMods = $(".card");
+	allMods.each(function(i, el) {
+		var el = $(el);
+		if (el.visible(true)) {
+			el.addClass("already-visible"); 
+		} 
+	});
+	win.scroll(function(event) {
+	allMods.each(function(i, el) {
+		var el = $(el);
+		if (el.visible(true)) {
+			el.addClass("come-in"); 
+		} 
+	});});
+}
