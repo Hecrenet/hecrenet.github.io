@@ -56,7 +56,10 @@ function addTitlesAndImagesAndInfo() {
 	}
 }
 
-function openId(idName) {
-	var x = $(idName)[0];
-	if (x.className == "") {x.className = "open";} else {x.className = "";}
+function openId(...idName) {
+	var x;
+	for (var i = 0; i < idName.length; i++) {
+		x = $(idName[i])[0];
+		if (x.className == "") {x.className = "open";} else {x.className = "";}
+	}
 }
