@@ -63,3 +63,9 @@ function openId(...idName) {
 		if (x.className == "") {x.className = "open";} else {x.className = "";}
 	}
 }
+
+function showNewsInfo(object) {
+	var x = object.nextSibling;
+	if (x.className == "news-card-preview") {x.className += " open"} else {x.className = "news-card-preview"};
+	
+}
