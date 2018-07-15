@@ -6,6 +6,8 @@ body {margin: 0; background-color: #f5f5f5}
 #nav a {color: #fff !important; text-decoration: none !important; font-size: 32px; display: block; text-align: center; margin-bottom: 10px}
 #nav img {width: 100%; display: block}
 #nav-links {position: relative; display: none; background-color: #333 !important; z-index: 2 !important}
+#nav-links a {font-size: 24px}
+#nav-links a:hover {background-color: #2a2a2a}
 #nav-links.open {display: block; animation: slideRight 0.5s ease forwards;}
 
 /* PAGE CONTENT */
