@@ -18,17 +18,14 @@ body {margin: 0; background-color: #f5f5f5}
 /* CARDS */
 /* News Cards */
 .news-card {margin: 2%; background-color: #fff; border-radius: 4px; box-shadow: 3px 3px 5px #ddd; overflow: hidden; font-family: sans-serif; width: 45%; color: #3a3a3a}
-.news-card-pub-info {clear: both;}
-.news-card-pub-info p {display: block; margin: 0;}
-.news-card-author {padding: 5px; float: left;}
-.news-card-author img {border-radius: 50%; width: 80px !important}
-.news-card-author p {float: right; margin-left: 10px; margin-top: 32px}
-.news-card-time {padding: 5px; float: right; text-align: right; margin: 22px}
 .news-card img {display: block; float: left; clear: both; width: 100%;}
 .news-card-flavor {float: left;}
 .news-card-flavor h2 {display: block; float: left; margin: 11px 22px;}
 .news-card-flavor a {display: block; float: right; color: #3a3a3a !important; text-decoration: none !important;}
-.news-card-preview p {float: left; display: block; margin: 10px;}
+.news-card-pub-info {}
+.news-card-pub-info img {border-radius: 50%; width: 20%; margin: 0 0 0 5px}
+.news-card-pub-info p {float: left; clear: both; }
+.news-card-preview p {float: left; display: block; margin: 10px 0 0 5px;}
 
 /* ARTICLE */ 
 #article {font-family: sans-serif; width: 70%; margin: 2%; border: 3px solid #3a3a3a; border-radius: 5px;}
