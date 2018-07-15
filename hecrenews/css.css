@@ -55,7 +55,7 @@ body {margin: 0; background-color: #f5f5f5}
 /* RESPONSIVE WEB DESIGN */
 /* Portrait Tablets and Big Landscape Phones */
 @media only screen and (min-width: 600px) {
-  .card {width: 45%}
+  .news-card {width: 45%}
 }
 /* Landscape Tablets */
 @media only screen and (min-width: 768px) {
