@@ -22,10 +22,10 @@ body {margin: 0; background-color: #f5f5f5}
 .news-card-flavor {float: left;}
 .news-card-flavor h2 {display: block; float: left; margin: 11px 22px;}
 .news-card-flavor a {display: block; float: right; color: #3a3a3a !important; text-decoration: none !important;}
-.news-card-pub-info {}
+.news-card-pub-info {clear: left; overflow: hidden; float: left}
 .news-card-pub-info img {border-radius: 50%; width: 20%; margin: 0 0 0 5px}
-.news-card-pub-info p {float: left; clear: both; }
-.news-card-preview p {float: left; display: block; margin: 10px 0 0 5px;}
+.news-card-pub-info p {float: left !important; clear: both; }
+.news-card-preview p {float: right; display: block; margin: 10px 0 0 5px;}
 
 /* ARTICLE */ 
 #article {font-family: sans-serif; width: 70%; margin: 2%; border: 3px solid #3a3a3a; border-radius: 5px;}
