@@ -17,7 +17,7 @@ body {margin: 0; background-color: #f5f5f5}
 
 /* CARDS */
 /* News Cards */
-.news-card {margin: 2%; background-color: #fff; border-radius: 4px; box-shadow: 3px 3px 5px #ddd; overflow: hidden; font-family: sans-serif; width: 45%; color: #3a3a3a}
+.news-card {margin: 2%; background-color: #fff; border-radius: 4px; box-shadow: 3px 3px 5px #ddd; overflow: hidden; font-family: sans-serif; width: 100%; color: #3a3a3a}
 .news-card img {display: block; float: left; clear: both; width: 100%;}
 .news-card-flavor {float: left;}
 .news-card-flavor h2 {display: block; float: left; margin: 11px 22px;}
@@ -55,7 +55,7 @@ body {margin: 0; background-color: #f5f5f5}
 /* RESPONSIVE WEB DESIGN */
 /* Portrait Tablets and Big Landscape Phones */
 @media only screen and (min-width: 600px) {
-
+  .card {width: 45%}
 }
 /* Landscape Tablets */
 @media only screen and (min-width: 768px) {
@@ -63,5 +63,5 @@ body {margin: 0; background-color: #f5f5f5}
 }
 /* Computers */
 @media only screen and (min-width: 992px) {
-
+  
 }
