@@ -65,8 +65,7 @@ function openId(...idName) {
 }
 
 function showNewsInfo(object) {
-	var x = object.parentElement;
-	var y = x.children;
+	var x = object.parentElement.children;
 	if (x[2].className == "news-card-preview") {x[2].className += " open"} else {x[2].className = "news-card-preview"};
 	
 }
