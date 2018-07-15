@@ -46,25 +46,13 @@ body {margin: 0; background-color: #f5f5f5}
 /* RESPONSIVE WEB DESIGN */
 /* Portrait Tablets and Big Landscape Phones */
 @media only screen and (min-width: 600px) {
-	/* Cards */
-	.news-card {width: 32%; margin: 1%; margin-bottom: 0;}
-	.news-card:nth-of-type(1) {width: 47%; margin: 2%}
-	.news-card:nth-of-type(2) {width: 47%; margin: 2%}
-	.news-card:not(:nth-of-type(1)):not(:nth-of-type(3)) {margin-left: 0;}
+
 }
 /* Landscape Tablets */
 @media only screen and (min-width: 768px) {
-	/* Cards */
-	.news-card {width: 32%; margin: 1%; margin-bottom: 0;}
-	.news-card:nth-of-type(1) {width: 47%; margin: 2%}
-	.news-card:nth-of-type(2) {width: 47%; margin: 2%}
-	.news-card:not(:nth-of-type(1)):not(:nth-of-type(3)) {margin-left: 0;}
+
 }
 /* Computers */
 @media only screen and (min-width: 992px) {
-	/* Cards */
-	.news-card {width: 14% !important; float: left; margin: 5%;}
-	.news-card:nth-of-type(1) {margin: 5%}
-	.news-card:nth-of-type(2) {margin: 5%}
-	.news-card:not(:nth-of-type(1)) {margin-left: 0;}
+
 }
