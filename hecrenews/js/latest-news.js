@@ -66,6 +66,6 @@ function openId(...idName) {
 
 function showNewsInfo(object) {
 	var x = object.parentElement.children;
-	if (x[2].className == "news-card-preview") {x[2].className += " open"} else {x[2].className = "news-card-preview"};
+	if (x[2].className == "news-card-preview") {x[2].className += " open"; $(this).text('&#2191'))} else {x[2].className = "news-card-preview"; $(this).text('&#2193')};
 	
 }
