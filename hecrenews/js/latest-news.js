@@ -37,13 +37,14 @@ function addCardNews(category, title, divName,) {
 }
 
 //FUNCTIONS THAT GET USED
+//Load in the Navigation Bar
 $(function() {
 	$("#navPlaceholder").load("/hecrenews/nav.html");
 	for (var i = 0; i < $(".news-card").length; i++) {
 		$(".news-card")[i].style.animationDelay = String((i + 1)/4) + "s";
 	}
 });
-
+//Fill in the arrays
 function addTitlesAndImagesAndInfo() {
 	for (var row = 0; row < newsLinks.length; row++) {
 		for (var column = 0; column < newsLinks[row].length; column++) {
@@ -55,7 +56,7 @@ function addTitlesAndImagesAndInfo() {
 		}
 	}
 }
-
+//Add the open class to an element
 function openId(...idName) {
 	var x;
 	for (var i = 0; i < idName.length; i++) {
@@ -63,7 +64,7 @@ function openId(...idName) {
 		if (x.className == "") {x.className = "open";} else {x.className = "";}
 	}
 }
-
+//Show the news 'info' (more like preview) of the News Card that called this function
 function showNewsInfo(object) {
 	var x = object.parentElement.children;
 	if (x[2].className == "news-card-preview") {x[2].className += " open"; object.innerHTML = "<h2>&#x2191</h2>";} else {x[2].className = "news-card-preview"; object.innerHTML = "<h2>&#x2193</h2>"};
