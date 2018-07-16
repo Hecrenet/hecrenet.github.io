@@ -70,3 +70,11 @@ function showNewsInfo(object) {
 	if (x[2].className == "news-card-preview") {x[2].className += " open"; object.innerHTML = "<h2>&#x2191</h2>";} else {x[2].className = "news-card-preview"; object.innerHTML = "<h2>&#x2193</h2>"};
 	
 }
+//Show the author's bio on hover
+$(".news-card-info li:first-child").hover(
+	function() {
+		var x = this.parentsUntil(".news-card-info");
+		console.log x;
+	}, function() {
+	}
+);
