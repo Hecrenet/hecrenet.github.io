@@ -73,7 +73,7 @@ function showNewsInfo(object) {
 //Show the author's bio on hover
 $(".news-card-info li:first-child").hover(
 	function() {
-		var x = this.parentsUntil(".news-card-info");
+		var x = $(".news-card-info li:first-child").parentsUntil(".news-card-info");
 		console.log x;
 	}, function() {
 	}
