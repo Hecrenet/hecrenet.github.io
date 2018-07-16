@@ -71,10 +71,10 @@ function showNewsInfo(object) {
 	
 }
 //Show the author's bio on hover
-$(".news-card-info li:first-child").hover(
+$(".news-card-info li:first-child img")[0].hover(
 	function() {
-		var x = $(".news-card-info li:first-child").parentsUntil(".news-card-info");
-		console.log x;
+		var x = $(this).parentsUntil(".news-card-info");
+		console.log(x);
 	}, function() {
 	}
 );
