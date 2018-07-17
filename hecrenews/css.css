@@ -19,13 +19,13 @@ body {margin: 0; background-color: #f0f0f0}
 /* CARDS */
 /* News Cards */
 .news-card {margin: 2%; background-color: #fff; border-radius: 4px; box-shadow: 3px 3px 5px #ddd; overflow: hidden; font-family: sans-serif; width: auto; color: #3a3a3a}
-.news-card-info {overflow: hidden;}
+.news-card-info {position: relative;}
 .news-card-info ul {list-style: none; margin: 0; padding: 0; overflow: hidden; max-height: 60px}
 .news-card-info li {display: inline; overflow: hidden; float: left;}
 .news-card-info li:first-child {max-width: 50px; padding: 5px}
 .news-card-info li p {display: block; padding: 5px;}
 .news-card-info img {border-radius: 50%; display: block;}
-.news-author {display: none;}
+.news-author {display: none; border: 1px solid #cecece; padding: 5px; position: absolute; background-color: #fff; top: 60px; width: calc(100% - 12px)}
 .news-author.open {display: block}
 .news-card img {display: block; float: left; clear: both; width: 100%;}
 .news-card-flavor {width: 100%}
