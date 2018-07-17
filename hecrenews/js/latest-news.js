@@ -14,7 +14,7 @@ var newsLinks = [
 
 //FUNCTIONS THAT GET CALLED FROM HTML
 function addCardNews(divName, link) {
-	$(divName).append("<div class='news-card'><div class= 'news-card-info'><ul><li><img></li><li><p></p></li><li><p></p></li></ul><div class='news-author-placeholder'></div></div><a class='need-link'><img src='/images/birds/legendary/hbird/hbird.jpg'></a><div class='news-card-flavor'><h2><a href='need-link'></a></h2><a href='javascript: void(0)' onclick='showNewsInfo(this)'><h2>&#x2193</h2></a><div class='news-card-preview'></div></div></div>");
+	var card = "<div class='news-card'><div class= 'news-card-info'><ul><li><img></li><li><p></p></li><li><p></p></li></ul><div class='news-author-placeholder'></div></div><a class='need-link'><img src='/images/birds/legendary/hbird/hbird.jpg'></a><div class='news-card-flavor'><h2><a href='need-link'></a></h2><a href='javascript: void(0)' onclick='showNewsInfo(this)'><h2>&#x2193</h2></a><div class='news-card-preview'></div></div></div>";
 	//Add the information
 	$.get(link, function(data){
 		var authorImg, pubDate, pubTime, authorBio, articleTitle, articlePreview;
