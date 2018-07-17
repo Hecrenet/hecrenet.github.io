@@ -16,35 +16,13 @@ var newsLinks = [
 
 //FUNCTIONS THAT GET CALLED FROM HTML
 function addCardNews(divName, link) {
-	$(divName).append("
-		<div class='news-card'>
-			<div class= 'news-card-info'>
-			  	//Author pic, and time of publish
-				<ul>
-					<li><img></li>
-					<li><p></p></li>
-					<li><p></p></li>
-				</ul>
-			  	//Author bio placeholder
-				<div class='news-author-placeholder'></div>
-			</div>
-			//The card's image
-			<a class='need-link'><img src='/images/birds/legendary/hbird/hbird.jpg'></a>
-			<div class='news-card-flavor'>
-				//News Title
-				<h2><a href='need-link'></a></h2>
-				<a href='javascript: void(0)' onclick='showNewsInfo(this)'><h2>&#x2193</h2></a>
-			  	//News Preview
-				<div class='news-card-preview'></div>
-			</div>
-		</div>");
-		//Check if link is a custom article or a pre-defined one
-		if (typeof link == "string") {
-			
-		} else {
-			
-		}
-	//Add the information 			  	
+	$(divName).append("<div class='news-card'><div class= 'news-card-info'><ul><li><img></li><li><p></p></li><li><p></p></li></ul><div class='news-author-placeholder'></div></div><a class='need-link'><img src='/images/birds/legendary/hbird/hbird.jpg'></a><div class='news-card-flavor'><h2><a href='need-link'></a></h2><a href='javascript: void(0)' onclick='showNewsInfo(this)'><h2>&#x2193</h2></a><div class='news-card-preview'></div></div></div>");
+	//Add the information
+	if (typeof link == "string") {
+		
+	} else {
+		
+	} 			  	
 }
 
 //FUNCTIONS THAT GET USED
