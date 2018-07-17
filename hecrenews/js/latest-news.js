@@ -22,6 +22,8 @@ function addCardNews(divName, link) {
 		$.ajax({url: authorLink, type: "get", async: false, success: function(data){
 			authorImg = $(data).filter("img")[0].src;
 			authorBio = $(data).filter(".news-author")[0];
+			console.log(authorBio);
+			console.log(String(authorBio));
 		}});
 		pubDate = $(data).find("#date")[0].innerHTML;
 		pubTime = $(data).find("#time")[0].innerHTML;
