@@ -57,10 +57,10 @@ $(function() {
 	//Keep author's bio showing when hovering on the bio
 	$(".news-author").hover(
 		function() {
-			this.addClass("open");
+			$(this).addClass("open");
 		},
 		function() {
-			this.removeClass("open");
+			$(this).removeClass("open");
 		}
 	);
 });
