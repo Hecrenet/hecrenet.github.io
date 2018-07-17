@@ -46,14 +46,23 @@ $(function() {
 	}
 	//Show the author's bio on hover
 	$($(".news-card-info li:first-child")[0]).hover(
-	function() {
-		var x = $(this).parentsUntil(".news-card");
-		$(x[1]).children(".news-author").addClass("open");
-	}, function() {
-		var x = $(this).parentsUntil(".news-card");
-		$(x[1]).children(".news-author").removeClass("open");
-	}
-);
+		function() {
+			var x = $(this).parentsUntil(".news-card");
+			$(x[1]).children(".news-author").addClass("open");
+		}, function() {
+			var x = $(this).parentsUntil(".news-card");
+			$(x[1]).children(".news-author").removeClass("open");
+		}
+	);
+	//Keep author's bio showing when hovering on the bio
+	$(".news-author").hover(
+		function() {
+			this.addClass("open");
+		},
+		function() {
+			this.removeClass("open");
+		}
+	);
 });
 //Fill in the arrays
 function addTitlesAndImagesAndInfo() {
