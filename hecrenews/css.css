@@ -25,6 +25,7 @@ body {margin: 0; background-color: #f5f5f5}
 .news-card-info li p {display: block; padding: 5px;}
 .news-card-info img {border-radius: 50%; display: block;}
 .news-author {display: none;}
+.news-author.open {display: block}
 .news-card img {display: block; float: left; clear: both; width: 100%;}
 .news-card-flavor {width: 100%}
 .news-card-flavor h2 {display: block; float: left; margin: 11px 22px;}
