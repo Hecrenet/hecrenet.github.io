@@ -57,7 +57,7 @@ body {margin: 0; background-color: #f0f0f0}
 @keyframes slideUp {0%{top: 200px; opacity: 0;} 100%{top: 0; opacity: 1;}}
 @keyframes fadeIn {0%{opacity: 0} 100%{ opacity: 0.8}}
 @keyframes slideRight {0%{left: 0} 100%{left: 80px}}
-@keyframes zoomIn {0%{transform: scale(0.1, 0.1)} 100%{transform: scale(1.1, 1.1)}}
+@keyframes zoomIn {0%{transform: scale(0.1, 0.1) rotate(10deg)} 100%{transform: scale(1.1, 1.1) rotate(360deg)}}
 
 /* RESPONSIVE WEB DESIGN */
 /* Portrait Tablets and Big Landscape Phones */
