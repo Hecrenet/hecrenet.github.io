@@ -11,26 +11,40 @@ var newsLinks = [
 	["/hecrenews/nothing.html", "/hecrenews/nothing.html", "/hecrenews/nothing.html", "/hecrenews/nothing.html", "/hecrenews/nothing.html"] //Travel [8][x]
 ];
 //UNDER HERE IS THE SHTUFF YOU DON'T TOUCH
-var newsTitles = [["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""]];
-var newNewsImages = [["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""]];
-var newNewsInfo = [["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""],["","","","",""]];
 
-addTitlesAndImagesAndInfo();
+//addTitlesAndImagesAndInfo(); This may be deleted in the near future
 
 //FUNCTIONS THAT GET CALLED FROM HTML
-function addCardNews(divName) {
-	for (var i = 0; i < newsLinks[0].length; i++) {
-		$(divName).append("");
-	}
-	for (var i = 0; i < newsLinks[0].length; i++) {
-		$(divName + " .needImage")[i].src = newNewsImages[category][i];
-		$($(divName + " .needTxt")[i]).text(newsTitles[category][i]);
-		$($(divName + " .info")[i]).append("<p>" + newNewsInfo[category][i] + "</p>");
-		$(divName + " .needLink")[i * 3].href = newsLinks[category][i];
-		$(divName + " .needLink")[i * 3 + 1].href = newsLinks[category][i];
-		$(divName + " .needLink")[i * 3 + 2].href = newsLinks[category][i];
-	}
-	
+function addCardNews(divName, link) {
+	$(divName).append("
+		<div class='news-card'>
+			<div class= 'news-card-info'>
+			  	//Author pic, and time of publish
+				<ul>
+					<li><img></li>
+					<li><p></p></li>
+					<li><p></p></li>
+				</ul>
+			  	//Author bio placeholder
+				<div class='news-author-placeholder'></div>
+			</div>
+			//The card's image
+			<a class='need-link'><img src='/images/birds/legendary/hbird/hbird.jpg'></a>
+			<div class='news-card-flavor'>
+				//News Title
+				<h2><a href='need-link'></a></h2>
+				<a href='javascript: void(0)' onclick='showNewsInfo(this)'><h2>&#x2193</h2></a>
+			  	//News Preview
+				<div class='news-card-preview'></div>
+			</div>
+		</div>");
+		//Check if link is a custom article or a pre-defined one
+		if (typeof link == "string") {
+			
+		} else {
+			
+		}
+	//Add the information 			  	
 }
 
 //FUNCTIONS THAT GET USED
