@@ -13,8 +13,8 @@ body {margin: 0; background-color: #f5f5f5}
 
 /* PAGE CONTENT */
 #page-content {margin-left: 80px;  position: relative; overflow: hidden;}
-#page-overlay {display: none; opacity: 0; background-color: #3a3a3a; position: fixed; width: 100vw; height: 100vh; top: 0; transition: 0.3s; overflow: hidden; z-index: 1;}
-#page-overlay.open {display: block; opacity: 0.8;}
+#page-overlay {display: none; opacity: 0; background-color: #3a3a3a; position: fixed; width: 100vw; height: 100vh; top: 0; overflow: hidden; z-index: 1;}
+#page-overlay.open {display: block; opacity: 0.8; animation: fadeIn 1s ease forwards}
 
 /* CARDS */
 /* News Cards */
