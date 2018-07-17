@@ -12,8 +12,6 @@ var newsLinks = [
 ];
 //UNDER HERE IS THE SHTUFF YOU DON'T TOUCH
 
-//addTitlesAndImagesAndInfo(); This may be deleted in the near future
-
 //FUNCTIONS THAT GET CALLED FROM HTML
 function addCardNews(divName, link) {
 	$(divName).append("<div class='news-card'><div class= 'news-card-info'><ul><li><img></li><li><p></p></li><li><p></p></li></ul><div class='news-author-placeholder'></div></div><a class='need-link'><img src='/images/birds/legendary/hbird/hbird.jpg'></a><div class='news-card-flavor'><h2><a href='need-link'></a></h2><a href='javascript: void(0)' onclick='showNewsInfo(this)'><h2>&#x2193</h2></a><div class='news-card-preview'></div></div></div>");
@@ -24,12 +22,18 @@ function addCardNews(divName, link) {
 		var authorLink = $(data).filter("#author-link")[0].innerHTML;
 		$.ajax({url: authorLink, type: "get", async: false, success: function(data){
 			authorImg = $(data).filter("img")[0].src;
+			console.log(authorImg);
 			authorBio = $(data).filter(".news-author")[0];
+			console.log(authorBio);
 		}});
 		pubDate = $(data).filter("#date")[0].innerHTML;
-		pubTime = $(data).filter("#time")[0].innerHTML
+		console.log(pubDate);
+		pubTime = $(data).filter("#time")[0].innerHTML;
+		console.log(pubTime);
 		articleTitle = $(data).filter("#title")[0].innerHTML;
+		console.log(articleTitle);
 		articlePreview = $(data).filter("#preview")[0].innerHTML;
+		console.log(articlePreview);
 	});			  	
 }
 
@@ -61,18 +65,6 @@ $(function() {
 		}
 	);
 });
-//Fill in the arrays
-function addTitlesAndImagesAndInfo() {
-	for (var row = 0; row < newsLinks.length; row++) {
-		for (var column = 0; column < newsLinks[row].length; column++) {
-			$.ajax({url: newsLinks[row][column], type: "get", async: false, success: function(data){
-				newsTitles[row][column] = $(data).filter("#title")[0].textContent;
-				newNewsImages[row][column] = $(data).filter("#thumbnail")[0].src;
-				newNewsInfo[row][column] = $(data).filter("#info")[0].textContent;
-			}});
-		}
-	}
-}
 //Add the open class to an element
 function openId(...idName) {
 	var x;
