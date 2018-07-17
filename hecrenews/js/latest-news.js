@@ -51,14 +51,14 @@ $(function() {
 		}
 	);
 	//Keep author's bio showing when hovering on the bio
-	$(".news-author").hover(
-		function() {
+	$(".news-author").on({
+		mouseenter: function() {
 			$(this).addClass("open");
 		},
-		function() {
+		mouseleave: function() {
 			$(this).removeClass("open");
 		}
-	);
+	});
 });
 //Add the open class to an element
 function openId(...idName) {
