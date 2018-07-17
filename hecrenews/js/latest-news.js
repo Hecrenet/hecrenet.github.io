@@ -48,7 +48,7 @@ $(function() {
 	$($(".news-card-info li:first-child")[0]).hover(
 	function() {
 		var x = $(this).parentsUntil(".news-card");
-		console.log(x[1]);
+		$(x[1]).children(".news-author").addClass("open");
 	}, function() {
 	}
 );
