@@ -41,14 +41,15 @@ $(function() {
 		$(".news-card")[i].style.animationDelay = String((i + 1)/4) + "s";
 	}
 	//Show the author's bio on hover
-	$(document).on({mouseenter, ".news-card-info li:first-child", function(){
-		var x = $(this).parentsUntil(".news-card"); 
-		$(x[1]).children(".news-author").addClass("open");
-	}});
-	$(document).on({mouseleave, ".news-card-info li:first-child", function(){
-		var x = $(this).parentsUntil(".news-card"); 
-		$(x[1]).children(".news-author").removeClass("open");
-	}});
+	$(document).on({
+		mouseenter: function() {
+			var x = $(this).parentsUntil(".news-card"); 
+			$(x[1]).children(".news-author").addClass("open");
+		}, mouseleave: function() {
+			var x = $(this).parentsUntil(".news-card");
+			$(x[1]).children(".news-author").removeClass("open");
+		}
+	}, ".news-card-info li:first-child");
 	/*$($(".news-card-info li:first-child")[0]).hover(
 		function() {
 			var x = $(this).parentsUntil(".news-card");
@@ -59,8 +60,13 @@ $(function() {
 		}
 	);*/
 	//Keep author's bio showing when hovering on the bio
-	$(document).on({mouseenter, ".news-author", function(){$(this).addClass("open");}});
-	$(document).on({mouseleave, ".news-author", function(){$(this).removeClass("open");}});
+	$(document).on({
+		mouseenter: function() {
+			$(this).addClass("open");
+		}, mouseleave: function() {
+			$(this).removeClass("open");
+		}
+	}, ".news-author");
 	/*$(".news-author").on({
 		mouseenter: function() {
 			$(this).addClass("open");
