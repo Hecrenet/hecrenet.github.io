@@ -1,6 +1,6 @@
 //This is the only thing you change, or you might break the Hecrenews (unless your Arjvik, but the code shouldn't need changing)
 var newsLinks = [
-	["/hecrenews/nothing.html", "/hecrenews/nothing.html", "/hecrenews/nothing.html", "/hecrenews/nothing.html", "/hecrenews/nothing.html"], //New News [0][x]
+	["/hecrenews/template.html", "/hecrenews/template.html", "/hecrenews/template.html", "/hecrenews/template.html", "/hecrenews/template.html"], //New News [0][x]
 	["/hecrenews/nothing.html", "/hecrenews/nothing.html", "/hecrenews/nothing.html", "/hecrenews/nothing.html", "/hecrenews/nothing.html"], //Mundane [1][x]
 	["/hecrenews/nothing.html", "/hecrenews/nothing.html", "/hecrenews/nothing.html", "/hecrenews/nothing.html", "/hecrenews/nothing.html"], //Gossip [2][x]
 	["/hecrenews/nothing.html", "/hecrenews/nothing.html", "/hecrenews/nothing.html", "/hecrenews/nothing.html", "/hecrenews/nothing.html"], //Political [3][x]
