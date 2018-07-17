@@ -19,7 +19,7 @@ function addCardNews(divName, link) {
 	$.get(link, function(data){
 		var authorImg, pubDate, pubTime, authorBio, articleTitle, articlePreview;
 		//Get the information from the author page (async false so no variable errors)
-		var authorLink = $(data).filter("#author-link")[0].innerHTML;
+		var authorLink = $(data).find("#author-link")[0].innerHTML;
 		$.ajax({url: authorLink, type: "get", async: false, success: function(data){
 			authorImg = $(data).filter("img")[0].src;
 			console.log(authorImg);
