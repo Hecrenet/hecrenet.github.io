@@ -27,9 +27,9 @@ function addCardNews(divName, link) {
 		pubTime = $(data).find("#time")[0].innerHTML;
 		articleTitle = $(data).find("#title")[0].innerHTML;
 		articlePreview = $(data).find("#preview")[0].innerHTML;
+		//Create the card
+		$(divName).append("<div class='news-card'><div class='news-card-info'><ul><li><img src=" + authorImg + "></li><li><p>" + pubDate + "</p></li><li><p>" + pubTime + "</p></li></ul>" + authorBio +"</div><a href=" + link + "><img src='/images/birds/legendary/hbird/hbird.jpg'></a><div class='news-card-flavor'><h2><a href=" + link + ">" + articleTitle + "</a></h2><a href='javascript: void(0)' onclick='showNewsInfo(this)'><h2>&#x2193</h2></a><div class='news-card-preview'><p>" + articlePreview + "</p></div></div></div>");
 	});
-	//Create the card
-	$(divName).append("<div class='news-card'><div class='news-card-info'><ul><li><img src=" + authorImg + "></li><li><p>" + pubDate + "</p></li><li><p>" + pubTime + "</p></li></ul>" + authorBio +"</div><a href=" + link + "><img src='/images/birds/legendary/hbird/hbird.jpg'></a><div class='news-card-flavor'><h2><a href=" + link + ">" + articleTitle + "</a></h2><a href='javascript: void(0)' onclick='showNewsInfo(this)'><h2>&#x2193</h2></a><div class='news-card-preview'><p>" + articlePreview + "</p></div></div></div>");
 }
 
 //FUNCTIONS THAT GET USED
