@@ -36,11 +36,10 @@ body {margin: 0; background-color: #f0f0f0}
 .news-card-preview p {margin: 11px;}
 
 /* ARTICLE */ 
-#article {font-family: sans-serif; width: 70%; margin: 2%; border: 3px solid #3a3a3a; border-radius: 5px;}
-#articleInfo {overflow: hidden; border-bottom: 3px solid #3a3a3a; padding: 5px; color: #3a3a3a}
-#articleInfo img {display: block; width: 80px; height: 80px; border-radius: 50%; border: 2px solid #3a3a3a; float: left}
-#articleAuthor {float: left; margin-left: 10px}
+#articleInfo {overflow: hidden; padding: 5px; color: #3a3a3a; background-color: #fff; box-shadow: 0 3px 5px #ddd; font-family: sans-serif;}
+#articleInfo h1 {margin: 10px; max-width: 100%;}
 #articleTime {float: right; margin-right: 10px; text-align: right;}
+#article {font-family: sans-serif; width: 70%; margin: 2%; border: 3px solid #3a3a3a; border-radius: 5px;}
 
 /* FOOTER */
 #footer {color: #fff; background-color: #3a3a3a; font-family: sans-serif; width: 100%; clear: both; padding: 5px; position: relative; top: 100px;}
