@@ -21,16 +21,14 @@ function addCardNews(divName, link) {
 		var authorLink = $(data).find("#author-link")[0].innerHTML;
 		$.ajax({url: authorLink, type: "get", async: false, success: function(data){
 			authorImg = $(data).filter("img")[0].src;
-			authorBio = $(data).filter(".news-author")[0];
-			console.log(authorBio);
-			console.log(String(authorBio));
+			authorBio = $(data).filter(".author-bio-parent")[0].innerHTML;
 		}});
 		pubDate = $(data).find("#date")[0].innerHTML;
 		pubTime = $(data).find("#time")[0].innerHTML;
 		articleTitle = $(data).find("#title")[0].innerHTML;
 		articlePreview = $(data).find("#preview")[0].innerHTML;
 		//Create the card
-		$(divName).append("<div class='news-card'><div class='news-card-info'><ul><li><img src=" + authorImg + "></li><li><p>" + pubDate + "</p></li><li><p>" + pubTime + "</p></li></ul>" + String(authorBio) +"</div><a href=" + link + "><img src='/images/birds/legendary/hbird/hbird.jpg'></a><div class='news-card-flavor'><h2><a href=" + link + ">" + articleTitle + "</a></h2><a href='javascript: void(0)' onclick='showNewsInfo(this)'><h2>&#x2193</h2></a><div class='news-card-preview'><p>" + articlePreview + "</p></div></div></div>");
+		$(divName).append("<div class='news-card'><div class='news-card-info'><ul><li><img src=" + authorImg + "></li><li><p>" + pubDate + "</p></li><li><p>" + pubTime + "</p></li></ul>" + authorBio +"</div><a href=" + link + "><img src='/images/birds/legendary/hbird/hbird.jpg'></a><div class='news-card-flavor'><h2><a href=" + link + ">" + articleTitle + "</a></h2><a href='javascript: void(0)' onclick='showNewsInfo(this)'><h2>&#x2193</h2></a><div class='news-card-preview'><p>" + articlePreview + "</p></div></div></div>");
 	});
 }
 
