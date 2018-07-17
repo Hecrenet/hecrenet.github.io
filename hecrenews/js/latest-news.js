@@ -47,8 +47,8 @@ $(function() {
 	//Show the author's bio on hover
 	$($(".news-card-info li:first-child")[0]).hover(
 	function() {
-		var x = $(this).parentsUntil(".news-card-info");
-		console.log(x);
+		var x = $(this).parentsUntil(".news-card");
+		console.log(x[1]);
 	}, function() {
 	}
 );
