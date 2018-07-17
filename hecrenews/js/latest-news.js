@@ -26,13 +26,13 @@ function addCardNews(divName, link) {
 			authorBio = $(data).filter(".news-author")[0];
 			console.log(authorBio);
 		}});
-		pubDate = $(data).filter("#date")[0].innerHTML;
+		pubDate = $(data).find("#date")[0].innerHTML;
 		console.log(pubDate);
-		pubTime = $(data).filter("#time")[0].innerHTML;
+		pubTime = $(data).find("#time")[0].innerHTML;
 		console.log(pubTime);
-		articleTitle = $(data).filter("#title")[0].innerHTML;
+		articleTitle = $(data).find("#title")[0].innerHTML;
 		console.log(articleTitle);
-		articlePreview = $(data).filter("#preview")[0].innerHTML;
+		articlePreview = $(data).find("#preview")[0].innerHTML;
 		console.log(articlePreview);
 	});			  	
 }
