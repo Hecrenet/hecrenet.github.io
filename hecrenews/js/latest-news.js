@@ -51,6 +51,8 @@ $(function() {
 		}
 	);
 	//Keep author's bio showing when hovering on the bio
+	$(document).on({mouseenter, ".newsauthor", function(){$(this).addClass("open");}});
+	$(document).on({mouseleave, ".newsauthor", function(){$(this).removeClass("open");}});
 	$(".news-author").on({
 		mouseenter: function() {
 			$(this).addClass("open");
