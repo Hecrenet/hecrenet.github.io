@@ -50,6 +50,8 @@ $(function() {
 		var x = $(this).parentsUntil(".news-card");
 		$(x[1]).children(".news-author").addClass("open");
 	}, function() {
+		var x = $(this).parentsUntil(".news-card");
+		$(x[1]).children(".news-author").removeClass("open");
 	}
 );
 });
