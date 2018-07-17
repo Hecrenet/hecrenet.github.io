@@ -18,12 +18,9 @@ var newNewsInfo = [["","","","",""],["","","","",""],["","","","",""],["","","",
 addTitlesAndImagesAndInfo();
 
 //FUNCTIONS THAT GET CALLED FROM HTML
-function addCardNews(category, title, divName,) {
-	if (title != "") {
-		$(divName).append("<h1>" + title + "</h1>");
-	}
+function addCardNews(divName) {
 	for (var i = 0; i < newsLinks[0].length; i++) {
-		$(divName).append("<div class='news-card'><div class='newsImg'><div class='info'><a class='needLink'>Go to article</a></div><a class='needLink'><img class='needImage'></a></div><div class='newsTxt'><a class='needTxt needLink'></p></div></div>");
+		$(divName).append("");
 	}
 	for (var i = 0; i < newsLinks[0].length; i++) {
 		$(divName + " .needImage")[i].src = newNewsImages[category][i];
