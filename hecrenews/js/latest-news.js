@@ -37,12 +37,21 @@ function addCardNews(category, title, divName,) {
 }
 
 //FUNCTIONS THAT GET USED
-//Load in the Navigation Bar
+//Functions that need to wait for DOM elements to load
 $(function() {
+	//Load in the Navigation Bar
 	$("#navPlaceholder").load("/hecrenews/nav.html");
 	for (var i = 0; i < $(".news-card").length; i++) {
 		$(".news-card")[i].style.animationDelay = String((i + 1)/4) + "s";
 	}
+	//Show the author's bio on hover
+	$(".news-card-info li:first-child")[0].hover(
+	function() {
+		var x = $(this).parentsUntil(".news-card-info");
+		console.log(x);
+	}, function() {
+	}
+);
 });
 //Fill in the arrays
 function addTitlesAndImagesAndInfo() {
@@ -70,11 +79,3 @@ function showNewsInfo(object) {
 	if (x[2].className == "news-card-preview") {x[2].className += " open"; object.innerHTML = "<h2>&#x2191</h2>";} else {x[2].className = "news-card-preview"; object.innerHTML = "<h2>&#x2193</h2>"};
 	
 }
-//Show the author's bio on hover
-$(".news-card-info li:first-child")[0].hover(
-	function() {
-		var x = $(this).parentsUntil(".news-card-info");
-		console.log(x);
-	}, function() {
-	}
-);
