@@ -18,7 +18,7 @@ body {margin: 0; background-color: #f0f0f0}
 
 /* CARDS */
 /* News Cards */
-.news-card {margin: 2%; background-color: #fff; border-radius: 4px; box-shadow: 3px 3px 5px #ddd; overflow: hidden; font-family: sans-serif; width: auto; color: #3a3a3a; animation: zoomIn 0.5s ease none}
+.news-card {margin: 2%; background-color: #fff; border-radius: 4px; box-shadow: 3px 3px 5px #ddd; overflow: hidden; font-family: sans-serif; width: auto; color: #3a3a3a; animation: zoomInAndSpin 0.5s ease none}
 .news-card-info {position: relative;}
 .news-card-info ul {list-style: none; margin: 0; padding: 0; overflow: hidden; max-height: 60px}
 .news-card-info li {display: inline; overflow: hidden; float: left;}
@@ -57,7 +57,7 @@ body {margin: 0; background-color: #f0f0f0}
 @keyframes slideUp {0%{top: 200px; opacity: 0;} 100%{top: 0; opacity: 1;}}
 @keyframes fadeIn {0%{opacity: 0} 100%{ opacity: 0.8}}
 @keyframes slideRight {0%{left: 0} 100%{left: 80px}}
-@keyframes zoomIn {0%{transform: scale(0.1, 0.1) rotate(10deg)} 100%{transform: scale(1.1, 1.1) rotate(360deg)}}
+@keyframes zoomInAndSpin {0%{transform: scale(0.1, 0.1) rotate(10deg)} 100%{transform: scale(1.1, 1.1) rotate(360deg)}}
 
 /* RESPONSIVE WEB DESIGN */
 /* Portrait Tablets and Big Landscape Phones */
