@@ -57,7 +57,7 @@ body {margin: 0; background-color: #f0f0f0}
 @keyframes slideUp {0%{top: 200px; opacity: 0;} 100%{top: 0; opacity: 1;}}
 @keyframes slideUpRotate {0%{top: 500px; opacity: 0; transform: rotate(-90deg);} 100%{top: 0; opacity: 1; transform: rotate(0deg);}}
 @keyframes come-in {to {transform: translateY(0);}}
-@keyframes fadeIn {0%{opacity: 0} 100%{ opacity: 1}}
+@keyframes fadeIn {0%{opacity: 0} 100%{ opacity: 0.8}}
 @keyframes slideRight {0%{left: 0} 100%{left: 80px}}
 
 /* RESPONSIVE WEB DESIGN */
