@@ -42,7 +42,7 @@ body {margin: 0; background-color: #f0f0f0}
 #author-placeholder .news-author {border: none; opacity: 1; position: absolute; top: 152px; left: 0;}
 #author-placeholder:hover .news-author {display: block}
 #articleTime {float: right; margin-right: 10px; text-align: right;}
-#article {font-family: sans-serif; width: 70%; margin: 2%; border: 3px solid #3a3a3a; border-radius: 5px;}
+#article {font-family: sans-serif; width: 70%; margin: 2% 0% 0% 15%;}
 
 /* FOOTER */
 #footer {color: #fff; background-color: #3a3a3a; font-family: sans-serif; width: 100%; clear: both; padding: 5px; position: relative; top: 100px;}
