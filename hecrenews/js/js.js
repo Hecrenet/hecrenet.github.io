@@ -73,3 +73,13 @@ function showNewsInfo(object) {
 	if (x[2].className == "news-card-preview") {x[2].className += " open"; object.innerHTML = "<h2>&#x2191</h2>";} else {x[2].className = "news-card-preview"; object.innerHTML = "<h2>&#x2193</h2>"};
 	
 }
+//Load in the author stuff for an article
+function loadAuthorIntoArticle() {
+	var authorLink = document.getElementById("author-link").innerHTML;
+	var authorImg, authorBio;
+	$.ajax({url: authorLink, type: "get", async: false, success: function(data){
+		authorImg = $(data).filter("img")[0].src;
+		authorBio = $(data).filter(".author-bio-parent")[0].innerHTML;
+	}});
+	$("#author-placeholder").append("<img src=" + authorImg + ">" + authorBio);
+}
