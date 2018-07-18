@@ -38,6 +38,9 @@ body {margin: 0; background-color: #f0f0f0}
 /* ARTICLE */ 
 #articleInfo {overflow: hidden; padding: 5px; color: #3a3a3a; background-color: #fff; box-shadow: 0 3px 5px #ddd; font-family: sans-serif;}
 #articleInfo h1 {margin: 10px; max-width: 100%;}
+#author-placeholder img {border-radius: 50%; width: 80px; display: block; float: left}
+#author-placeholder .news-author {border: none; opacity: 1; position: absolute; top: 152px; left: 0;}
+#author-placeholder:hover .news-author {display: block}
 #articleTime {float: right; margin-right: 10px; text-align: right;}
 #article {font-family: sans-serif; width: 70%; margin: 2%; border: 3px solid #3a3a3a; border-radius: 5px;}
 
