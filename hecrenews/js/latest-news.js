@@ -50,15 +50,6 @@ $(function() {
 			$(x[1]).children(".news-author").removeClass("open");
 		}
 	}, ".news-card-info li:first-child");
-	/*$($(".news-card-info li:first-child")[0]).hover(
-		function() {
-			var x = $(this).parentsUntil(".news-card");
-			$(x[1]).children(".news-author").addClass("open");
-		}, function() {
-			var x = $(this).parentsUntil(".news-card");
-			$(x[1]).children(".news-author").removeClass("open");
-		}
-	);*/
 	//Keep author's bio showing when hovering on the bio
 	$(document).on({
 		mouseenter: function() {
@@ -67,14 +58,6 @@ $(function() {
 			$(this).removeClass("open");
 		}
 	}, ".news-author");
-	/*$(".news-author").on({
-		mouseenter: function() {
-			$(this).addClass("open");
-		},
-		mouseleave: function() {
-			$(this).removeClass("open");
-		}
-	});*/
 });
 //Add the open class to an element
 function openId(...idName) {
