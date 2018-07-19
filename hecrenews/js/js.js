@@ -107,7 +107,7 @@ function changeFontsize(sign) {
 	} else if (sign == "negative" && currentFontsize > 16) {
 		setCookie("fontsize", String(--currentFontsize), 30);
 	}
-	$($("#font-size:nth-child(2)")[0]).html(String(currentFontsize) + "px");
+	$($("#font-size h1:nth-child(2)")[0]).html(String(currentFontsize) + "px");
 	$("#article p").css("font-size", String(currentFontsize) + "px");
 }
 //Initialize Font Setting
@@ -120,7 +120,7 @@ function initFontSetting() {
 		setCookie("fontsize", currentFontsize, 30);
 		$("#article p").css("font-size", currentFontsize + "px");
 	}
-	$($("#font-size:nth-child(2)")[0]).html(getCookie("fontsize") + "px");
+	$($("#font-size h1:nth-child(2)")[0]).html(getCookie("fontsize") + "px");
 }
 
 /* COOKIE FUNCTIONS */
