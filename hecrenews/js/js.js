@@ -61,10 +61,19 @@ $(function() {
 });
 //Add the open class to an element
 function openId(...idName) {
-	var x;
-	for (var i = 0; i < idName.length; i++) {
-		x = $(idName[i])[0];
-		if (x.className == "") {x.className = "open";} else {x.className = "";}
+	var openClass = $(".open");
+	if (openClass.length >= 0) {
+		var x;
+		for (var i = 0; i < idName.length; i++) {
+			x = $(idName[i])[0];
+			$(x).addClass("open");
+		}
+	} else {
+		var x;
+		for (var i = 0; i < openClass.length; i++) {
+			x = openClass[i];
+			$(x).removeClass("open");
+		}
 	}
 }
 //Show the news 'info' (more like preview) of the News Card that called this function
