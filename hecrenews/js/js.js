@@ -65,7 +65,10 @@ $(function() {
 //Add the open class to elements in parameter, or remove all open classes
 function openId(buttonId, ...idName) {
 	if (buttonId == 0) {
-		
+		var x;
+	for (var i = 0; i < idName.length; i++) {
+		x = $(idName[i])[0];
+		if (x.className == "") {x.className = "open";} else {x.className = "";}
 	} else if (navButtonNum == 0) {
 		navButtonNum = buttonId;
 		var x;
