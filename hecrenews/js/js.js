@@ -12,9 +12,17 @@ var newsLinks = [
 ];
 /* UNDER HERE IS THE SHTUFF YOU DON'T TOUCH */
 
-//Those sweet, sweet cookies
-setCookie("fontsize", "16", 30);
-console.log(getCookie("fontsize"));
+/* Those sweet, sweet cookies */
+//Font size
+if (getCookie("fontsize") == "") {
+	setCookie("fontsize", "16", 30);
+} else {
+	var currentFontsize = getCookie("fontsize");
+	//Setting cookie so that, in theory, it never expires
+	setCookie("fontsize", currentFontsize, 30);
+	$("#article p").style.fontSize = currentFontsize + "px";
+}
+
 //Global Variables
 var navButtonNum = 0;
 
@@ -95,6 +103,16 @@ function showNewsInfo(object) {
 	var x = object.parentElement.children;
 	if (x[2].className == "news-card-preview") {x[2].className += " open"; object.innerHTML = "<h2>&#x2191</h2>";} else {x[2].className = "news-card-preview"; object.innerHTML = "<h2>&#x2193</h2>"};
 	
+}
+
+/* SETTING FUNCTIONS */
+//Font size
+function changeFontsize(sign) {
+	var currentFontsize = Number(getCookie("fontsize"));
+	if (sign == "positive" && currentFontsize < 32) {
+		currentFontsize++;
+		setCookie("")
+	}
 }
 
 /* COOKIE FUNCTIONS */
