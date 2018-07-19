@@ -26,8 +26,8 @@ body {margin: 0; background-color: #f0f0f0}
 #settings-card.open {display: block}
 .setting-div.open {display: block}
 /* Font Size */
-#font-size {padding: 10px}
-#font-size h1 {display: inline;}
+#font-size {padding: 10px 0 10px calc(50% - 75px);}
+#font-size h1 {display: inline; margin-right: 5px; margin-left: 5px;}
 #font-size h1:not(:nth-child(2)) {cursor: pointer;}
 
 
