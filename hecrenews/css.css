@@ -24,6 +24,10 @@ body {margin: 0; background-color: #f0f0f0}
 .setting-div {display: none; border-top: 1px solid #cecece}
 #settings-card.open {display: block}
 .setting-div.open {display: block}
+/* Font Size */
+#font-size {padding: 10px}
+#font-size h1 {display: inline;}
+#font-size h1:not(:nth-child(2)) {cursor: pointer;}
 
 
 /* PAGE CONTENT */
