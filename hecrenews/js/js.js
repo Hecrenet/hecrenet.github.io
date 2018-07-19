@@ -14,14 +14,7 @@ var newsLinks = [
 
 /* Those sweet, sweet cookies */
 //Font size
-if (getCookie("fontsize") == "") {
-	setCookie("fontsize", "16", 30);
-} else {
-	var currentFontsize = getCookie("fontsize");
-	//Setting cookie so that, in theory, it never expires
-	setCookie("fontsize", currentFontsize, 30);
-	$("#article p").css("font-size", currentFontsize + "px");
-}
+initFontSetting();
 
 //Global Variables
 var navButtonNum = 0;
@@ -110,9 +103,24 @@ function showNewsInfo(object) {
 function changeFontsize(sign) {
 	var currentFontsize = Number(getCookie("fontsize"));
 	if (sign == "positive" && currentFontsize < 32) {
-		currentFontsize++;
-		setCookie("")
+		setCookie("fontsize", String(++currentFontsize), 30);
+	} else if (sign == "negative" && currentFontsize > 16) {
+		setCookie("fontsize", String(--currentFontsize), 30);
 	}
+	$("#font-size:nth-child(2)").html(String(currentFontsize) + "px");
+	$("#article p").css("font-size", String(currentFontsize) + "px");
+}
+//Initialize Font Setting
+function initFontSetting() {
+	if (getCookie("fontsize") == "") {
+		setCookie("fontsize", "16", 30);
+	} else {
+		var currentFontsize = getCookie("fontsize");
+		//Setting cookie so that, in theory, it never expires (If user constantly returns to page)
+		setCookie("fontsize", currentFontsize, 30);
+		$("#article p").css("font-size", currentFontsize + "px");
+	}
+	$("#font-size:nth-child(2)").html(getCookie("fontsize") + "px");
 }
 
 /* COOKIE FUNCTIONS */
