@@ -15,10 +15,12 @@ body {margin: 0; background-color: #f0f0f0}
 #nav-links a:hover {background-color: #2a2a2a}
 #nav-links.open {display: block; animation: slideRight 0.5s ease forwards;}
 /* Settings Navigation */
-#settings-card {display: none; position: fixed; top: 25vh; left: 25vw; background-color: #fff; z-index: 2 !important; border-radius: 4px;}
-#settings-card ul {background-color: inherit; width: 50%; height: auto;}
+#settings-card {display: none; position: fixed; top: 25vh; left: 25vw; background-color: #fff; z-index: 2 !important; border-radius: 4px; width: 50vw; border: 1px solid #cecece}
+#settings-card ul {all: initial; all: unset; font-family: sans-serif;}
+#settings-card li {padding: 10px 0 10px 0; width: 100%; border-bottom: 1px solid #cecece;}
+#settings-card li:first-child {text-align: center;}
 #settings-card .setting {display: none;}
-#settings-card.open {display: block;}
+#settings-card.open {display: table}
 
 
 /* PAGE CONTENT */
