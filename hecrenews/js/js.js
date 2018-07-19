@@ -12,6 +12,9 @@ var newsLinks = [
 ];
 //UNDER HERE IS THE SHTUFF YOU DON'T TOUCH
 
+//Global Variables
+var navButtonNum = 0;
+
 //FUNCTIONS THAT GET CALLED FROM HTML
 function addCardNews(divName, link) {
 	//Add the information
@@ -60,18 +63,21 @@ $(function() {
 	}, ".news-author");
 });
 //Add the open class to elements in parameter, or remove all open classes
-function openId(...idName, buttonId) {
-	var openClass = $(".open");
-	if (openClass.length >= 0) {
+function openId(buttonId, ...idName) {
+	if (buttonId == 0) {
+		
+	} else if (navButtonNum == 0) {
+		navButtonNum = buttonId;
 		var x;
 		for (var i = 0; i < idName.length; i++) {
-			x = $(idName[i])[0];
+			var x = $(idName[i])[0];
 			$(x).addClass("open");
 		}
-	} else {
+	} else if (buttonId == navButtonNum) {
+		navButtonNum = 0;
 		var x;
-		for (var i = 0; i < openClass.length; i++) {
-			x = openClass[i];
+		for (var i = 0; i < idName.length; i++) {
+			var x = $(idName[i])[0];
 			$(x).removeClass("open");
 		}
 	}
