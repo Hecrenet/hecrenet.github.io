@@ -12,10 +12,6 @@ var newsLinks = [
 ];
 /* UNDER HERE IS THE SHTUFF YOU DON'T TOUCH */
 
-/* Those sweet, sweet cookies */
-//Font size
-initFontSetting();
-
 //Global Variables
 var navButtonNum = 0;
 
@@ -62,6 +58,9 @@ $(function() {
 	
 	//Keep author's bio showing when hovering on the bio
 	$(document).on({mouseenter: function() {$(this).addClass("open");}, mouseleave: function() {$(this).removeClass("open");}}, ".news-author");
+	
+	//Literally functions
+	initFontSetting();
 });
 
 //Add the open class to elements in parameter, or remove all open classes
