@@ -64,7 +64,7 @@ $(function() {
 function openId(buttonId, element, ...idName) {
 	//Used for a setting
 	if (buttonId == 0) {
-		if ($(this).hasClass("active-setting")) {
+		if ($(element).hasClass("active-setting")) {
 			$(element).removeClass("active-setting");
 			var x;
 			for (var i = 0; i < idName.length; i++) {
@@ -81,22 +81,10 @@ function openId(buttonId, element, ...idName) {
 		}
 	/* The rest of this code is used for the navigation bar */
 	//Check if there is nothing opened, then open
-	} else if (navButtonNum == 0) {
-		navButtonNum = buttonId;
-		var x;
-		for (var i = 0; i < idName.length; i++) {
-			var x = $(idName[i])[0];
-			$(x).addClass("open");
-		}
+	} else if (navButtonNum == 0) {navButtonNum = buttonId; var x; for (var i = 0; i < idName.length; i++) {var x = $(idName[i])[0]; $(x).addClass("open");}
+
 	//Check if the same button that called the function already opened something, then close
-	} else if (buttonId == navButtonNum) {
-		navButtonNum = 0;
-		var x;
-		for (var i = 0; i < idName.length; i++) {
-			var x = $(idName[i])[0];
-			$(x).removeClass("open");
-		}
-	}
+	} else if (buttonId == navButtonNum) {navButtonNum = 0; var x; for (var i = 0; i < idName.length; i++) {var x = $(idName[i])[0]; $(x).removeClass("open");}}
 }
 
 //Show the news 'info' (more like preview) of the News Card that called this function
