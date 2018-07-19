@@ -14,9 +14,11 @@ body {margin: 0; background-color: #f0f0f0}
 #nav-links a {font-size: 24px; margin: 0; padding: 10px 5px;}
 #nav-links a:hover {background-color: #2a2a2a}
 #nav-links.open {display: block; animation: slideRight 0.5s ease forwards;}
-/* Setting Navigation */
-#settings-card {display: none; position: fixed; top: 50vh; left: 50vw; background-color: #fff; z-index: 2 !imortant; border-radius: 4px;}
+/* Settings Navigation */
+#settings-card {display: none; position: fixed; top: 25vh; left: 25vw; background-color: #fff; z-index: 2 !important; border-radius: 4px;}
+#settings-card ul {background-color: inherit; width: 50%; height: auto;}
 #settings-card.open {display: block;}
+
 
 /* PAGE CONTENT */
 #page-content {margin-left: 80px;  position: relative; overflow: hidden;}
