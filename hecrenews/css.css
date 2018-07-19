@@ -22,7 +22,7 @@ body {margin: 0; background-color: #f0f0f0}
 #settings-card li:first-child {text-align: center;}
 #settings-card li:last-child {border-bottom: none; }
 #settings-card li.active-setting {background-color: #2a2a2a; color: #fff}
-.setting-div {display: none; border-top: 1px solid #cecece}
+.setting-div {display: none; border-top: 1px solid #cecece; font-family: sans-serif;}
 #settings-card.open {display: block}
 .setting-div.open {display: block}
 /* Font Size */
