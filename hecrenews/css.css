@@ -17,9 +17,10 @@ body {margin: 0; background-color: #f0f0f0}
 /* Settings Navigation */
 #settings-card {display: none; position: fixed; top: 25vh; left: 25vw; background-color: #fff; z-index: 2 !important; border-radius: 4px; width: 50vw; border: 1px solid #cecece}
 #settings-card ul {all: initial; all: unset; font-family: sans-serif;}
-#settings-card li {padding: 10px 0 10px 0; width: 100%; border-bottom: 1px solid #cecece;}
+#settings-card li {padding: 10px 0 10px 0; width: 100%; border-bottom: 1px solid #cecece; transition: 0.3s}
+#settings-card li:not(:first-child):hover {background-color: #3a3a3a; color: #fff}
 #settings-card li:first-child {text-align: center;}
-#settings-card li:last-child {border-bottom: none;}
+#settings-card li:last-child {border-bottom: none; border-radius: 0 0 4px 4px}
 #settings-card .setting {display: none; border-top: 1px solid #cecece}
 #settings-card.open {display: block}
 
