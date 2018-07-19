@@ -20,7 +20,7 @@ if (getCookie("fontsize") == "") {
 	var currentFontsize = getCookie("fontsize");
 	//Setting cookie so that, in theory, it never expires
 	setCookie("fontsize", currentFontsize, 30);
-	$("#article p").style.fontSize = currentFontsize + "px";
+	$("#article p").css("font-size", currentFontsize + "px");
 }
 
 //Global Variables
