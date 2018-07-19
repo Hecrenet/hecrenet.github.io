@@ -64,13 +64,14 @@ $(function() {
 });
 //Add the open class to elements in parameter, or remove all open classes
 function openId(buttonId, ...idName) {
-	//Usually for a setting
+	//Used for a setting
 	if (buttonId == 0) {
 		var x;
 		for (var i = 0; i < idName.length; i++) {
 			x = $(idName[i])[0];
-			if ($(x).hasClass("open")) {$(x).removeClass("open");} else {$(x).addClass("open");}
+			if ($(x).hasClass("open")) {$(x).removeClass("open");} else {$(x).addClass("open"); $(this).addClass("active-setting");}
 		}
+	/* The rest of this code is used for the navigation bar */
 	//Check if there is nothing opened, then open
 	} else if (navButtonNum == 0) {
 		navButtonNum = buttonId;
