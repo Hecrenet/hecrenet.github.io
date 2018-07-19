@@ -17,6 +17,7 @@ body {margin: 0; background-color: #f0f0f0}
 /* Settings Navigation */
 #settings-card {display: none; position: fixed; top: 25vh; left: 25vw; background-color: #fff; z-index: 2 !important; border-radius: 4px;}
 #settings-card ul {background-color: inherit; width: 50%; height: auto;}
+#settings-card .setting {display: none;}
 #settings-card.open {display: block;}
 
 
