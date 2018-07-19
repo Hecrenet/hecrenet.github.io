@@ -10,12 +10,12 @@ var newsLinks = [
 	["/hecrenews/nothing.html", "/hecrenews/nothing.html", "/hecrenews/nothing.html", "/hecrenews/nothing.html", "/hecrenews/nothing.html"], //Food [7][x]
 	["/hecrenews/nothing.html", "/hecrenews/nothing.html", "/hecrenews/nothing.html", "/hecrenews/nothing.html", "/hecrenews/nothing.html"] //Travel [8][x]
 ];
-//UNDER HERE IS THE SHTUFF YOU DON'T TOUCH
+/* UNDER HERE IS THE SHTUFF YOU DON'T TOUCH */
 
 //Global Variables
 var navButtonNum = 0;
 
-//FUNCTIONS THAT GET CALLED FROM HTML
+/* FUNCTIONS THAT GET CALLED FROM HTML */
 function addCardNews(divName, link) {
 	//Add the information
 	$.get(link, function(data){
@@ -35,7 +35,18 @@ function addCardNews(divName, link) {
 	});
 }
 
-//FUNCTIONS THAT GET USED
+//Load in the author stuff for an article
+function loadAuthorIntoArticle() {
+	var authorLink = document.getElementById("author-link").innerHTML;
+	var authorImg, authorBio;
+	$.ajax({url: authorLink, type: "get", async: false, success: function(data){
+		authorImg = $(data).filter("img")[0].src;
+		authorBio = $(data).filter(".author-bio-parent")[0].innerHTML;
+	}});
+	$("#author-placeholder").append("<img src=" + authorImg + ">" + authorBio);
+}
+
+/* FUNCTIONS THAT GET USED */
 //Functions that need to wait for DOM elements to load
 $(function() {
 	//Load in the Navigation Bar
@@ -43,6 +54,7 @@ $(function() {
 	for (var i = 0; i < $(".news-card").length; i++) {
 		$(".news-card")[i].style.animationDelay = String((i + 1)/4) + "s";
 	}
+	
 	//Show the author's bio on hover
 	$(document).on({
 		mouseenter: function() {
@@ -53,6 +65,7 @@ $(function() {
 			$(x[1]).children(".news-author").removeClass("open");
 		}
 	}, ".news-card-info li:first-child");
+	
 	//Keep author's bio showing when hovering on the bio
 	$(document).on({
 		mouseenter: function() {
@@ -62,6 +75,7 @@ $(function() {
 		}
 	}, ".news-author");
 });
+
 //Add the open class to elements in parameter, or remove all open classes
 function openId(buttonId, ...idName) {
 	//Used for a setting
@@ -100,19 +114,10 @@ function openId(buttonId, ...idName) {
 		}
 	}
 }
+
 //Show the news 'info' (more like preview) of the News Card that called this function
 function showNewsInfo(object) {
 	var x = object.parentElement.children;
 	if (x[2].className == "news-card-preview") {x[2].className += " open"; object.innerHTML = "<h2>&#x2191</h2>";} else {x[2].className = "news-card-preview"; object.innerHTML = "<h2>&#x2193</h2>"};
 	
-}
-//Load in the author stuff for an article
-function loadAuthorIntoArticle() {
-	var authorLink = document.getElementById("author-link").innerHTML;
-	var authorImg, authorBio;
-	$.ajax({url: authorLink, type: "get", async: false, success: function(data){
-		authorImg = $(data).filter("img")[0].src;
-		authorBio = $(data).filter(".author-bio-parent")[0].innerHTML;
-	}});
-	$("#author-placeholder").append("<img src=" + authorImg + ">" + authorBio);
 }
