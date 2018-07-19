@@ -66,10 +66,20 @@ $(function() {
 function openId(buttonId, ...idName) {
 	//Used for a setting
 	if (buttonId == 0) {
-		var x;
-		for (var i = 0; i < idName.length; i++) {
-			x = $(idName[i])[0];
-			if ($(x).hasClass("open")) {$(x).removeClass("open");} else {$(x).addClass("open"); $(this).addClass("active-setting");}
+		if ($(this).hasClass("active-setting")) {
+			$(this).removeClass("active-setting");
+			var x;
+			for (var i = 0; i < idName.length; i++) {
+				x = $(idName[i])[0];
+				$(x).removeClass("open");
+			}
+		} else {
+			$(this).addClass("active-setting");
+			var x;
+			for (var i = 0; i < idName.length; i++) {
+				x = $(idName[i])[0];
+				$(x).addClass("open");
+			}
 		}
 	/* The rest of this code is used for the navigation bar */
 	//Check if there is nothing opened, then open
