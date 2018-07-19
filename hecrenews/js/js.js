@@ -12,6 +12,9 @@ var newsLinks = [
 ];
 /* UNDER HERE IS THE SHTUFF YOU DON'T TOUCH */
 
+//Those sweet, sweet cookies
+setCookie("fontsize", "16", 30);
+console.log(getCookie("fontsize"));
 //Global Variables
 var navButtonNum = 0;
 
@@ -92,4 +95,29 @@ function showNewsInfo(object) {
 	var x = object.parentElement.children;
 	if (x[2].className == "news-card-preview") {x[2].className += " open"; object.innerHTML = "<h2>&#x2191</h2>";} else {x[2].className = "news-card-preview"; object.innerHTML = "<h2>&#x2193</h2>"};
 	
+}
+
+/* COOKIE FUNCTIONS */
+//Courtesy of w3schools (no, we didn't ask permission, plz don't take us down ): ) 
+function setCookie(cname, cvalue, exdays) {
+	var d = new Date();
+	d.setTime(d.getTime() + (exdays*24*60*60*1000));
+	var expires = "expires="+ d.toUTCString();
+	document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/hecrenews/";
+}
+
+function getCookie(cname) {
+	var name = cname + "=";
+	var decodedCookie = decodeURIComponent(document.cookie);
+	var ca = decodedCookie.split(';');
+	for(var i = 0; i <ca.length; i++) {
+		var c = ca[i];
+		while (c.charAt(0) == ' ') {
+			c = c.substring(1);
+		}
+		if (c.indexOf(name) == 0) {
+			return c.substring(name.length, c.length);
+		}
+	}
+	return "";
 }
