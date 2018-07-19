@@ -27,7 +27,7 @@ body {margin: 0; background-color: #f0f0f0}
 .news-card-info li:first-child {max-width: 50px; padding: 5px}
 .news-card-info li p {display: block; padding: 5px;}
 .news-card-info img {border-radius: 50%; display: block;}
-.news-author {display: none; border-top: 1px solid #cecece; border-radius: 0 0 5px 0; padding: 5px; position: absolute; background-color: #fff; top: 60px; width: calc(80% - 12px); opacity: 0.9}
+.news-author {display: none; border-top: 1px solid #cecece; border-radius: 0 0 5px 0; padding: 5px; position: absolute; background-color: #fff; top: 60px; width: calc(80% - 12px); opacity: 0.8; animation: fadeIn 1s ease forwards}
 .news-author.open {display: block}
 .news-card img {display: block; float: left; clear: both; width: 100%;}
 .news-card-flavor {width: 100%}
