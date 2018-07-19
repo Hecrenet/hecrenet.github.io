@@ -21,7 +21,7 @@ body {margin: 0; background-color: #f0f0f0}
 #settings-card li:not(:first-child):hover {background-color: #3a3a3a; color: #fff; cursor: pointer}
 #settings-card li:first-child {text-align: center;}
 #settings-card li:last-child {border-bottom: none; border-radius: 0 0 4px 4px}
-#settings-card .setting {display: none; border-top: 1px solid #cecece}
+.setting-div {display: none; border-top: 1px solid #cecece}
 #settings-card.open {display: block}
 
 
