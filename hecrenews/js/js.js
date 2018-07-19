@@ -59,8 +59,8 @@ $(function() {
 		}
 	}, ".news-author");
 });
-//Add the open class to an element
-function openId(...idName) {
+//Add the open class to elements in parameter, or remove all open classes
+function openId(...idName, buttonId) {
 	var openClass = $(".open");
 	if (openClass.length >= 0) {
 		var x;
