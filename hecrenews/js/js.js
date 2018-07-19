@@ -64,11 +64,14 @@ $(function() {
 });
 //Add the open class to elements in parameter, or remove all open classes
 function openId(buttonId, ...idName) {
+	//Usually for a setting
 	if (buttonId == 0) {
 		var x;
-	for (var i = 0; i < idName.length; i++) {
-		x = $(idName[i])[0];
-		if (x.className == "") {x.className = "open";} else {x.className = "";}
+		for (var i = 0; i < idName.length; i++) {
+			x = $(idName[i])[0];
+			if (x.className == "") {x.className = "open";} else {x.className = "";}
+		}
+	//Check if there is nothing opened, then open
 	} else if (navButtonNum == 0) {
 		navButtonNum = buttonId;
 		var x;
@@ -76,6 +79,7 @@ function openId(buttonId, ...idName) {
 			var x = $(idName[i])[0];
 			$(x).addClass("open");
 		}
+	//Check if the same button that called the function already opened something, then close
 	} else if (buttonId == navButtonNum) {
 		navButtonNum = 0;
 		var x;
