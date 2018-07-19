@@ -3,15 +3,20 @@
 body {margin: 0; background-color: #f0f0f0}
 
 /* NAV */
+/* Main Navigation */
 #nav ul {list-style: none; padding: 0; margin: 0; background-color: #3a3a3a; overflow: auto; position: fixed; height: 100%; font-family: sans-serif; z-index: 3}
 #nav li {width: 80px; overflow: hidden;}
 #nav a {color: #fff !important; text-decoration: none !important; font-size: 32px; display: block; text-align: center; margin-bottom: 10px}
 #nav img {width: 100%; display: block}
+/* Links Navigation */
 #nav-links {position: relative; display: none; background-color: #333 !important; z-index: 2 !important}
 #nav-links li {width: auto}
 #nav-links a {font-size: 24px; margin: 0; padding: 10px 5px;}
 #nav-links a:hover {background-color: #2a2a2a}
 #nav-links.open {display: block; animation: slideRight 0.5s ease forwards;}
+/* Setting Navigation */
+#settings-card {display: none; position: fixed; top: 50vh; left: 50vw; background-color: #fff; z-index: 2 !imortant; border-radius: 4px;}
+#settings-card.open {display: block;}
 
 /* PAGE CONTENT */
 #page-content {margin-left: 80px;  position: relative; overflow: hidden;}
