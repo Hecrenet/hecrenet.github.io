@@ -51,44 +51,28 @@ function loadAuthorIntoArticle() {
 $(function() {
 	//Load in the Navigation Bar
 	$("#navPlaceholder").load("/hecrenews/nav.html");
-	for (var i = 0; i < $(".news-card").length; i++) {
-		$(".news-card")[i].style.animationDelay = String((i + 1)/4) + "s";
-	}
+	for (var i = 0; i < $(".news-card").length; i++) {$(".news-card")[i].style.animationDelay = String((i + 1)/4) + "s";}
 	
 	//Show the author's bio on hover
-	$(document).on({
-		mouseenter: function() {
-			var x = $(this).parentsUntil(".news-card"); 
-			$(x[1]).children(".news-author").addClass("open");
-		}, mouseleave: function() {
-			var x = $(this).parentsUntil(".news-card");
-			$(x[1]).children(".news-author").removeClass("open");
-		}
-	}, ".news-card-info li:first-child");
+	$(document).on({mouseenter: function() {var x = $(this).parentsUntil(".news-card");  $(x[1]).children(".news-author").addClass("open");}, mouseleave: function() {var x = $(this).parentsUntil(".news-card"); $(x[1]).children(".news-author").removeClass("open");}}, ".news-card-info li:first-child");
 	
 	//Keep author's bio showing when hovering on the bio
-	$(document).on({
-		mouseenter: function() {
-			$(this).addClass("open");
-		}, mouseleave: function() {
-			$(this).removeClass("open");
-		}
-	}, ".news-author");
+	$(document).on({mouseenter: function() {$(this).addClass("open");}, mouseleave: function() {$(this).removeClass("open");}}, ".news-author");
 });
 
 //Add the open class to elements in parameter, or remove all open classes
-function openId(buttonId, ...idName) {
+function openId(buttonId, element, ...idName) {
 	//Used for a setting
 	if (buttonId == 0) {
 		if ($(this).hasClass("active-setting")) {
-			$(this).removeClass("active-setting");
+			$(element).removeClass("active-setting");
 			var x;
 			for (var i = 0; i < idName.length; i++) {
 				x = $(idName[i])[0];
 				$(x).removeClass("open");
 			}
 		} else {
-			$(this).addClass("active-setting");
+			$(element).addClass("active-setting");
 			var x;
 			for (var i = 0; i < idName.length; i++) {
 				x = $(idName[i])[0];
