@@ -96,7 +96,7 @@ function showNewsInfo(object) {
 
 /* SETTING FUNCTIONS */
 function createSettings() {
-	initFontSettings();
+	initFontSetting();
 }
 
 //Font size
