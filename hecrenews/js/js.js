@@ -95,6 +95,10 @@ function showNewsInfo(object) {
 }
 
 /* SETTING FUNCTIONS */
+function createSettings() {
+	initFontSettings();
+}
+
 //Font size
 function changeFontsize(sign) {
 	var currentFontsize = Number(getCookie("fontsize"));
