@@ -51,7 +51,9 @@ function loadAuthorIntoArticle() {
 $(function() {
 	/* DYNAMIC LOADING */
 	//Load in the Navigation Bar
-	$("#navPlaceholder").load("/hecrenews/nav.html");
+	$.ajax({url: "/hecrenews/nav.html", type: "get", async: false, success: function(data) {
+		$("#navPlaceholder").load(data);
+	}});
 	
 	/* OTHER FUNCTIONS */
 	//Load all the settings
