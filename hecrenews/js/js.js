@@ -48,10 +48,11 @@ function loadAuthorIntoArticle() {
 
 /* FUNCTIONS THAT GET USED */
 //Functions that need to wait for DOM elements to load
-$(window).bind("load", function() {
-	initFontSetting();
-});
 $(function() {
+	//Load all the settings
+	initFontSetting();
+	$($("#font-size h1:nth-child(2)")[0]).append(getCookie("fontsize") + "px");
+	
 	//Load in the Navigation Bar
 	$("#navPlaceholder").load("/hecrenews/nav.html");
 	for (var i = 0; i < $(".news-card").length; i++) {$(".news-card")[i].style.animationDelay = String((i + 1)/4) + "s";}
