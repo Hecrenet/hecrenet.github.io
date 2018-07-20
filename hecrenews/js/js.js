@@ -12,11 +12,6 @@ var newsLinks = [
 ];
 /* UNDER HERE IS THE SHTUFF YOU DON'T TOUCH */
 
-//Testing how ripe watermelons can be during hunting season
-window.addEventListener("DOMContentLoaded", function() {
-	initFontSetting();
-}, false);
-
 //Global Variables
 var navButtonNum = 0;
 
