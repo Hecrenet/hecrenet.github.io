@@ -12,6 +12,15 @@ var newsLinks = [
 ];
 /* UNDER HERE IS THE SHTUFF YOU DON'T TOUCH */
 initFontSetting();
+if (getCookie("fontsize") == "") {
+		setCookie("fontsize", "16", 30);
+	} else {
+		var currentFontsize = getCookie("fontsize");
+		//Setting cookie so that, in theory, it never expires (If user constantly returns to page)
+		setCookie("fontsize", currentFontsize, 30);
+		$("#article p").css("font-size", currentFontsize + "px");
+	}
+	$($("#font-size h1:nth-child(2)")[0]).html(getCookie("fontsize") + "px");
 //Global Variables
 var navButtonNum = 0;
 
