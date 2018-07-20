@@ -52,7 +52,6 @@ $(function() {
 	/* DYNAMIC LOADING */
 	//Load in the Navigation Bar
 	$("#navPlaceholder").load("/hecrenews/nav.html");
-	for (var i = 0; i < $(".news-card").length; i++) {$(".news-card")[i].style.animationDelay = String((i + 1)/4) + "s";}
 	
 	/* OTHER FUNCTIONS */
 	//Load all the settings
@@ -124,7 +123,7 @@ function initFontSetting() {
 		setCookie("fontsize", currentFontsize, 30);
 		$("#article p").css("font-size", currentFontsize + "px");
 	}
-	document.querySelector("#font-size h1:nth-child(2)").innerHTML = getCookie("fontsize") + "px";
+	$($("#font-size h1:nth-child(2)")[0]).html(getCookie("fontsize") + "px");
 }
 
 /* COOKIE FUNCTIONS */
