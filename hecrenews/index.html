@@ -14,13 +14,18 @@
 	</div>
 	<div id="page-content">
 		<script type="text/javascript">
-			addCardNews("#page-content", 
+			/*addCardNews("#page-content", 
 				    newsLinks[0][0],
 				    newsLinks[0][1],
 				    newsLinks[0][2],
 				    newsLinks[0][3],
 				    newsLinks[0][4],
-				   );
+				   );*/
+
+			for (var i = 0; i < newLinks.length; i++) {
+				addCardNews("#page-content", newsLinks[0][i])
+			}
+
 		</script>
 	</div>
 </body>
