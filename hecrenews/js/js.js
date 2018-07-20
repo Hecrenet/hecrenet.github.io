@@ -11,7 +11,7 @@ var newsLinks = [
 	["/hecrenews/nothing.html", "/hecrenews/nothing.html", "/hecrenews/nothing.html", "/hecrenews/nothing.html", "/hecrenews/nothing.html"] //Travel [8][x]
 ];
 /* UNDER HERE IS THE SHTUFF YOU DON'T TOUCH */
-
+initFontSetting();
 //Global Variables
 var navButtonNum = 0;
 
@@ -50,7 +50,7 @@ function loadAuthorIntoArticle() {
 //Functions that need to wait for DOM elements to load
 $(function() {
 	//Literally functions
-	initFontSetting();
+	
 	
 	//Load in the Navigation Bar
 	$("#navPlaceholder").load("/hecrenews/nav.html");
