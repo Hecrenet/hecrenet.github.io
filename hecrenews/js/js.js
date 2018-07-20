@@ -50,15 +50,7 @@ function loadAuthorIntoArticle() {
 //Functions that need to wait for DOM elements to load
 $(function() {
 	//Literally functions
-	if (getCookie("fontsize") == "") {
-		setCookie("fontsize", "16", 30);
-		$($("#font-size h1:nth-child(2)")[0]).html(getCookie("fontsize") + "px");
-	} else {
-		var currentFontsize = getCookie("fontsize");
-		setCookie("fontsize", currentFontsize, 30);
-		$("#article p").css("font-size", currentFontsize + "px");
-		$($("#font-size h1:nth-child(2)")[0]).html(currentFontsize + "px");
-	}
+	initFontSetting();
 	
 	//Load in the Navigation Bar
 	$("#navPlaceholder").load("/hecrenews/nav.html");
@@ -121,12 +113,13 @@ function changeFontsize(sign) {
 function initFontSetting() {
 	if (getCookie("fontsize") == "") {
 		setCookie("fontsize", "16", 30);
-		$($("#font-size h1:nth-child(2)")[0]).html(getCookie("fontsize") + "px");
 	} else {
 		var currentFontsize = getCookie("fontsize");
 		setCookie("fontsize", currentFontsize, 30);
 		$("#article p").css("font-size", currentFontsize + "px");
-		$($("#font-size h1:nth-child(2)")[0]).html(currentFontsize + "px");
+	}
+	for (var i = 0; i < 1000; i++) {
+		$($("#font-size h1:nth-child(2)")[0]).html(getCookie("fontsize") + "px");
 	}
 }
 
