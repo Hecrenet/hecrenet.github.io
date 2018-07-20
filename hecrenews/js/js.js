@@ -12,6 +12,11 @@ var newsLinks = [
 ];
 /* UNDER HERE IS THE SHTUFF YOU DON'T TOUCH */
 
+//Testing how ripe watermelons can be during hunting season
+window.addEventListener("DOMContentLoaded", function() {
+	initFontSetting();
+}, false);
+
 //Global Variables
 var navButtonNum = 0;
 
@@ -49,9 +54,6 @@ function loadAuthorIntoArticle() {
 /* FUNCTIONS THAT GET USED */
 //Functions that need to wait for DOM elements to load
 $(function() {
-	//Literally functions
-	initFontSetting();
-	
 	//Load in the Navigation Bar
 	$("#navPlaceholder").load("/hecrenews/nav.html");
 	for (var i = 0; i < $(".news-card").length; i++) {$(".news-card")[i].style.animationDelay = String((i + 1)/4) + "s";}
@@ -118,9 +120,7 @@ function initFontSetting() {
 		setCookie("fontsize", currentFontsize, 30);
 		$("#article p").css("font-size", currentFontsize + "px");
 	}
-	for (var i = 0; i < 1000; i++) {
-		$($("#font-size h1:nth-child(2)")[0]).html(getCookie("fontsize") + "px");
-	}
+	$($("#font-size h1:nth-child(2)")[0]).html(getCookie("fontsize") + "px");
 }
 
 /* COOKIE FUNCTIONS */
