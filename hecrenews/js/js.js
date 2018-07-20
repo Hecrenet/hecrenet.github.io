@@ -49,6 +49,9 @@ function loadAuthorIntoArticle() {
 /* FUNCTIONS THAT GET USED */
 //Functions that need to wait for DOM elements to load
 $(function() {
+	//Literally functions
+	initFontSetting();
+	
 	//Load in the Navigation Bar
 	$("#navPlaceholder").load("/hecrenews/nav.html");
 	for (var i = 0; i < $(".news-card").length; i++) {$(".news-card")[i].style.animationDelay = String((i + 1)/4) + "s";}
@@ -58,9 +61,6 @@ $(function() {
 	
 	//Keep author's bio showing when hovering on the bio
 	$(document).on({mouseenter: function() {$(this).addClass("open");}, mouseleave: function() {$(this).removeClass("open");}}, ".news-author");
-	
-	//Literally functions
-	initFontSetting();
 });
 
 //Add the open class to elements in parameter, or remove all open classes
