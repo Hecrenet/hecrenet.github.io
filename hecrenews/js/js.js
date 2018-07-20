@@ -51,7 +51,6 @@ function loadAuthorIntoArticle() {
 $(function() {
 	//Load all the settings
 	initFontSetting();
-	$($("#font-size h1:nth-child(2)")[0]).append(getCookie("fontsize") + "px");
 	
 	//Load in the Navigation Bar
 	$("#navPlaceholder").load("/hecrenews/nav.html");
