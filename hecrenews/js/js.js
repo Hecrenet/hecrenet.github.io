@@ -19,7 +19,7 @@ var navButtonNum = 0;
 function addCardNews(divName, ...links) {
 	//Add the information
 	for (var i = 0; i < links.length; i++) {
-		$.get(links[i], function(data){
+		$.ajax({url: links[i], type: "get", async: false, success: function(data){
 			var authorImg, pubDate, pubTime, authorBio, articleTitle, articlePreview;
 			//Get the information from the author page (async false so no variable errors)
 			var authorLink = $(data).find("#author-link")[0].innerHTML;
@@ -33,7 +33,7 @@ function addCardNews(divName, ...links) {
 			articlePreview = $(data).find("#preview")[0].innerHTML;
 			//Create the card
 			$(divName).append("<div class='news-card'><div class='news-card-info'><ul><li><img src=" + authorImg + "></li><li><p>" + pubDate + "</p></li><li><p>" + pubTime + "</p></li></ul>" + authorBio +"</div><a href=" + links[i] + "><img src='/images/birds/legendary/hbird/hbird.jpg'></a><div class='news-card-flavor'><h2><a href=" + links[i] + ">" + articleTitle + "</a></h2><a href='javascript: void(0)' onclick='showNewsInfo(this)'><h2>&#x2193</h2></a><div class='news-card-preview'><p>" + articlePreview + "</p></div></div></div>");
-		});
+		}});
 	}
 }
 
