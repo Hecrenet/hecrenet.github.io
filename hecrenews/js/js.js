@@ -16,23 +16,25 @@ var newsLinks = [
 var navButtonNum = 0;
 
 /* FUNCTIONS THAT GET CALLED FROM HTML */
-function addCardNews(divName, link) {
+function addCardNews(divName, ...links) {
 	//Add the information
-	$.get(link, function(data){
-		var authorImg, pubDate, pubTime, authorBio, articleTitle, articlePreview;
-		//Get the information from the author page (async false so no variable errors)
-		var authorLink = $(data).find("#author-link")[0].innerHTML;
-		$.ajax({url: authorLink, type: "get", async: false, success: function(data){
-			authorImg = $(data).filter("img")[0].src;
-			authorBio = $(data).filter(".author-bio-parent")[0].innerHTML;
-		}});
-		pubDate = $(data).find("#date")[0].innerHTML;
-		pubTime = $(data).find("#time")[0].innerHTML;
-		articleTitle = $(data).find("#title")[0].innerHTML;
-		articlePreview = $(data).find("#preview")[0].innerHTML;
-		//Create the card
-		$(divName).append("<div class='news-card'><div class='news-card-info'><ul><li><img src=" + authorImg + "></li><li><p>" + pubDate + "</p></li><li><p>" + pubTime + "</p></li></ul>" + authorBio +"</div><a href=" + link + "><img src='/images/birds/legendary/hbird/hbird.jpg'></a><div class='news-card-flavor'><h2><a href=" + link + ">" + articleTitle + "</a></h2><a href='javascript: void(0)' onclick='showNewsInfo(this)'><h2>&#x2193</h2></a><div class='news-card-preview'><p>" + articlePreview + "</p></div></div></div>");
-	});
+	for (var i = 0; i < links.length; i++) {
+		$.get(links[i], function(data){
+			var authorImg, pubDate, pubTime, authorBio, articleTitle, articlePreview;
+			//Get the information from the author page (async false so no variable errors)
+			var authorLink = $(data).find("#author-link")[0].innerHTML;
+			$.ajax({url: authorLink, type: "get", async: false, success: function(data){
+				authorImg = $(data).filter("img")[0].src;
+				authorBio = $(data).filter(".author-bio-parent")[0].innerHTML;
+			}});
+			pubDate = $(data).find("#date")[0].innerHTML;
+			pubTime = $(data).find("#time")[0].innerHTML;
+			articleTitle = $(data).find("#title")[0].innerHTML;
+			articlePreview = $(data).find("#preview")[0].innerHTML;
+			//Create the card
+			$(divName).append("<div class='news-card'><div class='news-card-info'><ul><li><img src=" + authorImg + "></li><li><p>" + pubDate + "</p></li><li><p>" + pubTime + "</p></li></ul>" + authorBio +"</div><a href=" + links[i] + "><img src='/images/birds/legendary/hbird/hbird.jpg'></a><div class='news-card-flavor'><h2><a href=" + links[i] + ">" + articleTitle + "</a></h2><a href='javascript: void(0)' onclick='showNewsInfo(this)'><h2>&#x2193</h2></a><div class='news-card-preview'><p>" + articlePreview + "</p></div></div></div>");
+		});
+	}
 }
 
 //Load in the author stuff for an article
