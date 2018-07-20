@@ -52,7 +52,7 @@ $(function() {
 	/* DYNAMIC LOADING */
 	//Load in the Navigation Bar
 	$.ajax({url: "/hecrenews/nav.html", type: "get", async: false, success: function(data) {
-		$("#navPlaceholder").load(data);
+		$("#navPlaceholder").load("/hecrenews/nav.html");
 	}});
 	
 	/* OTHER FUNCTIONS */
