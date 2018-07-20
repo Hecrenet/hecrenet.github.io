@@ -120,7 +120,7 @@ function initFontSetting() {
 		setCookie("fontsize", currentFontsize, 30);
 		$("#article p").css("font-size", currentFontsize + "px");
 	}
-	$($("#font-size h1:nth-child(2)")[0]).html(getCookie("fontsize") + "px");
+	$($("#font-size h1:nth-child(2)")[0]).append(getCookie("fontsize") + "px");
 }
 
 /* COOKIE FUNCTIONS */
