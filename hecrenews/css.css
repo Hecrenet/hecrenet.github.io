@@ -16,6 +16,7 @@ body {margin: 0; background-color: #f0f0f0}
 #nav-links.open {display: block; animation: slideRight 0.5s ease forwards;}
 /* Settings Navigation */
 #settings-card {display: none; position: fixed; top: 25vh; left: 25vw; background-color: #fff; z-index: 2 !important; border-radius: 4px; width: 50vw; border: 1px solid #cecece; overflow: hidden}
+#settings-card::selection {background: transparent;}
 #settings-card ul {all: initial; all: unset; font-family: sans-serif;}
 #settings-card li {padding: 10px 0 10px 0; width: 100%; border-bottom: 1px solid #cecece; transition: 0.3s;}
 #settings-card li:not(:first-child):hover {background-color: #3a3a3a; color: #fff; cursor: pointer}
