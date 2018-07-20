@@ -49,16 +49,18 @@ function loadAuthorIntoArticle() {
 /* FUNCTIONS THAT GET USED */
 //Functions that need to wait for DOM elements to load
 $(function() {
-	//Load all the settings
-	initFontSetting();
-	
+	/* DYNAMIC LOADING */
 	//Load in the Navigation Bar
 	$("#navPlaceholder").load("/hecrenews/nav.html");
 	for (var i = 0; i < $(".news-card").length; i++) {$(".news-card")[i].style.animationDelay = String((i + 1)/4) + "s";}
 	
+	/* OTHER FUNCTIONS */
+	//Load all the settings
+	initFontSetting();
+	
+	/* EVENT FUNCTIONS */
 	//Show the author's bio on hover
 	$(document).on({mouseenter: function() {var x = $(this).parentsUntil(".news-card");  $(x[1]).children(".news-author").addClass("open");}, mouseleave: function() {var x = $(this).parentsUntil(".news-card"); $(x[1]).children(".news-author").removeClass("open");}}, ".news-card-info li:first-child");
-	
 	//Keep author's bio showing when hovering on the bio
 	$(document).on({mouseenter: function() {$(this).addClass("open");}, mouseleave: function() {$(this).removeClass("open");}}, ".news-author");
 });
