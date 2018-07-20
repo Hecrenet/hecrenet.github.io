@@ -48,6 +48,9 @@ function loadAuthorIntoArticle() {
 
 /* FUNCTIONS THAT GET USED */
 //Functions that need to wait for DOM elements to load
+$(window).bind("load", function() {
+	initFontSetting();
+});
 $(function() {
 	//Load in the Navigation Bar
 	$("#navPlaceholder").load("/hecrenews/nav.html");
