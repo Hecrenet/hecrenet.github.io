@@ -7,7 +7,7 @@ $(function() {
 		$("#top-nav").append(data);
 	}});
 	//Open the designated tab
-	$("#defaultopen")[0].click();
+	document.getElementById("defaultOpen").click();
 });
 /*===================================
   Copied functions from first
