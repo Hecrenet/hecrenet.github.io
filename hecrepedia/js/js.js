@@ -6,6 +6,8 @@ $(function() {
 	$.ajax({url: "/hecrepedia/nav.html", type: "get", async: false, success: function(data) {
 		$("#top-nav").append(data);
 	}});
+	//Open the designated tab
+	$("#defaultopen")[0].click();
 });
 /*===================================
   Copied functions from first
