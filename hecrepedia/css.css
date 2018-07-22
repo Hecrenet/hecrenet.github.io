@@ -22,3 +22,8 @@ body {margin: 0; padding: 0; background-color: #f4f4f4}
 #top-nav li:nth-child(even) .dropdown-links a:nth-child(odd) {background-color: #3a3a3a}
 #top-nav li:nth-child(even) .dropdown-links a:nth-child(even) {background-color: #333}
 .dropdown:hover .dropdown-links {display: block}
+
+/*===================================
+  Tabs
+  ===================================*/
+.tabcontent {display: none;}
