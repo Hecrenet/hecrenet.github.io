@@ -26,4 +26,8 @@ body {margin: 0; padding: 0; background-color: #f4f4f4}
 /*===================================
   Tabs
   ===================================*/
-.tabcontent {display: none;}
+.tab {overflow: hidden; width: auto; background-color: #444; margin: 20px;}
+.tab button {border: none; padding: 10px; cursor: pointer; color: white; background-color: #444; display: inline; padding: 16px; transition: 0.3s}
+.tab button:hover {background-color: #3a3a3a}
+.tab button.active {background-color: #5bbbff;}
+.tabcontent {display: none; margin: 20px}
