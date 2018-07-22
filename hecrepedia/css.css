@@ -13,4 +13,6 @@ body {margin: 0; padding: 0; background-color: #f4f4f4}
 #top-nav li:last-child a {float: right; padding: 0}
 #top-nav a:hover {background-color: #222}
 #top-nav img {width: 60px; display: block}
+/* Dropdown */
 .dropdown-links {display: none;}
+.dropdown:hover .dropdown-links {display: block}
