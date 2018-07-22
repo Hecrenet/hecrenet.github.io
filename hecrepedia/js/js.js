@@ -3,7 +3,7 @@
   ===================================*/
 $(function() {
 	//Load in the Navigation Bar
-	$.ajax({url: "/hecrepedia2/nav.html", type: "get", async: false, success: function(data) {
+	$.ajax({url: "/hecrepedia/nav.html", type: "get", async: false, success: function(data) {
 		$("#top-nav").append(data);
 	}});
 });
