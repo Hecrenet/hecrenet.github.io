@@ -1,12 +1,12 @@
 /*===================================
-  General Things
+  Imports and the misc. styling
   ===================================*/
 body {margin: 0; padding: 0; background-color: #f4f4f4}
 
 /*===================================
   Top Navigation
   ===================================*/
-#top-nav {font-family: sans-serif;}
+#top-nav {font-family: sans-serif; box-shadow: 0 5px 5px #cecece; z-index: 1}
 #top-nav ul {list-style: none; margin: 0; padding: 0; overflow: hidden; background-color: #3a3a3a}
 #top-nav li {float: left}
 #top-nav li:nth-child(even) {background-color: #333}
