@@ -9,12 +9,16 @@ body {margin: 0; padding: 0; background-color: #f4f4f4}
 #top-nav {font-family: sans-serif;}
 #top-nav ul {list-style: none; margin: 0; padding: 0; overflow: hidden; background-color: #3a3a3a}
 #top-nav li {float: left}
+#top-nav li:nth-child(even) {background-color: #333}
 #top-nav li:last-child {float: right}
 #top-nav a {display: block; color: #fff; text-decoration: none; padding: 23px 15px; transition: 0.3s}
 #top-nav li:last-child a {padding: 0;}
-#top-nav a:hover {background-color: #222}
+#top-nav a:hover {background-color: #222 !important}
 #top-nav img {display: block; width: 60px}
+.dropdown-link {width: 115px; text-align: center}
 .dropdown-links {display: none; position: absolute; text-align: center; box-shadow: 0px 5px 5px #cecece}
-.dropdown-links a:nth-child(odd) {background-color: #333}
-.dropdown-links a:nth-child(even) {background-color: #3a3a3a}
+#top-nav li:nth-child(odd) .dropdown-links a:nth-child(odd) {background-color: #333}
+#top-nav li:nth-child(odd) .dropdown-links a:nth-child(even) {background-color: #3a3a3a}
+#top-nav li:nth-child(even) .dropdown-links a:nth-child(odd) {background-color: #3a3a3a}
+#top-nav li:nth-child(even) .dropdown-links a:nth-child(even) {background-color: #333}
 .dropdown:hover .dropdown-links {display: block}
