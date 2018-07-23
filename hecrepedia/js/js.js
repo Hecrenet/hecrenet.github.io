@@ -51,7 +51,7 @@ function openClass(className) {
 		if ($($(className)[i]).hasClass("open")) {
 			$($(className)[i]).removeClass("open")
 		} else {
-			$($(className)[i]).addCkass("open")
+			$($(className)[i]).addClass("open")
 		}
 	}
 }
