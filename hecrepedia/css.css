@@ -12,6 +12,7 @@ body {margin: 0; padding: 0; background-color: #f4f4f4}
 #top-nav li {float: left}
 #top-nav li:nth-child(even) {background-color: #333}
 #top-nav li:last-child {float: right}
+#top-nav li.menu-icon {display: none; background-color: #333;}
 #top-nav a {display: block; color: #fff; text-decoration: none; padding: 23px 15px; transition: 0.3s}
 #top-nav li:last-child a {padding: 0;}
 #top-nav a:hover {background-color: #222 !important}
@@ -38,3 +39,14 @@ body {margin: 0; padding: 0; background-color: #f4f4f4}
   Cards
   ===================================*/
 .text-card {padding: 10px; border: 1px solid #ddd; margin-top: 10px; background-color: #fff}
+
+/*===================================
+  Responsive Navigation
+  We are gangsters and did a computer-
+  first approach, take that, phone
+  users (Probably gonna affect SEO)
+  ===================================*/
+@media only screen and (max-width: 672px) {
+	#top-nav li:not(:first-child):not(:last-child) {display: none}
+	#top-nav li.menu-icon {display: block}
+} 
