@@ -51,3 +51,10 @@ body {margin: 0; padding: 0; background-color: #f4f4f4}
 	#top-nav li.menu-icon a {display: block !important;}
 	.dropdown:hover .dropdown-links {display: none}
 }
+/* This one is for the trolls who want the nav as tiny as possible. Hopefully the smallest width is 320px */
+@media only screen and (max-width: 318px) {
+	#top-nav li {width: 50%}
+	#top-nav li a {text-align: center;}
+	#top-nav img {margin: auto}
+	#top-nav li:first-child {width: 100%; text-align: center; margin-bottom: 4px}
+}
