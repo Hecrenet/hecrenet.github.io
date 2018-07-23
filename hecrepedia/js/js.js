@@ -35,7 +35,7 @@ function openTab(evt, tabName) {var i, tabcontent, tablinks;tabcontent = documen
 /*===================================
   Onclick functions
   ===================================*/
-//Add the "open" class, make sure to use # when calling
+//Add the "open" class, doesn't have to be a div...
 function openDiv(divName) {
 	if ($($(divName)[0]).hasClass("open")) {
 		$($(divName)[0]).removeClass("open");
