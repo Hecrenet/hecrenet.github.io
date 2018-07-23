@@ -35,11 +35,23 @@ function openTab(evt, tabName) {var i, tabcontent, tablinks;tabcontent = documen
 /*===================================
   Onclick functions
   ===================================*/
-//Add the "open" class, doesn't have to be a div...
-function openDiv(divName) {
-	if ($($(divName)[0]).hasClass("open")) {
-		$($(divName)[0]).removeClass("open");
-	} else {
-		$($(divName)[0]).addClass("open");
+//Add the "open" class to an element with an id
+function openId(...idName) {
+	for (var i = 0; i < idName.length; i++) {
+		if ($($(idName[i])[0]).hasClass("open")) {
+			$($(idName[i])[0]).removeClass("open");
+		} else {
+			$($(idName[i])[0]).addClass("open");
+		}
+	}
+}
+//Add the "open" class to an elements with a common class
+function openClass(className) {
+	for (var i = 0; i < $(className).length; i++) {
+		if ($($(className)[i]).hasClass("open")) {
+			$($(className)[i]).removeClass("open")
+		} else {
+			$($(className)[i]).addCkass("open")
+		}
 	}
 }
