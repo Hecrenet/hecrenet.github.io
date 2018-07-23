@@ -31,3 +31,15 @@ function addAnimalCards(divName, ...links) {
 function addTabs(...names) {for (var i = 0; i < names.length; i++) {$($(".tab")[0]).append("<button class=\"tablinks\" onclick=\"openTab(event,'" + names[i] + "')\">" + names[i] + "</button>");}$($(".tab .tablinks")[0]).addClass("active");$(".tab .tablinks")[0].id = "defaultOpen";}
 //Switch the content tabs
 function openTab(evt, tabName) {var i, tabcontent, tablinks;tabcontent = document.getElementsByClassName("tabcontent");for (i = 0; i < tabcontent.length; i++) {tabcontent[i].style.display = "none";}tablinks = document.getElementsByClassName("tablinks");for (i = 0; i < tablinks.length; i++) {tablinks[i].className = tablinks[i].className.replace(" active", "");}document.getElementById(tabName).style.display = "block";evt.currentTarget.className += " active";}
+
+/*===================================
+  Onclick functions
+  ===================================*/
+//Add the "open" class, make sure to use # when calling
+function openDiv(divName) {
+	if ($($(divName)[0]).hasClass("open")) {
+		$($(divName)[0]).removeClass("open");
+	} else {
+		$($(divName)[0]).addClass("open");
+	}
+}
