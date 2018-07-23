@@ -9,11 +9,11 @@ body {margin: 0; padding: 0; background-color: #f4f4f4}
   ===================================*/
 #top-nav {font-family: sans-serif; z-index: 1}
 #top-nav ul {list-style: none; margin: 0; padding: 0; overflow: hidden; background-color: #3a3a3a}
-#top-nav li {float: left; max-height: 60px}
+#top-nav li {float: left; max-height: 60px;}
 #top-nav li:nth-child(even) {background-color: #333}
 #top-nav li:last-child {float: right}
 #top-nav li.menu-icon a {display: none; background-color: #333;}
-#top-nav a {display: block; color: #fff; text-decoration: none; padding: 23px 15px; transition: 0.3s}
+#top-nav a {display: block; color: #fff; text-decoration: none; padding: 21px 15px; transition: 0.3s;}
 #top-nav li:last-child a {padding: 0;}
 #top-nav a:hover {background-color: #222 !important}
 #top-nav img {display: block; width: 60px}
@@ -58,5 +58,5 @@ body {margin: 0; padding: 0; background-color: #f4f4f4}
 	#top-nav li {width: 50%}
 	#top-nav li a {text-align: center;}
 	#top-nav img {margin: auto}
-	#top-nav li:first-child {width: 100%; text-align: center; margin-bottom: 4px}
+	#top-nav li:first-child {width: 100%; text-align: center;}
 }
