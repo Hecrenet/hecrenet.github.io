@@ -30,7 +30,7 @@ body {margin: 0; padding: 0; background-color: #f4f4f4}
 /*===================================
   Tabs
   ===================================*/
-.tab {overflow: hidden; width: auto; background-color: #444; margin: 20px;}
+.tab {overflow: hidden; width: auto; background-color: #444; margin: 20px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5)}
 .tab button {border: none; padding: 10px; cursor: pointer; color: white; background-color: #444; display: inline; padding: 16px; transition: 0.3s;}
 .tab button:focus {outline: none}
 .tab button:hover {background-color: #3a3a3a}
