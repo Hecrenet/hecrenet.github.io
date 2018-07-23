@@ -49,4 +49,5 @@ body {margin: 0; padding: 0; background-color: #f4f4f4}
 @media only screen and (max-width: 672px) {
 	#top-nav li:not(:first-child):not(:last-child) a {display: none}
 	#top-nav li.menu-icon a {display: block !important;}
+	.dropdown:hover .dropdown-links {display: none}
 }
