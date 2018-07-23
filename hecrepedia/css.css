@@ -17,6 +17,8 @@ body {margin: 0; padding: 0; background-color: #f4f4f4}
 #top-nav li:last-child a {padding: 0;}
 #top-nav a:hover {background-color: #222 !important}
 #top-nav img {display: block; width: 60px}
+#top-nav li.dropdown.open {clear: both; width: 100%}
+#top-nav li.dropdown.open a {display: block !important; width: 100% !important}
 .dropdown-link {text-align: center}
 .dropdown-links {display: none; position: absolute; text-align: center;}
 #top-nav li:nth-child(odd) .dropdown-links a:nth-child(odd) {background-color: #333}
