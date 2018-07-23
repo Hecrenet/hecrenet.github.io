@@ -55,3 +55,16 @@ function openClass(className) {
 		}
 	}
 }
+
+/*===================================
+  Background Functions
+  ===================================*/
+(function($) {
+	var $window = $(window),
+
+	$window.resize(function resize(){
+	if ($window.width() > 672) {
+		$(".dropdown").removeClass("open");
+	}
+	}).trigger('resize');
+})(jQuery);
