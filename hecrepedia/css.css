@@ -37,4 +37,4 @@ body {margin: 0; padding: 0; background-color: #f4f4f4}
 /*===================================
   Cards
   ===================================*/
-.text-card {padding: 10px; border: 1px solid #ddd; margin-top: 10px}
+.text-card {padding: 10px; border: 1px solid #ddd; margin-top: 10px; background-color: #fff}
