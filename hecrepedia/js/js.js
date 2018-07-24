@@ -72,11 +72,11 @@ function openClass(className) {
   Functions used for organization ):
   ===================================*/
 function changeCardGroupHeight() {
-	var cardContainers = $(".text-card-group");
+	/*var cardContainers = $(".text-card-group");
 	cardContainers.css("height", "auto");
 	var myHeight;
 	for (var i = 0; i < cardContainers.length; i++) {
 		myHeight = String($(cardContainers[i]).height());
 		$(cardContainers[i]).css("height", myHeight);
-	}
+	}*/
 }
