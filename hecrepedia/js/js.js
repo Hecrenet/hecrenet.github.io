@@ -9,11 +9,6 @@ $(function() {
 	}});
 	//Open the designated tab
 	document.getElementById("defaultOpen").click();
-	
-	//STUFF
-	document.getElementsByTagName("meta")[0].setAttribute("content", "width=21");
-	changeCardGroupHeight();
-	document.getElementsByTagName("meta")[0].setAttribute("content", "width=device-width,initial-scale=1");
 });
 /*===================================
   Copied functions from first
