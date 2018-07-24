@@ -9,9 +9,6 @@ $(function() {
 	}});
 	//Open the designated tab
 	document.getElementById("defaultOpen").click();
-	//Set the card group height
-	changeCardGroupHeight();
-	document.getElementById("defaultOpen").click();
 });
 /*===================================
   Copied functions from first
