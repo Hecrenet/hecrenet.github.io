@@ -1,4 +1,15 @@
 /*===================================
+  Refresh the page because I don't
+  know how code works...
+  ===================================*/
+window.onload = function() {
+	if(!window.location.hash) {
+		window.location = window.location + '#loaded';
+		window.location.reload();
+	}
+}
+
+/*===================================
   Functions that need all DOM objects
   to load first
   ===================================*/
@@ -9,8 +20,6 @@ $(function() {
 	}});
 	//Open the designated tab
 	document.getElementById("defaultOpen").click();
-	//Refresh the page
-	location.reload();
 });
 /*===================================
   Copied functions from first
