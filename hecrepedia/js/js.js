@@ -9,9 +9,7 @@ $(function() {
 	}});
 	//Open the designated tab
 	document.getElementById("defaultOpen").click();
-	for (var i = 0; i < 100; i++) {
-		changeCardGroupHeight()
-	}
+	changeCardGroupHeight()
 });
 /*===================================
   Copied functions from first
@@ -81,6 +79,5 @@ function changeCardGroupHeight() {
 	for (var i = 0; i < cardContainers.length; i++) {
 		myHeight = String($(cardContainers[i]).height());
 		$(cardContainers[i]).css("height", myHeight);
-		console.log(cardContainers[i]);
 	}
 }
