@@ -9,6 +9,17 @@ $(function() {
 	}});
 	//Open the designated tab
 	document.getElementById("defaultOpen").click();
+	//Someone plz help, the changeCardGroupHeight() only works on page refresh, when button is clicked, or when page size changes
+	if(document.URL.indexOf("#")==-1) {
+		// Set the URL to whatever it was plus "#".
+		url = document.URL+"#";
+		location = "#";
+		//Reload the page
+		location.reload(true);
+	} else {
+		url = document.URL-"#";
+		location = "";
+	}
 });
 /*===================================
   Copied functions from first
