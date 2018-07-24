@@ -10,6 +10,7 @@ $(function() {
 	//Open the designated tab
 	document.getElementById("defaultOpen").click();
 	//Set the card group height
+	var cardContainers = $(".text-card-group")
 	var myHeight;
 	for (var i = 0; i < cardContainers.length; i++) {
 		myHeight = String($(cardContainers[i]).height());
