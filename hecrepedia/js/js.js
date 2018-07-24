@@ -8,9 +8,11 @@ $(function() {
 		$("#top-nav").append(data);
 	}});
 	//Open the designated tab
-	$($("#defaultOpen")[0]).dblclick();
+	for (var i = 0; i < 2;) {
+		document.getElementById("defaultOpen").click();
+	}
 	//Set the card group height
-	changeCardContainerHeight();
+	changeCardGroupHeight();
 });
 /*===================================
   Copied functions from first
