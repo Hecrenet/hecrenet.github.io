@@ -11,9 +11,9 @@ $(function() {
 	document.getElementById("defaultOpen").click();
 	
 	//STUFF
-	document.getElementById("viewport").setAttribute("content", "width=0");
+	document.getElementsByTagName("meta")[0].setAttribute("content", "width=0");
 	changeCardGroupHeight();
-	document.getElementById("viewport").setAttribute("content", "width=device-width,initial-scale=1");
+	document.getElementByTagName("meta")[0].setAttribute("content", "width=device-width,initial-scale=1");
 });
 /*===================================
   Copied functions from first
