@@ -17,8 +17,7 @@ $(function() {
 		//Reload the page
 		location.reload(true);
 	} else {
-		url = document.URL-"#";
-		location = "";
+		history.pushState(null, null, window.location.href - "#");
 	}
 });
 /*===================================
