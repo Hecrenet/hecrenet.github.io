@@ -9,8 +9,8 @@ $(function() {
 	}});
 	//Open the designated tab
 	document.getElementById("defaultOpen").click();
-	document.getElementById("defaultOpen").click();
 	//Set the card group height
+	changeCardGroupHeight();
 	changeCardGroupHeight();
 });
 /*===================================
