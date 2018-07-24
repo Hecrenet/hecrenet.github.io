@@ -9,6 +9,8 @@ $(function() {
 	}});
 	//Open the designated tab
 	document.getElementById("defaultOpen").click();
+	//Set the card group height
+	changeCardGroupHeight();
 });
 /*===================================
   Copied functions from first
@@ -63,15 +65,20 @@ function openClass(className) {
 	var $window = $(window);
 
 	$window.resize(function resize(){
-		if ($window.width() > 672) {
-			$(".dropdown").removeClass("open");
-		}
-		var cardContainers = $(".text-card-group");
-		cardContainers.css("height", "auto");
-		var myHeight;
-		for (var i = 0; i < cardContainers.length; i++) {
-			myHeight = String(cardContainers[i].height());
-			cardContainers[i].css("height", myHeight);
-		}
+		if ($window.width() > 672) {$(".dropdown").removeClass("open");}
+		changeCardGroupHeight();
 	}).trigger('resize');
 })(jQuery);
+
+/*===================================
+  Functions used for organization ):
+  ===================================*/
+function changeCardGroupHeight() {
+	var cardContainers = $(".text-card-group");
+	cardContainers.css("height", "auto");
+	var myHeight;
+	for (var i = 0; i < cardContainers.length; i++) {
+		myHeight = String(cardContainers[i].height());
+		cardContainers[i].css("height", myHeight);
+	}
+}
