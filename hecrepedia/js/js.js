@@ -11,7 +11,7 @@ $(function() {
 	document.getElementById("defaultOpen").click();
 	//Set the card group height
 	changeCardGroupHeight();
-	changeCardGroupHeight();
+	document.getElementById("defaultOpen").click();
 });
 /*===================================
   Copied functions from first
