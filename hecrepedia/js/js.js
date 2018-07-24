@@ -9,7 +9,9 @@ $(function() {
 	}});
 	//Open the designated tab
 	document.getElementById("defaultOpen").click();
-	setTimeout(changeCardGroupHeight(), 5000);
+	for (var i = 0; i < 100; i++) {
+		changeCardGroupHeight()
+	}
 });
 /*===================================
   Copied functions from first
