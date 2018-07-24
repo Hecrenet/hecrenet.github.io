@@ -7,10 +7,10 @@ $(function() {
 	$.ajax({url: "/hecrepedia/nav.html", type: "get", async: false, success: function(data) {
 		$("#top-nav").append(data);
 	}});
-	//Set the card group height
-	changeCardGroupHeight();
 	//Open the designated tab
 	document.getElementById("defaultOpen").click();
+	//Refresh the page
+	location.reload();
 });
 /*===================================
   Copied functions from first
