@@ -8,14 +8,9 @@ $(function() {
 		$("#top-nav").append(data);
 	}});
 	//Open the designated tab
-	document.getElementById("defaultOpen").click();
+	//document.getElementById("defaultOpen").click();
 	//Set the card group height
-	var cardContainers = $(".text-card-group")
-	var myHeight;
-	for (var i = 0; i < cardContainers.length; i++) {
-		myHeight = String($(cardContainers[i]).height());
-		$(cardContainers[i]).css("height", myHeight);
-	}
+	changeCardContainerHeight();
 });
 /*===================================
   Copied functions from first
