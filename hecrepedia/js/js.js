@@ -8,7 +8,7 @@ $(function() {
 		$("#top-nav").append(data);
 	}});
 	//Open the designated tab
-	//document.getElementById("defaultOpen").click();
+	$($("#defaultOpen")[0]).dblclick();
 	//Set the card group height
 	changeCardContainerHeight();
 });
