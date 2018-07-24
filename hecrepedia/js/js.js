@@ -63,8 +63,15 @@ function openClass(className) {
 	var $window = $(window);
 
 	$window.resize(function resize(){
-	if ($window.width() > 672) {
-		$(".dropdown").removeClass("open");
-	}
+		if ($window.width() > 672) {
+			$(".dropdown").removeClass("open");
+		}
+		var cardContainers = $(".text-card-group");
+		cardContainers.css("height", "auto");
+		var myHeight;
+		for (var i = 0; i < cardContainers.length; i++) {
+			myHeight = String(cardContainers[i].height());
+			cardContainers[i].css("height", myHeight);
+		}
 	}).trigger('resize');
 })(jQuery);
