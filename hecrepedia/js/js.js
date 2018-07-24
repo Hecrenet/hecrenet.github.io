@@ -9,9 +9,11 @@ $(function() {
 	}});
 	//Open the designated tab
 	document.getElementById("defaultOpen").click();
-	changeCardGroupHeight();
 	
-	document.getElementById("viewport").setAttribute("content", "width=480");
+	//STUFF
+	document.getElementById("viewport").setAttribute("content", "width=0");
+	changeCardGroupHeight();
+	document.getElementById("viewport").setAttribute("content", "width=device-width,initial-scale=1");
 });
 /*===================================
   Copied functions from first
