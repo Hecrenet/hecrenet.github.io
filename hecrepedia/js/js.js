@@ -78,7 +78,7 @@ function changeCardGroupHeight() {
 	cardContainers.css("height", "auto");
 	var myHeight;
 	for (var i = 0; i < cardContainers.length; i++) {
-		myHeight = String(cardContainers[i].height());
+		myHeight = String($(cardContainers[i]).height());
 		cardContainers[i].css("height", myHeight);
 	}
 }
