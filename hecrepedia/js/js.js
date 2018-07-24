@@ -10,7 +10,11 @@ $(function() {
 	//Open the designated tab
 	document.getElementById("defaultOpen").click();
 	//Set the card group height
-	changeCardGroupHeight();
+	var myHeight;
+	for (var i = 0; i < cardContainers.length; i++) {
+		myHeight = String($(cardContainers[i]).height());
+		$(cardContainers[i]).css("height", myHeight);
+	}
 });
 /*===================================
   Copied functions from first
