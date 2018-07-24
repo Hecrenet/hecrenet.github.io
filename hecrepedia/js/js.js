@@ -9,7 +9,9 @@ $(function() {
 	}});
 	//Open the designated tab
 	document.getElementById("defaultOpen").click();
-	changeCardGroupHeight()
+	changeCardGroupHeight();
+	
+	document.getElementById("viewport").setAttribute("content", "width=480");
 });
 /*===================================
   Copied functions from first
