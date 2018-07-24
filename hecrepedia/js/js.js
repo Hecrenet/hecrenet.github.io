@@ -7,6 +7,8 @@ $(function() {
 	$.ajax({url: "/hecrepedia/nav.html", type: "get", async: false, success: function(data) {
 		$("#top-nav").append(data);
 	}});
+	//Set the card group height
+	changeCardGroupHeight();
 	//Open the designated tab
 	document.getElementById("defaultOpen").click();
 });
@@ -72,11 +74,11 @@ function openClass(className) {
   Functions used for organization ):
   ===================================*/
 function changeCardGroupHeight() {
-	/*var cardContainers = $(".text-card-group");
+	var cardContainers = $(".text-card-group");
 	cardContainers.css("height", "auto");
 	var myHeight;
 	for (var i = 0; i < cardContainers.length; i++) {
 		myHeight = String($(cardContainers[i]).height());
 		$(cardContainers[i]).css("height", myHeight);
-	}*/
+	}
 }
