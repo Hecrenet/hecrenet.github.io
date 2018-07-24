@@ -74,7 +74,7 @@ function openClass(className) {
   ===================================*/
 function changeCardGroupHeight() {
 	var cardContainers = $(".text-card-group");
-	cardContainers.css("height", "auto");
+	cardContainers.css("height", "initial");
 	var myHeight;
 	for (var i = 0; i < cardContainers.length; i++) {
 		myHeight = String($(cardContainers[i]).height());
