@@ -17,7 +17,7 @@ $(function() {
 		//Reload the page
 		location.reload(true);
 	} else {
-		history.pushState(null, null, window.location.href - "#");
+		history.pushState(null, null, document.URL - "#");
 	}
 });
 /*===================================
