@@ -17,6 +17,8 @@ $(function() {
 	$.ajax({url: "/hecrepedia/nav.html", type: "get", async: false, success: function(data) {
 		$("#top-nav").append(data);
 	}});
+	//Set the style of the tab
+	setTabStyle();
 	//Open the designated tab
 	document.getElementById("defaultOpen").click();
 });
@@ -74,6 +76,7 @@ function openClass(className) {
 
 	$window.resize(function resize(){
 		if ($window.width() > 672) {$(".dropdown").removeClass("open");}
+		setTabStyle();
 		changeCardGroupHeight();
 	}).trigger('resize');
 })(jQuery);
@@ -89,4 +92,8 @@ function changeCardGroupHeight() {
 		myHeight = String($(cardContainers[i]).height());
 		$(cardContainers[i]).css("height", myHeight);
 	}
+}
+
+function setTabStyle() {
+	if ($($(".tab")[0]).height() > 47) {$($(".tab button")).css("width", "100%")} else {$($(".tab button")).css("width", "auto")}
 }
