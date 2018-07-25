@@ -60,7 +60,7 @@ body {margin: 0; padding: 0; background-color: #f4f4f4;}
   first approach, take that, phone
   users (Probably gonna affect SEO)
   ===================================*/
-@media only screen and (max-width: 672px) {
+@media only screen and (max-width: 767px) {
 	#top-nav li:not(:first-child):not(:last-child) a {display: none}
 	#top-nav li.menu-icon a {display: block !important;}
 	.dropdown:hover .dropdown-links {display: none}
