@@ -66,10 +66,6 @@ body {margin: 0; padding: 0; background-color: #f4f4f4;}
 	.dropdown:hover .dropdown-links {display: none}
 }
 
-@media only screen and (max-width: 368px) {
-	.tab button {width: 100%;}
-}
-
 /* This one is for the trolls who want the nav as tiny as possible. Hopefully the smallest width is 320px */
 @media only screen and (max-width: 318px) {
 	#top-nav li {width: 50%}
