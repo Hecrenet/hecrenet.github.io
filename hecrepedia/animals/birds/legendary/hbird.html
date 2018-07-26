@@ -14,12 +14,9 @@
 	<link rel="stylesheet" type="text/css" href="/hecrepedia/css.css">
 	<script type="text/javascript" src="/hecrepedia/js/jquery.js"></script>
 	<script type="text/javascript" src="/hecrepedia/js/js.js"></script>
+	<script type="text/javascript">$("body").load("/hecrepedia/animals/template.html");</script>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 </head>
 <body>
-	<script>
-		document.body.innerHTML = httpGet("/hecrepedia/animals/template.html");
-		function httpGet(url) {var xmlHttp = new XMLHttpRequest(); xmlHttp.open( "GET", url, false ); xmlHttp.send( null ); return xmlHttp.responseText;}
-	</script>
 </body>
 </html>
