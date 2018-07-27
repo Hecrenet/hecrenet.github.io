@@ -4,6 +4,36 @@
 var minTabWidth = 0;
 
 /*===================================
+  Add the information
+  ===================================*/
+function fillOutPage(imgLink, breifDesc, pers, associations, birth, history, moreHis, present, powers, facts, appearances, trivia) {
+	//Quick Facts img
+	$("#quick-facts img")[0].src = imgLink;
+	//Breif Description
+	$($("#breif-description")[0]).append("<p>" + breifDesc + "</p>");
+	//Personality
+	$($("#personality")[0]).append("<p>" + pers + "</p>");
+	//Associations
+	$($("#associations")[0]).append("<p>" + associations + "</p>");
+	//Birth
+	$($("#birth")[0]).append("<p>" + birth + "</p>");
+	//Historical Stuff
+	$($("#historical-stuff")[0]).append("<p>" + history + "</p>");
+	//More History
+	$($("#more-history")[0]).append("<p>" + moreHis + "</p>");
+	//Present Day
+	$($("#present-day")[0]).append("<p>" + present + "</p>");
+	//Powers
+	$($("#powers")[0]).append("<p>" + powers + "</p>");
+	//Fun Facts
+	$($("#fun-facts")[0]).append("<p>" + facts + "</p>");
+	//Special Appearances
+	$($("#special-appearances")[0]).append("<p>" + appearances + "</p>");
+	//Other Trivia
+	$($("#other-trivia")[0]).append("<p>" + trivia + "</p>");
+}
+
+/*===================================
   Functions that need all DOM objects
   to load first
   ===================================*/
@@ -31,19 +61,6 @@ function waitForDOM() {
   Copied functions from first
   Hecrepedia, compressed a few of them
   ===================================*/
-//Add Card(s)
-function addAnimalCards(divName, ...links) {
-	var image, name, info;
-	for (var i = 0; i < links.length; i++) {
-		$.ajax({url: links[i], type: "get", async: false, success: function(data){
-			image = $(data).find("#infoImg")[0].src;
-			name = $(data).filter("#infoName")[0].textContent;
-			info = $(data).find("#info")[0].textContent;
-		}});
-		$(divName).append("<div class='animal-card'><a href='" + links[i] + "'><img src='" + image + "'></a><div class='cardContainer'><p><b>" + name + "</b></p></div></div>");
-	}
-}
-
 //Add Tabs
 function addTabs(...names) {for (var i = 0; i < names.length; i++) {$($(".tab")[0]).append("<button class=\"tablinks\" onclick=\"openTab(event,'" + names[i] + "')\">" + names[i] + "</button>");}$($(".tab .tablinks")[0]).addClass("active");$(".tab .tablinks")[0].id = "defaultOpen";}
 //Switch the content tabs
