@@ -15,14 +15,6 @@ This is the website of the Hecretary Bird Association.
   + Test it out in chrome with inspect tool
   + Ask a tech person in the HBA (currently 2)
   
-***
-
-## Alternative Languages:
-- [Zulu](https://translate.google.com/translate?sl=en&tl=zu&u=hecretary-bird.github.io)
-- [Spanish](https://translate.google.com/translate?sl=en&tl=es&u=hecretary-bird.github.io)
-
-***
-
 ## What the Hecrenet has
 ### And what it will soon get
 * Hecrepedia
