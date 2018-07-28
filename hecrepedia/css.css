@@ -40,6 +40,7 @@ body {margin: 0; padding: 0; background-color: #f4f4f4;}
 /*===================================
   Cards
   ===================================*/
+/* Text Card */
 .text-card-group {clear: both; overflow: hidden; padding: 1px;}
 .text-card {padding: 10px; border: 1px solid #ddd; background-color: #fff; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); margin-bottom: 10px}
 .text-card img {width: 100%;}
@@ -53,6 +54,13 @@ body {margin: 0; padding: 0; background-color: #f4f4f4;}
 .text-card.half-height {height: calc(50% - 32px)}
 .text-card.left {width: calc(50% - 30px); float: left; clear: left;}
 .text-card.right {width: calc(50% - 30px); float: right; clear: right;}
+/* Animal Card */
+.animal-card-group {overflow: hidden}
+.animal-card {width: calc(50% - 30px); overflow: hidden; background-color: #fff;  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); float: right; transition: 0.3s}
+.animal-card:nth-child(odd) {margin-right: 30px; float: left}
+.animal-card:hover {box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05)}
+.animal-img  img {width: 100%; display: block}
+.animal-name {text-align: center; font-weight: bold;}
 
 /*===================================
   Misc.
