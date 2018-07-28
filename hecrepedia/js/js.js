@@ -39,7 +39,7 @@ function addAnimalCards(divName, ...links) {
 			information = data.slice(data.search("fillOutPage"), data.length);
 			information = information.slice(information.search("\\(") + 1, information.search("\\)"));
 			console.log(information);
-			information = information.split(",");
+			information = information.split("\n");
 			for (var j = 0; j < information.length; j++) {
 				console.log(information[j]);
 			}
