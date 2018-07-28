@@ -52,9 +52,9 @@ function addAnimalCards(divName, ...links) {
 			image = information[2].slice(information[2].search('"'), information[2].length - 1);
 		}});
 		if (i % 2 == 0) {
-			$(divName + "animal-card-group[i/2]").append("<div class='animal-card'><div class='animal-img'><img src=" + image + "></div><div class='animal-name'><p>" + name + "</p></div></div>");
+			$(divName + " animal-card-group[i/2]").append("<div class='animal-card'><div class='animal-img'><img src=" + image + "></div><div class='animal-name'><p>" + name + "</p></div></div>");
 		} else {
-			$(divName + "animal-card-group[(i - 1)/2]").append("<div class='animal-card'><div class='animal-img'><img src=" + image + "></div><div class='animal-name'><p>" + name + "</p></div></div>");
+			$(divName + " animal-card-group[(i - 1)/2]").append("<div class='animal-card'><div class='animal-img'><img src=" + image + "></div><div class='animal-name'><p>" + name + "</p></div></div>");
 		}
 	}
 }
