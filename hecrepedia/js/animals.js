@@ -33,6 +33,15 @@ function fillOutPage(imgLink, breifDesc, pers, associations, birth, history, mor
 	$($("#other-trivia")[0]).append("<p>" + trivia + "</p>");
 }
 
+function addFactTable(...tableData) {
+	if (tableData % 2 == 0) {
+		$($("#quick-facts")[0]).append("<table></table");
+		for (var i = 0; i < tableData.length; i++) {
+			$($("#quick-facts table")[0]).append("<tr><td>" + tableData[i * 2] + "</td><td>" + tableData[i * 2 + 1] + "</td></tr>")
+		}
+	}
+}
+
 /*===================================
   Functions that need all DOM objects
   to load first
