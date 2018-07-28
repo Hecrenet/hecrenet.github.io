@@ -33,16 +33,14 @@ $(function() {
   ===================================*/
 //Add Card(s)
 function addAnimalCards(divName, ...links) {
-	var information;
+	var image, information;
 	for (var i = 0; i < links.length; i++) {
 		$.ajax({url: links[i], type: "get", async: false, success: function(data){
 			information = data.slice(data.search("fillOutPage"), data.length);
 			information = information.slice(information.search("\\(") + 1, information.search("\\)"));
 			console.log(information);
 			information = information.split("\n");
-			for (var j = 0; j < information.length; j++) {
-				console.log(information[j]);
-			}
+			image = information[2];
 		}});
 		//$(divName).append("");
 	}
