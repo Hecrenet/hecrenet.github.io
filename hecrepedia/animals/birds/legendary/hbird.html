@@ -21,6 +21,10 @@
 		$.ajax({url: "/hecrepedia/animals/template.html", type: "get", async: false, success: function(data){
 			$("body").append(data);
 		}});
+		//Name
+		$("<h1 id='animal-name'>Hecretary Bird</h1>").insertBefore(".tab");
+		//Pronunciation
+		$("<p id='animal-pronunciation'>/hek-ree-TAY-ree b&#x0259rd/</p>").insertBefore(".tab");
 		fillOutPage(
 			//Image Link
 			"/images/birds/legendary/hbird/hbird.jpg",
