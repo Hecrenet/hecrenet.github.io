@@ -34,6 +34,15 @@ $(function() {
 //Add Card(s)
 function addAnimalCards(divName, ...links) {
 	var image, name, information;
+	if (links.length % 2 == 0) {
+		for (var i = 0; i < links.length / 2; i++) {
+			$(divName).append("<div class='animal-card-group'></div>");
+		}
+	} else {
+		for (var i = 0; i < (links.length + 1) / 2; i++) {
+			$(divName).append("<div class='animal-card-group'></div>");
+		}
+	}
 	for (var i = 0; i < links.length; i++) {
 		$.ajax({url: links[i], type: "get", async: false, success: function(data){
 			name = data.slice(data.search("<title>") + 7, data.search("</title>"));
@@ -42,7 +51,7 @@ function addAnimalCards(divName, ...links) {
 			information = information.split("\n");
 			image = information[2].slice(information[2].search('"'), information[2].length - 1);
 		}});
-		$(divName).append("<div class='animal-card'><div class='animal-img'><img src=" + image + "></div><div class='animal-name'><p>" + name + "</p></div></div>");
+		$(divName + "animal-card-group[i]").append("<div class='animal-card'><div class='animal-img'><img src=" + image + "></div><div class='animal-name'><p>" + name + "</p></div></div>");
 	}
 }
 
