@@ -55,6 +55,12 @@ body {margin: 0; padding: 0; background-color: #f4f4f4;}
 .text-card.right {width: calc(50% - 30px); float: right; clear: right;}
 
 /*===================================
+  Misc.
+  ===================================*/
+#animal-name {margin-left: 20px; font-family: sans-serif;}
+#animal-pronunciation {margin-left: 20px; font-family: sans-serif;}
+
+/*===================================
   Responsive Navigation
   We are gangsters and did a computer-
   first approach, take that, phone
