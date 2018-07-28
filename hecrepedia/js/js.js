@@ -38,7 +38,7 @@ function addAnimalCards(divName, ...links) {
 		$.ajax({url: links[i], type: "get", async: false, success: function(data){
 			information = data.slice(data.search("fillOutPage"), data.length);
 			console.log(information);
-			information = information.slice(information.search("(") + 1, information.search(")"));
+			information = information.slice(information.search("\(") + 1, information.search("\)"));
 			console.log(information);
 		}});
 		//$(divName).append("");
