@@ -42,7 +42,7 @@ function addAnimalCards(divName, ...links) {
 			information = information.split("\n");
 			image = information[2].slice(information[2].search('"'), information[2].length - 1);
 		}});
-		$(divName).append("<div class='animal-card'><div class='animal-img'><img src=\"" + image + "\"></div><div class='animal-name'><p>" + name + "</p></div></div>");
+		$(divName).append("<div class='animal-card'><div class='animal-img'><img src='" + image + "'></div><div class='animal-name'><p>" + name + "</p></div></div>");
 	}
 }
 
