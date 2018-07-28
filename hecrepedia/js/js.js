@@ -37,9 +37,12 @@ function addAnimalCards(divName, ...links) {
 	for (var i = 0; i < links.length; i++) {
 		$.ajax({url: links[i], type: "get", async: false, success: function(data){
 			information = data.slice(data.search("fillOutPage"), data.length);
-			console.log(information);
 			information = information.slice(information.search("\\(") + 1, information.search("\\)"));
 			console.log(information);
+			information = information.split(",");
+			for (var j = 0; j < information.length; j++) {
+				console.log(information[j]);
+			}
 		}});
 		//$(divName).append("");
 	}
