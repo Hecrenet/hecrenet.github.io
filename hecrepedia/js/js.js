@@ -59,7 +59,6 @@ $(function() {
 	}
 }*/
 function addAnimalCards(divName, ...links) {
-	var image, name, information, tempNum;
 	for (var i = 0; i < links.length; i++) {
 		$.ajax({url: links[i], type: "get", success: createAnimalCard(i)
 			/*name = data.slice(data.search("<title>") + 7, data.search("</title>"));
@@ -73,6 +72,7 @@ function addAnimalCards(divName, ...links) {
 
 function createAnimalCard(i) {
 	return function(data) {
+		var image, name, information, tempNum;
 		console.log(i);
 		console.log(data);
 	}
