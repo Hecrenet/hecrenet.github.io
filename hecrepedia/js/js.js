@@ -32,49 +32,29 @@ $(function() {
   Hecrepedia, compressed a few of them
   ===================================*/
 //Add Card(s)
-/*function addAnimalCards(divName, ...links) {
-	var image, name, information, tempNum;
+function addAnimalCards(divName, ...links) {
 	if (links.length % 2 == 0) {
-		for (var i = 0; i < links.length / 2; i++) {
-			$(divName).append("<div class='animal-card-group'></div>");
-		}
+		for (var i = 0; i < links.length / 2; i++) {$(divName).append("<div class='animal-card-group'></div>");}
 	} else {
-		for (var i = 0; i < (links.length + 1) / 2; i++) {
-			$(divName).append("<div class='animal-card-group'></div>");
-		}
+		for (var i = 0; i < (links.length + 1) / 2; i++) {$(divName).append("<div class='animal-card-group'></div>");}
 	}
-	for (var i = 0; i < links.length; i++) {
-		$.ajax({url: links[i], type: "get", async: false, success: function(data){
-			name = data.slice(data.search("<title>") + 7, data.search("</title>"));
-			information = data.slice(data.search("fillOutPage"), data.length);
-			information = information.slice(information.search("\\(") + 1, information.search("\\)"));
-			information = information.split("\n");
-			image = information[2].slice(information[2].search('"'), information[2].length - 1);
-		}});
+	for (var i = 0; i < links.length; i++) {$.ajax({url: links[i], type: "get", success: createAnimalCard(i, divName)});}
+}
+
+function createAnimalCard(i, divName) {
+	return function(data) {
+		var image, name, information, tempNum;
+		name = data.slice(data.search("<title>") + 7, data.search("</title>"));
+		information = data.slice(data.search("fillOutPage"), data.length);
+		information = information.slice(information.search("\\(") + 1, information.search("\\)"));
+		information = information.split("\n");
+		image = information[2].slice(information[2].search('"'), information[2].length - 1);
+		
 		if (i % 2 == 0) {
 			$($(divName + " .animal-card-group")[i / 2]).append("<div class='animal-card'><div class='animal-img'><a href=" + links[i] + "><img src=" + image + "></a></div><div class='animal-name'><p>" + name + "</p></div></div>");
 		} else {
 			$($(divName + " .animal-card-group")[(i - 1) / 2]).append("<div class='animal-card'><div class='animal-img'><a href=" + links[i] + "><img src=" + image + "></a></div><div class='animal-name'><p>" + name + "</p></div></div>");
 		}
-	}
-}*/
-function addAnimalCards(divName, ...links) {
-	for (var i = 0; i < links.length; i++) {
-		$.ajax({url: links[i], type: "get", success: createAnimalCard(i)
-			/*name = data.slice(data.search("<title>") + 7, data.search("</title>"));
-			information = data.slice(data.search("fillOutPage"), data.length);
-			information = information.slice(information.search("\\(") + 1, information.search("\\)"));
-			information = information.split("\n");
-			image = information[2].slice(information[2].search('"'), information[2].length - 1);*/
-		});
-	}
-}
-
-function createAnimalCard(i) {
-	return function(data) {
-		var image, name, information, tempNum;
-		console.log(i);
-		console.log(data);
 	}
 }
 
