@@ -61,13 +61,13 @@ $(function() {
 function addAnimalCards(divName, ...links) {
 	var image, name, information, tempNum;
 	for (var i = 0; i < links.length; i++) {
-		$.ajax({url: links[i], type: "get", async: false, success: createAnimalCard(i){
+		$.ajax({url: links[i], type: "get", async: false, success: createAnimalCard(i)
 			/*name = data.slice(data.search("<title>") + 7, data.search("</title>"));
 			information = data.slice(data.search("fillOutPage"), data.length);
 			information = information.slice(information.search("\\(") + 1, information.search("\\)"));
 			information = information.split("\n");
 			image = information[2].slice(information[2].search('"'), information[2].length - 1);*/
-		}});
+		});
 	}
 }
 
