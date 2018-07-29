@@ -38,10 +38,10 @@ function addAnimalCards(divName, ...links) {
 	} else {
 		for (var i = 0; i < (links.length + 1) / 2; i++) {$(divName).append("<div class='animal-card-group'></div>");}
 	}
-	for (var i = 0; i < links.length; i++) {$.ajax({url: links[i], type: "get", success: createAnimalCard(i, divName)});}
+	for (var i = 0; i < links.length; i++) {$.ajax({url: links[i], type: "get", success: createAnimalCard(i, divName, links)});}
 }
 
-function createAnimalCard(i, divName) {
+function createAnimalCard(i, divName, links) {
 	return function(data) {
 		var image, name, information, tempNum;
 		name = data.slice(data.search("<title>") + 7, data.search("</title>"));
