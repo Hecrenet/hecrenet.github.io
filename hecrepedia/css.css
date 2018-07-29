@@ -82,6 +82,10 @@ iframe {width: 100%}
 	.dropdown:hover .dropdown-links {display: none}
 }
 
+@media only screen and (max-width: 384px) {
+	.tab button {width: 100%}
+}
+
 /* This one is for the trolls who want the nav as tiny as possible. Hopefully the smallest width is 320px */
 @media only screen and (max-width: 318px) {
 	#top-nav li {width: 50%}
