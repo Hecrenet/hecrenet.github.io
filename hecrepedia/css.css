@@ -84,6 +84,7 @@ iframe {width: 100%}
 
 @media only screen and (max-width: 511px) {
 	.text-card, .text-card.left, .text-card.right, .animal-card {width: 100%}
+	.text-card.right {float: left}
 	.text-card.full-height, .text-card.half-height {height: auto}
 }
 
