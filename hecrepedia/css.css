@@ -83,7 +83,8 @@ iframe {width: 100%}
 }
 
 @media only screen and (max-width: 511px) {
-	.text-card, .text-card.left, .text-card.right {width: 100%}
+	.text-card, .text-card.left, .text-card.right, .animal-card {width: 100%}
+	.text-card.full-height, .text-card.half-height {height: auto}
 }
 
 @media only screen and (max-width: 384px) {
