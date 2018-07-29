@@ -1,7 +1,7 @@
 /*===================================
   Global Variables
   ===================================*/
-var minTabWidth = 0;
+var minTabWidth = 326;
 
 /*===================================
   Functions that need all DOM objects
@@ -115,5 +115,5 @@ function changeCardGroupHeight() {
 }
 
 function setTabStyle() {
-	if ($($(".tab")[0]).height() > 47 && $($(".tab")[0]).width() < minTabWidth) {$($(".tab button")).css("width", "100%")} else {$($(".tab button")).css("width", "auto"); minTabWidth = $($(".tab")[0]).width(); }
+	if ($($(".tab")[0]).height() > 47 && $($(".tab")[0]).width() < minTabWidth) {$($(".tab button")).css("width", "100%")} else {$($(".tab button")).css("width", "auto");}
 }
