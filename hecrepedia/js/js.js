@@ -32,7 +32,7 @@ $(function() {
   Hecrepedia, compressed a few of them
   ===================================*/
 //Add Card(s)
-function addAnimalCards(divName, ...links) {
+/*function addAnimalCards(divName, ...links) {
 	var image, name, information, tempNum;
 	if (links.length % 2 == 0) {
 		for (var i = 0; i < links.length / 2; i++) {
@@ -56,6 +56,25 @@ function addAnimalCards(divName, ...links) {
 		} else {
 			$($(divName + " .animal-card-group")[(i - 1) / 2]).append("<div class='animal-card'><div class='animal-img'><a href=" + links[i] + "><img src=" + image + "></a></div><div class='animal-name'><p>" + name + "</p></div></div>");
 		}
+	}
+}*/
+function addAnimalCards(divName, ...links) {
+	var image, name, information, tempNum;
+	for (var i = 0; i < links.length; i++) {
+		$.ajax({url: links[i], type: "get", async: false, success: createAnimalCard(i){
+			/*name = data.slice(data.search("<title>") + 7, data.search("</title>"));
+			information = data.slice(data.search("fillOutPage"), data.length);
+			information = information.slice(information.search("\\(") + 1, information.search("\\)"));
+			information = information.split("\n");
+			image = information[2].slice(information[2].search('"'), information[2].length - 1);*/
+		}});
+	}
+}
+
+function createAnimalCard(i) {
+	return function(data) {
+		console.log(i);
+		console.log(data);
 	}
 }
 
