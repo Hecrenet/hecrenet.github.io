@@ -68,6 +68,8 @@ body {margin: 0; padding: 0; background-color: #f4f4f4;}
 #animal-name {margin-left: 20px; font-family: sans-serif;}
 #animal-pronunciation {margin-left: 20px; font-family: sans-serif;}
 
+iframe {width: 100%}
+
 /*===================================
   Responsive Navigation
   We are gangsters and did a computer-
