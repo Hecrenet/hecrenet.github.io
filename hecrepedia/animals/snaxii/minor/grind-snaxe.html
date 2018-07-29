@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121185448-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-121185448-1');
+	</script>
+	
+	<title>Grind Snaxe</title>
+	<link rel="stylesheet" type="text/css" href="/hecrepedia/css.css">
+	<script type="text/javascript" src="/hecrepedia/js/jquery.js"></script>
+	<script type="text/javascript" src="/hecrepedia/js/animals.js"></script>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+<body>
+	<script type="text/javascript">
+		$.ajax({url: "/hecrepedia/animals/template.html", type: "get", async: false, success: function(data){
+			$("body").append(data);
+		}});
+		//Name
+		$("<h1 id='animal-name'>Grind Snaxe</h1>").insertBefore(".tab");
+		//Pronunciation
+		$("<p id='animal-pronunciation'>/eev&#x02591 ssnaks/</p>").insertBefore(".tab");
+		fillOutPage(
+			//Image Link
+			"/images/snaxe/major/sea-dragon-snaxe/sea-dragon-snaxe.jpg",
+			//Breif Description
+			"",
+			//Personality
+			"",
+			//Associations
+			"",
+			//Birth
+			"",
+			//Historical Stuff
+			"",
+			//More History
+			"",
+			//Present Day
+			"",
+			//Powers
+			"",
+			//Fun Facts
+			"",
+			//Special Appearances
+			"",
+			//Other Trivia
+			""
+		);
+		addFactTable("Name", "Grind Snaxe",
+			     "Species", "",
+			     "Hecredex Number", "",
+			     "Rarity", "",
+			     "Dangertivity", ""
+			    );
+		waitForDOM();
+	</script>
+</body>
+</html>
