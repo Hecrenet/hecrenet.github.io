@@ -8,16 +8,6 @@ var minTabWidth = 326;
   to load first
   ===================================*/
 $(function() {
-	/*//Someone plz help, the changeCardGroupHeight() only works on page refresh, when button is clicked, or when page size changes
-	if(document.URL.indexOf("#")==-1) {
-		// Set the URL to whatever it was plus "#".
-		url = document.URL+"#";
-		location = "#";
-		//Reload the page
-		location.reload(true);
-	} else {
-		history.pushState(null, null, document.location.href.match(/(^[^#]*)/)[0]);
-	}*/
 	//Load in the Navigation Bar
 	$.ajax({url: "/hecrepedia/nav.html", type: "get", async: false, success: function(data) {
 		$("#top-nav").append(data);
@@ -28,6 +18,7 @@ $(function() {
 	document.getElementById("defaultOpen").click();
 	//Animate Animal Cards when in view
 	var $animation_elements = $(".animal-card");
+	var $window = $(window);
 	$window.on("scroll", checkIfInView);
 	function checkIfInView() {
 		var WINDOW_HEIGHT = $window.height();
