@@ -32,7 +32,7 @@ p, h1, h2, h3, h4, h5, h6 {color: #3a3a3a}
   Tabs
   ===================================*/
 .tab {overflow: hidden; width: auto; background-color: #444; margin: 21px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); border-radius: 2px}
-.tab button {border: none; padding: 10px; cursor: pointer; color: white; background-color: #444; display: inline; padding: 16px; transition: 0.3s;}
+.tab button {border: none; padding: 10px; cursor: pointer; color: #fff; background-color: #444; display: inline; padding: 16px; transition: 0.3s;}
 .tab button:focus {outline: none}
 .tab button:hover {background-color: #3a3a3a}
 .tab button.active {background-color: #5bbbff;}
@@ -47,7 +47,7 @@ p, h1, h2, h3, h4, h5, h6 {color: #3a3a3a}
 .text-card h2 {background-color: #5bbbff; color: #fff; padding: 10px; margin: 0; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25); font-weight: normal;}
 .text-card-text {padding: 10px; overflow: auto; height: calc(100% - 69px);}
 .text-card-text::-webkit-scrollbar {width: 5px;}
-.text-card-text::-webkit-scrollbar-thumb {background-color: #5bbbff}
+.text-card-text::-webkit-scrollbar-thumb {background-color: #5afa}
 .text-card img {width: 100%;}
 .text-card table {border-collapse: collapse; width: 100%;}
 .text-card td {text-align: center; padding: 10px; width: 50%; color: #fff; transition: 0.3s}
