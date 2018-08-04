@@ -16,6 +16,12 @@ $(function() {
 	setTabStyle();
 	//Open the designated tab
 	document.getElementById("defaultOpen").click();
+});
+/*===================================
+  Functions that need the whole page
+  to load first
+  ===================================*/
+$(window).bind("load", function(){
 	//Animate Animal Cards when in view
 	var $animation_elements = $(".animal-card");
 	var $window = $(window);
@@ -40,6 +46,7 @@ $(function() {
 		});
 	}
 });
+
 /*===================================
   Copied functions from first
   Hecrepedia, compressed a few of them
