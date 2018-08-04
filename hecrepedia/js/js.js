@@ -23,7 +23,7 @@ $(function() {
   ===================================*/
 $(window).bind("load", function(){
 	//Animate Animal Cards when in view
-	var $animation_elements = $(".animal-card");
+	var $animation_elements = $(".animal-card-group");
 	var $window = $(window);
 	$window.on("scroll", checkIfInView);
 	function checkIfInView() {
