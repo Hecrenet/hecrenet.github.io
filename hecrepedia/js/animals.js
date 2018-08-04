@@ -10,27 +10,27 @@ function fillOutPage(imgLink, breifDesc, pers, associations, birth, history, mor
 	//Quick Facts img
 	$("#quick-facts img")[0].src = imgLink;
 	//Breif Description
-	$($("#breif-description")[0]).append("<p>" + breifDesc + "</p>");
+	$($("#breif-description .text-card-text")[0]).append("<p>" + breifDesc + "</p>");
 	//Personality
-	$($("#personality")[0]).append("<p>" + pers + "</p>");
+	$($("#personality .text-card-text")[0]).append("<p>" + pers + "</p>");
 	//Associations
-	$($("#associations")[0]).append("<p>" + associations + "</p>");
+	$($("#associations .text-card-text")[0]).append("<p>" + associations + "</p>");
 	//Birth
-	$($("#birth")[0]).append("<p>" + birth + "</p>");
+	$($("#birth .text-card-text")[0]).append("<p>" + birth + "</p>");
 	//Historical Stuff
-	$($("#historical-stuff")[0]).append("<p>" + history + "</p>");
+	$($("#historical-stuff .text-card-text")[0]).append("<p>" + history + "</p>");
 	//More History
-	$($("#more-history")[0]).append("<p>" + moreHis + "</p>");
+	$($("#more-history .text-card-text")[0]).append("<p>" + moreHis + "</p>");
 	//Present Day
-	$($("#present-day")[0]).append("<p>" + present + "</p>");
+	$($("#present-day .text-card-text")[0]).append("<p>" + present + "</p>");
 	//Powers
-	$($("#powers")[0]).append("<p>" + powers + "</p>");
+	$($("#powers .text-card-text")[0]).append("<p>" + powers + "</p>");
 	//Fun Facts
-	$($("#fun-facts")[0]).append("<p>" + facts + "</p>");
+	$($("#fun-facts .text-card-text")[0]).append("<p>" + facts + "</p>");
 	//Special Appearances
-	$($("#special-appearances")[0]).append("<p>" + appearances + "</p>");
+	$($("#special-appearances .text-card-text")[0]).append("<p>" + appearances + "</p>");
 	//Other Trivia
-	$($("#other-trivia")[0]).append("<p>" + trivia + "</p>");
+	$($("#other-trivia .text-card-text")[0]).append("<p>" + trivia + "</p>");
 }
 
 function addFactTable(...tableData) {
