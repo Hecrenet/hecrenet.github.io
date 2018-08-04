@@ -67,9 +67,10 @@ body {margin: 0; padding: 0; background-color: #f4f4f4;}
 /*===================================
   Misc.
   ===================================*/
-/* Some animal card stuff */
+/* Some misc animal stuff that doesn't belong with the rest */
 #animal-name {margin-left: 20px; font-family: sans-serif;}
 #animal-pronunciation {margin-left: 20px; font-family: sans-serif;}
+#quick-facts img {display: block;}
 /* iFrame */
 iframe {width: 100%}
 
@@ -91,7 +92,7 @@ iframe {width: 100%}
 
 @media only screen and (max-width: 511px) {
 	.animal-card {width: 100%}
-	.text-card.right, .text-card.left {width: calc(100% - 21px);}
+	.text-card.right, .text-card.left {width: 100%}
 	.text-card.right {float: left}
 	.text-card.full-height, .text-card.half-height {height: auto}
 }
