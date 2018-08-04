@@ -30,7 +30,7 @@ body {margin: 0; padding: 0; background-color: #f4f4f4;}
 /*===================================
   Tabs
   ===================================*/
-.tab {overflow: hidden; width: auto; background-color: #444; margin: 21px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5)}
+.tab {overflow: hidden; width: auto; background-color: #444; margin: 21px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); border-radius: 2px}
 .tab button {border: none; padding: 10px; cursor: pointer; color: white; background-color: #444; display: inline; padding: 16px; transition: 0.3s;}
 .tab button:focus {outline: none}
 .tab button:hover {background-color: #3a3a3a}
@@ -42,7 +42,7 @@ body {margin: 0; padding: 0; background-color: #f4f4f4;}
   ===================================*/
 /* Text Card */
 .text-card-group {clear: both; overflow: hidden; padding: 1px;}
-.text-card {padding: 10px; border: 1px solid #ddd; background-color: #fff; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); margin-bottom: 10px}
+.text-card {padding: 10px; border: 1px solid #ddd; background-color: #fff; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); margin-bottom: 10px; border-radius: 2px}
 .text-card img {width: 100%;}
 .text-card table {border-collapse: collapse; width: 100%;}
 .text-card td {text-align: center; padding: 10px; border: 1px solid #fff; width: 50%; color: #fff; transition: 0.3s}
@@ -56,7 +56,7 @@ body {margin: 0; padding: 0; background-color: #f4f4f4;}
 .text-card.right {width: calc(50% - 28px); float: right; clear: right;}
 /* Animal Card */
 .animal-card-group {overflow: hidden}
-.animal-card {width: calc(50% - 5px); overflow: hidden; background-color: #fff;  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); float: right; transition: 0.3s; margin-bottom: 10px}
+.animal-card {width: calc(50% - 5px); overflow: hidden; background-color: #fff;  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); float: right; transition: 0.3s; margin-bottom: 10px; border-radius: 2px}
 .animal-card:nth-child(odd) {float: left}
 .animal-card:hover {box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05)}
 .animal-img  img {width: 100%; display: block}
