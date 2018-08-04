@@ -68,14 +68,12 @@ body {margin: 0; padding: 0; background-color: #f4f4f4;}
 /* Some animal card stuff */
 #animal-name {margin-left: 20px; font-family: sans-serif;}
 #animal-pronunciation {margin-left: 20px; font-family: sans-serif;}
-.in-view {animation: slideUp 1s ease forwards}
 /* iFrame */
 iframe {width: 100%}
 
 /*===================================
   Animations
   ===================================*/
-@keyframes slideUp {0%{position: relative; top: 200px} 100%{top: 0}}
 
 /*===================================
   Responsive Navigation
