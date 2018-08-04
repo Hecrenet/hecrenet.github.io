@@ -91,7 +91,7 @@ function openClass(className) {
   Background Functions
   ===================================*/
 (function($) {
-	//Resize Cards
+	//Resize Stuff
 	var $window = $(window);
 
 	$window.resize(function resize(){
@@ -100,6 +100,28 @@ function openClass(className) {
 		changeCardGroupHeight();
 	}).trigger('resize');
 	
+	//Animate Animal Cards when in view
+	var $animation_elements = $(".animal-card");
+	$window.on("scroll", checkIfInView);
+	function checkIfInView() {
+		var WINDOW_HEIGHT = $window.height();
+		var WINDOW_TOP_POSITION = $window.scrollTop();
+		var WINDOW_BOTTOM_POSITION = WINDOW_TOP_POSITION + WINDOW_HEIGHT;
+		
+		$.each($animation_elements, function() {
+			var $element = $(this);
+			var elementHeight = $element.outerHeight();
+			var elementTopPosition = $element.offset().top;
+			var elementBottomPosition = (elementTopPosition + elementHeight);
+			
+			//Check to see if the element is in viewport
+			if (elementBottomPosition >= WINDOW_TOP_POSITION && elementBottomPosition <= WINDOW_BOTTOM_POSITION) {
+				$element.addClass("in-view");
+			} else {
+				$element.removeClass("in-view");
+			}
+		});
+	}
 })(jQuery);
 
 /*===================================
