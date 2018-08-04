@@ -8,7 +8,7 @@ var minTabWidth = 326;
   to load first
   ===================================*/
 $(function() {
-	//Someone plz help, the changeCardGroupHeight() only works on page refresh, when button is clicked, or when page size changes
+	/*//Someone plz help, the changeCardGroupHeight() only works on page refresh, when button is clicked, or when page size changes
 	if(document.URL.indexOf("#")==-1) {
 		// Set the URL to whatever it was plus "#".
 		url = document.URL+"#";
@@ -17,7 +17,7 @@ $(function() {
 		location.reload(true);
 	} else {
 		history.pushState(null, null, document.location.href.match(/(^[^#]*)/)[0]);
-	}
+	}*/
 	//Load in the Navigation Bar
 	$.ajax({url: "/hecrepedia/nav.html", type: "get", async: false, success: function(data) {
 		$("#top-nav").append(data);
@@ -26,6 +26,28 @@ $(function() {
 	setTabStyle();
 	//Open the designated tab
 	document.getElementById("defaultOpen").click();
+	//Animate Animal Cards when in view
+	var $animation_elements = $(".animal-card");
+	$window.on("scroll", checkIfInView);
+	function checkIfInView() {
+		var WINDOW_HEIGHT = $window.height();
+		var WINDOW_TOP_POSITION = $window.scrollTop();
+		var WINDOW_BOTTOM_POSITION = WINDOW_TOP_POSITION + WINDOW_HEIGHT;
+		
+		$.each($animation_elements, function() {
+			var $element = $(this);
+			var elementHeight = $element.outerHeight();
+			var elementTopPosition = $element.offset().top;
+			var elementBottomPosition = (elementTopPosition + elementHeight);
+			
+			//Check to see if the element is in viewport
+			if (elementBottomPosition >= WINDOW_TOP_POSITION && elementBottomPosition <= WINDOW_BOTTOM_POSITION) {
+				$element.addClass("in-view");
+			} else {
+				$element.removeClass("in-view");
+			}
+		});
+	}
 });
 /*===================================
   Copied functions from first
@@ -98,30 +120,7 @@ function openClass(className) {
 		if ($window.width() > 672) {$(".dropdown").removeClass("open");}
 		setTabStyle();
 		changeCardGroupHeight();
-	}).trigger('resize');
-	
-	//Animate Animal Cards when in view
-	var $animation_elements = $(".animal-card");
-	$window.on("scroll", checkIfInView);
-	function checkIfInView() {
-		var WINDOW_HEIGHT = $window.height();
-		var WINDOW_TOP_POSITION = $window.scrollTop();
-		var WINDOW_BOTTOM_POSITION = WINDOW_TOP_POSITION + WINDOW_HEIGHT;
-		
-		$.each($animation_elements, function() {
-			var $element = $(this);
-			var elementHeight = $element.outerHeight();
-			var elementTopPosition = $element.offset().top;
-			var elementBottomPosition = (elementTopPosition + elementHeight);
-			
-			//Check to see if the element is in viewport
-			if (elementBottomPosition >= WINDOW_TOP_POSITION && elementBottomPosition <= WINDOW_BOTTOM_POSITION) {
-				$element.addClass("in-view");
-			} else {
-				$element.removeClass("in-view");
-			}
-		});
-	}
+	});
 })(jQuery);
 
 /*===================================
