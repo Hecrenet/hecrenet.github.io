@@ -42,7 +42,9 @@ body {margin: 0; padding: 0; background-color: #f4f4f4;}
   ===================================*/
 /* Text Card */
 .text-card-group {clear: both; overflow: hidden; padding: 1px;}
-.text-card {padding: 10px; border: 1px solid #ddd; background-color: #fff; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); margin-bottom: 10px; border-radius: 2px}
+.text-card {background-color: #fff; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); margin-bottom: 10px; border-radius: 2px}
+.text-card h2 {background-color: #5bbbff; color: #fff; padding: 10px; margin: 0; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25)}
+.text-card p {padding: 10px}
 .text-card img {width: 100%;}
 .text-card table {border-collapse: collapse; width: 100%;}
 .text-card td {text-align: center; padding: 10px; border: 1px solid #fff; width: 50%; color: #fff; transition: 0.3s}
@@ -50,10 +52,10 @@ body {margin: 0; padding: 0; background-color: #f4f4f4;}
 .text-card td:nth-child(odd):hover {background-color: #5aaaff}
 .text-card td:nth-child(even) {background-color: #3a3a3a}
 .text-card td:nth-child(even):hover {background-color: #333}
-.text-card.full-height {height: calc(100% - 32px);}
-.text-card.half-height {height: calc(50% - 32px)}
-.text-card.left {width: calc(50% - 28px); float: left; clear: left;}
-.text-card.right {width: calc(50% - 28px); float: right; clear: right;}
+.text-card.full-height {height: calc(100% - 12px);}
+.text-card.half-height {height: calc(50% - 12px)}
+.text-card.left {width: calc(50% - 8px); float: left; clear: left;}
+.text-card.right {width: calc(50% - 8px); float: right; clear: right;}
 /* Animal Card */
 .animal-card-group {overflow: hidden}
 .animal-card {width: calc(50% - 5px); overflow: hidden; background-color: #fff;  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); float: right; transition: 0.3s; margin-bottom: 10px; border-radius: 2px}
