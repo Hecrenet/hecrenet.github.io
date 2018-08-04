@@ -97,12 +97,14 @@ function openClass(className) {
   ===================================*/
 function changeCardGroupHeight() {
 	var cardContainers = $(".text-card-group");
-	cardContainers.css("height", "initial");
+	cardContainers.css("height", "auto");
+	$(".text-card").css("height", "auto");
 	var myHeight;
 	for (var i = 0; i < cardContainers.length; i++) {
 		myHeight = String($(cardContainers[i]).height());
 		$(cardContainers[i]).css("height", myHeight);
 	}
+	$(".text-card").css("height", "");
 }
 
 function setTabStyle() {
