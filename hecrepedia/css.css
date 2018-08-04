@@ -70,18 +70,6 @@ body {margin: 0; padding: 0; background-color: #f4f4f4;}
 #animal-pronunciation {margin-left: 20px; font-family: sans-serif;}
 /* iFrame */
 iframe {width: 100%}
-/* Animal Card Scroll animation */
-.slide-in {
-	transform: translateY(150px);
-	animation: come-in 0.8s ease forwards;
-}
-.slide-in:nth-child(odd) {
-	animation-duration: 0.6s;
-}
-.on-screen {
-	transform: translateY(0);
-	animation: none;
-}
 
 /*===================================
   Animations
