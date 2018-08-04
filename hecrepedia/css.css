@@ -48,11 +48,12 @@ p, h1, h2, h3, h4, h5, h6 {color: #3a3a3a}
 .text-card p {padding: 10px}
 .text-card img {width: 100%;}
 .text-card table {border-collapse: collapse; width: 100%;}
-.text-card td {text-align: center; padding: 10px; border: 1px solid #fff; width: 50%; color: #fff; transition: 0.3s}
-.text-card td:nth-child(odd) {background-color: #5bbbff;}
+.text-card td {text-align: center; padding: 10px; width: 50%; color: #fff; transition: 0.3s}
+.text-card td:nth-child(odd) {background-color: #5bbbff; border-bottom: 1px solid #5aaaff}
 .text-card td:nth-child(odd):hover {background-color: #5aaaff}
-.text-card td:nth-child(even) {background-color: #3a3a3a}
+.text-card td:nth-child(even) {background-color: #3a3a3a; border-bottom: 1px solid #333}
 .text-card td:nth-child(even):hover {background-color: #333}
+.text-card tr:last-child td {border: none}
 .text-card.full-height {height: calc(100% - 12px);}
 .text-card.half-height {height: calc(50% - 12px)}
 .text-card.left {width: calc(50% - 8px); float: left; clear: left;}
