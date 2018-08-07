@@ -47,9 +47,9 @@ p, h1, h2, h3, h4, h5, h6 {color: #3a3a3a}
   ===================================*/
 /* Text Card */
 .text-card-group {clear: both; overflow: hidden; padding: 1px;}
-.text-card {background-color: #fff; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); margin-bottom: 10px; overflow: hidden}
+.text-card {background-color: #fff; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); margin-bottom: 10px;}
 .text-card h2 {background-color: #5bbbff; color: #fff; padding: 10px; margin: 0; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25); font-weight: normal;}
-.text-card-text {padding: 10px; overflow: auto; height: calc(100% - 69px);}
+.text-card-text {padding: 10px; overflow: auto; height: calc(100% - 69px); border: 1px solid #ddd; border-top: none}
 .text-card-text::-webkit-scrollbar {width: 5px;}
 .text-card-text::-webkit-scrollbar-thumb {background-color: #5afa}
 .text-card img {width: 100%;}
