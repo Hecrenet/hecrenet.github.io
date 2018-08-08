@@ -95,7 +95,7 @@ iframe {width: 100%}
 @media only screen and (max-width: 767px) {
 	#top-nav li:not(:first-child):not(:last-child) a {display: none}
 	#top-nav li.menu-icon a {display: block !important;}
-	.dropdown:hover .dropdown-links {display: none}
+	.dropdown-links {width: 100%}
 }
 
 @media only screen and (max-width: 511px) {
