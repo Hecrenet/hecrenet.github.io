@@ -2,7 +2,8 @@
   Imports and the misc. styling
   ===================================*/
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-body {margin: 0; padding: 0; background-color: #f4f4f4;}
+
+body {margin: 0; padding: 0; background-color: #f4f4f4; overflow: hidden}
 p, h1, h2, h3, h4, h5, h6 {color: #3a3a3a}
 #page {height: calc(100vh - 60px); overflow: auto;}
 #page.open {height: calc(100vh - 300px)}
@@ -53,7 +54,7 @@ p, h1, h2, h3, h4, h5, h6 {color: #3a3a3a}
 .text-card-text::-webkit-scrollbar {width: 5px;}
 .text-card-text::-webkit-scrollbar-thumb {background-color: #5afa}
 .text-card img {width: 100%;}
-.text-card table {border-collapse: collapse; width: 100%;}
+.text-card table {border-collapse: collapse; width: 100%; height: calc(100% - 49px)}
 .text-card td {text-align: center; padding: 10px; width: 50%; color: #fff; transition: 0.3s}
 .text-card td:nth-child(odd) {background-color: #5bbbff; border-bottom: 1px solid #5aaaff}
 .text-card td:nth-child(odd):hover {background-color: #5aaaff}
@@ -81,6 +82,8 @@ p, h1, h2, h3, h4, h5, h6 {color: #3a3a3a}
 #quick-facts img {display: block;}
 /* iFrame */
 iframe {width: 100%}
+iframe::-webkit-scrollbar {width: 5px}
+iframe::-webkit-scrollbar-thumb {background-color: #5afa}
 
 /*===================================
   Animations
