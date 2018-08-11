@@ -46,6 +46,7 @@ function createAnimalCard(i, divName, links) {
 		
 		tempNum = i % ANIMAL_CARD_GROUPS == 0 ? i / ANIMAL_CARD_GROUPS : (ANIMAL_CARD_GROUPS - i % ANIMAL_CARD_GROUPS + i) / ANIMAL_CARD_GROUPS - 1;
 		console.log(tempNum);
+		console.log(i);
 		if (i % ANIMAL_CARD_GROUPS == 0) {
 			$($(divName + " .animal-card-group")[i / ANIMAL_CARD_GROUPS]).append("<div class='animal-card'><div class='animal-img'><a href=" + links[i] + "><img src=" + image + "></a></div><div class='animal-name'><p>" + name + "</p></div></div>");
 		} else {
