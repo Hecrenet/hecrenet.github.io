@@ -36,7 +36,7 @@ p, h1, h2, h3, h4, h5, h6 {color: #3a3a3a}
 /*===================================
   Tabs
   ===================================*/
-.tab {overflow: hidden; width: auto; background-color: #444; margin: 21px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);}
+.tab {overflow: hidden; width: auto; background-color: #444; margin: 21px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); border-radius: 4px}
 .tab button {border: none; padding: 10px; cursor: pointer; color: #fff; background-color: #444; display: inline; padding: 16px; transition: 0.3s;}
 .tab button:focus {outline: none}
 .tab button:hover {background-color: #3a3a3a}
@@ -48,9 +48,9 @@ p, h1, h2, h3, h4, h5, h6 {color: #3a3a3a}
   ===================================*/
 /* Text Card */
 .text-card-group {clear: both; overflow: hidden; padding: 1px;}
-.text-card {background-color: #fff; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); margin-bottom: 10px;}
-.text-card h2 {background-color: #5bbbff; color: #fff; padding: 10px; margin: 0; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25); font-weight: normal;}
-.text-card-text {padding: 10px; overflow: auto; height: calc(100% - 69px); border: 1px solid #ddd; border-top: none}
+.text-card {background-color: #fff; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); margin-bottom: 10px; border-radius: 4px;}
+.text-card h2 {background-color: #5bbbff; color: #fff; padding: 10px; margin: 0; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25); font-weight: normal; border-radius: 4px 4px 0 0}
+.text-card-text {padding: 10px; overflow: auto; height: calc(100% - 69px); border: 1px solid #ddd; border-top: none; border-radius: 4px;}
 .text-card-text::-webkit-scrollbar {width: 5px;}
 .text-card-text::-webkit-scrollbar-thumb {background-color: #5afa}
 .text-card img {width: 100%;}
@@ -67,7 +67,7 @@ p, h1, h2, h3, h4, h5, h6 {color: #3a3a3a}
 .text-card.right {width: calc(50% - 8px); float: right; clear: right;}
 /* Animal Card */
 .animal-card-group {overflow: hidden}
-.animal-card {width: calc(50% - 5px); overflow: hidden; background-color: #fff;  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); float: right; transition: 0.3s; margin-bottom: 10px;}
+.animal-card {width: calc(50% - 5px); overflow: hidden; background-color: #fff;  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); float: right; transition: 0.3s; margin-bottom: 10px; border-radius: 4px}
 .animal-card:nth-child(odd) {float: left}
 .animal-card:hover {box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05)}
 .animal-img  img {width: 100%; display: block}
