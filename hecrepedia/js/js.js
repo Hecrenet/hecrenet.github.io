@@ -23,29 +23,28 @@ $(function() {
   ===================================*/
 //Add Card(s)
 function addAnimalCards(divName, ...links) {
-	//Figure out how many animal card groups need to be made
-	var animalCardGroups = links.length % ANIMAL_CARD_GROUPS ? links.length / ANIMAL_CARD_GROUPS : (ANIMAL_CARD_GROUPS - links.length % ANIMAL_CARD_GROUPS + links.length) / ANIMAL_CARD_GROUPS;
-	//Create the animal card groups
-	for (var i = 0; i < animalCardGroups; i++) {$(divName).append("<div class='animal-card-group'></div>");}
-	//Create the animal card
-	for (var i = 0; i < links.length; i++) {$.ajax({url: links[i], type: "get", success: createAnimalCard(i, divName, links[i])});}
+	if (links.length % ANIMAL_CARD_GROUPS == 0) {
+		for (var i = 0; i < links.length / ANIMAL_CARD_GROUPS; i++) {$(divName).append("<div class='animal-card-group'></div>");}
+	} else {
+		for (var i = 0; i < (ANIMAL_CARD_GROUPS - links.length % ANIMAL_CARD_GROUPS + links.length) / ANIMAL_CARD_GROUPS; i++) {$(divName).append("<div class='animal-card-group'></div>");}
+	}
+	for (var i = 0; i < links.length; i++) {$.ajax({url: links[i], type: "get", success: createAnimalCard(i, divName, links)});}
 }
 
-function createAnimalCard(i, divName, link) {
+function createAnimalCard(i, divName, links) {
 	return function(data) {
 		var image, name, information, tempNum;
-		//Get the Animal Name
 		name = data.slice(data.search("<title>") + 7, data.search("</title>"));
-		//Set the information array by splitting the information by new lines in the fillOutPage() function
 		information = data.slice(data.search("fillOutPage"), data.length);
 		information = information.slice(information.search("\\(") + 1, information.search("\\)"));
 		information = information.split("\n");
-		//Set the variables to be put into the $.append() line
 		image = information[2].slice(information[2].search('"'), information[2].length - 1);
-		//Figure out which Animal Card Group the Animal Card is in
-		var divIndex = i % 4 == 0 ? i / 4 : (ANIMAL_CARD_GROUPS - i % ANIMAL_CARD_GROUPS + i) / 4 - 1 ;
-		//Append the animal card
-		$($(divName + " .animal-card-group")[divIndex]).append("<div class='animal-card'><div class='animal-img'><a href=" + link + "><img src=" + image + "></a></div><div class='animal-name'><p>" + name + "</p></div></div>");
+		
+		if (i % ANIMAL_CARD_GROUPS == 0) {
+			$($(divName + " .animal-card-group")[i / ANIMAL_CARD_GROUPS]).append("<div class='animal-card'><div class='animal-img'><a href=" + links[i] + "><img src=" + image + "></a></div><div class='animal-name'><p>" + name + "</p></div></div>");
+		} else {
+			$($(divName + " .animal-card-group")[( ANIMAL_CARD_GROUPS - i % ANIMAL_CARD_GROUPS + i) / ANIMAL_CARD_GROUPS - 1]).append("<div class='animal-card'><div class='animal-img'><a href=" + links[i] + "><img src=" + image + "></a></div><div class='animal-name'><p>" + name + "</p></div></div>");
+		}
 	}
 }
 
