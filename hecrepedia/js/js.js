@@ -34,10 +34,10 @@ function addAnimalCards(divName, ...links) {
 function createAnimalCard(i, divName, links) {
 	return function(data) {
 		var image, name, information, tempNum;
+		/*
 		//Get the Animal Name
 		name = data.slice(data.search("<title>") + 7, data.search("</title>"));
 		//Set the information array by splitting the information by new lines in the fillOutPage() function
-		/*
 		information = data.slice(data.search("fillOutPage"), data.length);
 		information = information.slice(information.search("\\(") + 1, information.search("\\)"));
 		information = information.split("\n");
