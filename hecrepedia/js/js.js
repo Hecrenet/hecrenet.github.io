@@ -2,7 +2,7 @@
   Global Variables
   ===================================*/
 var MIN_TAB_WIDTH = 326;
-var ANIMAL_CARD_GROUPS = 2;
+var ANIMAL_CARD_GROUPS = 4;
 
 /*===================================
   Functions that need all DOM objects
@@ -59,12 +59,8 @@ function createAnimalCard(i, divName, links) {
 		tempNum = i % ANIMAL_CARD_GROUPS == 0 ? i / ANIMAL_CARD_GROUPS : (ANIMAL_CARD_GROUPS - i % ANIMAL_CARD_GROUPS + i) / ANIMAL_CARD_GROUPS - 1;
 		console.log("Animal Card Group: " + tempNum);
 		console.log("Animal Number in Loop: " + i);
-		//Add the animal card
-		if (i % ANIMAL_CARD_GROUPS == 0) {
-			$($(divName + " .animal-card-group")[i / ANIMAL_CARD_GROUPS]).append("<div class='animal-card'><div class='animal-img'><a href=" + links[i] + "><img src=" + image + "></a></div><div class='animal-name'><p>" + name + "</p></div></div>");
-		} else {
-			$($(divName + " .animal-card-group")[( ANIMAL_CARD_GROUPS - i % ANIMAL_CARD_GROUPS + i) / ANIMAL_CARD_GROUPS - 1]).append("<div class='animal-card'><div class='animal-img'><a href=" + links[i] + "><img src=" + image + "></a></div><div class='animal-name'><p>" + name + "</p></div></div>");
-		}
+		//Append the animal card
+		$($(divName + " .animal-card-group")[tempNum]).append("<div class='animal-card'><div class='animal-img'><a href=" + links[i] + "><img src=" + image + "></a></div><div class='animal-name'><p>" + name + "</p></div></div>");
 	}
 }
 
