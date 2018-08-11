@@ -28,10 +28,10 @@ function addAnimalCards(divName, ...links) {
 	//Create the animal card groups
 	for (var i = 0; i < animalCardGroups; i++) {$(divName).append("<div class='animal-card-group'></div>");}
 	//Create the animal card
-	for (var i = 0; i < links.length; i++) {$.ajax({url: links[i], type: "get", success: createAnimalCard(i, divName, links)});}
+	for (var i = 0; i < links.length; i++) {$.ajax({url: links[i], type: "get", success: createAnimalCard(i, divName, links[i])});}
 }
 
-function createAnimalCard(i, divName, links) {
+function createAnimalCard(i, divName, link) {
 	return function(data) {
 		var image, name, information, tempNum;
 		//Get the Animal Name
@@ -45,7 +45,7 @@ function createAnimalCard(i, divName, links) {
 		//Figure out which Animal Card Group the Animal Card is in
 		var divIndex = i % 4 == 0 ? i / 4 : (ANIMAL_CARD_GROUPS - i % ANIMAL_CARD_GROUPS + i) / 4 - 1 ;
 		//Append the animal card
-		$($(divName + " .animal-card-group")[divIndex]).append("<div class='animal-card'><div class='animal-img'><a href=" + links[i] + "><img src=" + image + "></a></div><div class='animal-name'><p>" + name + "</p></div></div>");
+		$($(divName + " .animal-card-group")[divIndex]).append("<div class='animal-card'><div class='animal-img'><a href=" + link + "><img src=" + image + "></a></div><div class='animal-name'><p>" + name + "</p></div></div>");
 	}
 }
 
