@@ -54,7 +54,10 @@ p, h1, h2, h3, h4, h5, h6 {color: #3a3a3a}
 .text-card-text::-webkit-scrollbar {width: 5px;}
 .text-card-text::-webkit-scrollbar-thumb {background-color: #5afa}
 .text-card img {width: 100%;}
-.text-card table {border-collapse: collapse; width: 100%; height: calc(100% - 49px)}
+.text-card-table {height: calc(100% - 49px); overflow: hidden; border-radius: 0 0 4px 4px}
+.text-card-table::-webkit-scrollbar {width: 5px}
+.text-card-table::-webkit-scrollbar-thumb {background-color: #5afa}
+.text-card table {border-collapse: collapse; width: 100%; height: 100%}
 .text-card td {text-align: center; padding: 10px; width: 50%; color: #fff; transition: 0.3s}
 .text-card td:nth-child(odd) {background-color: #5bbbff; border-bottom: 1px solid #5aaaff}
 .text-card td:nth-child(odd):hover {background-color: #5aaaff}
@@ -67,8 +70,8 @@ p, h1, h2, h3, h4, h5, h6 {color: #3a3a3a}
 .text-card.right {width: calc(50% - 8px); float: right; clear: right;}
 /* Animal Card */
 .animal-card-group {overflow: hidden}
-.animal-card {width: calc(50% - 5px); overflow: hidden; background-color: #fff;  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); float: right; transition: 0.3s; margin-bottom: 10px; border-radius: 4px}
-.animal-card:nth-child(odd) {float: left}
+.animal-card {width: calc(25% - 9px); overflow: hidden; background-color: #fff;  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); float: left; transition: 0.3s; margin-bottom: 10px; border-radius: 4px}
+.animal-card:not(:nth-child(4)) {margin-right: 12px}
 .animal-card:hover {box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05)}
 .animal-img  img {width: 100%; display: block}
 .animal-name {text-align: center; font-weight: bold;}
