@@ -58,6 +58,7 @@ p, h1, h2, h3, h4, h5, h6 {color: #3a3a3a}
 .text-card-table::-webkit-scrollbar {width: 5px}
 .text-card-table::-webkit-scrollbar-thumb {background-color: #5afa}
 .text-card-table table {border-collapse: collapse; width: 100%; height: 100%}
+.text-card #table-container {overflow: hidden; border-radius: 0 0 4px 4px}
 .text-card table {border-collapse: collapse; width: 100%;}
 .text-card td {text-align: center; padding: 10px; width: 50%; color: #fff; transition: 0.3s}
 .text-card td:nth-child(odd) {background-color: #5bbbff; border-bottom: 1px solid #5aaaff}
