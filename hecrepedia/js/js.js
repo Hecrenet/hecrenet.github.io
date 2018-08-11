@@ -24,7 +24,7 @@ $(function() {
 //Add Card(s)
 function addAnimalCards(divName, ...links) {
 	//Figure out how many animal card groups need to be made
-	var animalCardGroups = links.length % ANIMAL_CARD_GGROUPS ? links.length / ANIMAL_CARD_GROUPS : (ANIMAL_CARD_GROUPS - links.length % ANIMAL_CARD_GROUPS + links.length) / ANIMAL_CARD_GROUPS;
+	var animalCardGroups = links.length % ANIMAL_CARD_GROUPS ? links.length / ANIMAL_CARD_GROUPS : (ANIMAL_CARD_GROUPS - links.length % ANIMAL_CARD_GROUPS + links.length) / ANIMAL_CARD_GROUPS;
 	//Create the animal card groups
 	for (var i = 0; i < animalCardGroups; i++) {$(divName).append("<div class='animal-card-group'></div>");}
 	//Create the animal card
