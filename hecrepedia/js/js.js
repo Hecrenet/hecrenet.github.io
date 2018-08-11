@@ -2,6 +2,7 @@
   Global Variables
   ===================================*/
 var MIN_TAB_WIDTH = 326;
+var ANIMAL_CARD_GROUPS = 4;
 
 /*===================================
   Functions that need all DOM objects
@@ -9,9 +10,7 @@ var MIN_TAB_WIDTH = 326;
   ===================================*/
 $(function() {
 	//Load in the Navigation Bar
-	$.ajax({url: "/hecrepedia/nav.html", type: "get", async: false, success: function(data) {
-		$("#top-nav").append(data);
-	}});
+	$("#top-nav").load("/hecrepedia/nav.html");
 	//Set the style of the tab
 	setTabStyle();
 	//Open the designated tab
@@ -24,28 +23,29 @@ $(function() {
   ===================================*/
 //Add Card(s)
 function addAnimalCards(divName, ...links) {
-	if (links.length % 2 == 0) {
-		for (var i = 0; i < links.length / 2; i++) {$(divName).append("<div class='animal-card-group'></div>");}
-	} else {
-		for (var i = 0; i < (links.length + 1) / 2; i++) {$(divName).append("<div class='animal-card-group'></div>");}
-	}
+	//Figure out how many animal card groups need to be made
+	var animalCardGroups = links.length % ANIMAL_CARD_GGROUPS ? links.length / ANIMAL_CARD_GROUPS : (ANIMAL_CARD_GROUPS - links.length % ANIMAL_CARD_GROUPS + links.length) / ANIMAL_CARD_GROUPS;
+	//Create the animal card groups
+	for (var i = 0; i < animalCardGroups; i++) {$(divName).append("<div class='animal-card-group'></div>");}
+	//Create the animal card
 	for (var i = 0; i < links.length; i++) {$.ajax({url: links[i], type: "get", success: createAnimalCard(i, divName, links)});}
 }
 
 function createAnimalCard(i, divName, links) {
 	return function(data) {
 		var image, name, information, tempNum;
+		//Get the Animal Name
 		name = data.slice(data.search("<title>") + 7, data.search("</title>"));
+		//Set the information array by splitting the information by new lines in the fillOutPage() function
 		information = data.slice(data.search("fillOutPage"), data.length);
 		information = information.slice(information.search("\\(") + 1, information.search("\\)"));
 		information = information.split("\n");
+		//Set the variables to be put into the $.append() line
 		image = information[2].slice(information[2].search('"'), information[2].length - 1);
-		
-		if (i % 2 == 0) {
-			$($(divName + " .animal-card-group")[i / 2]).append("<div class='animal-card'><div class='animal-img'><a href=" + links[i] + "><img src=" + image + "></a></div><div class='animal-name'><p>" + name + "</p></div></div>");
-		} else {
-			$($(divName + " .animal-card-group")[(i - 1) / 2]).append("<div class='animal-card'><div class='animal-img'><a href=" + links[i] + "><img src=" + image + "></a></div><div class='animal-name'><p>" + name + "</p></div></div>");
-		}
+		//Figure out which Animal Card Group the Animal Card is in
+		var divIndex = i % 4 == 0 ? i / 4 : (ANIMAL_CARD_GROUPS - i % ANIMAL_CARD_GROUPS + i) / 4 - 1 ;
+		//Append the animal card
+		$($(divName + " .animal-card-group")[divIndex]).append("<div class='animal-card'><div class='animal-img'><a href=" + links[i] + "><img src=" + image + "></a></div><div class='animal-name'><p>" + name + "</p></div></div>");
 	}
 }
 
