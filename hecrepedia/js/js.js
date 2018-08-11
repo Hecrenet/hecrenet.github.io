@@ -46,7 +46,7 @@ function createAnimalCard(i, divName, links) {
 		var divIndex = i % 4 == 0 ? i / 4 : (ANIMAL_CARD_GROUPS - i % ANIMAL_CARD_GROUPS + i) / 4 - 1 ;
 		//Append the animal card
 		$($(divName + " .animal-card-group")[divIndex]).append("<div class='animal-card'><div class='animal-img'><a href=" + links[i] + "><img></a></div><div class='animal-name'><p>" + name + "</p></div></div>");
-		$(".animal-card[i] img").attr("src", image);
+		$($(".animal-card img")[i]).attr("src", image);
 	}
 }
 
