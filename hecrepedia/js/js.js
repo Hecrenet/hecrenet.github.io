@@ -55,10 +55,11 @@ function createAnimalCard(i, divName, links) {
 		information = information.split("\n");
 		//Set the variables of the other information
 		image = information[2].slice(information[2].search('"'), information[2].length - 1);
-		
+		//Set tempNum to the div of which group the animal card should be added to
 		tempNum = i % ANIMAL_CARD_GROUPS == 0 ? i / ANIMAL_CARD_GROUPS : (ANIMAL_CARD_GROUPS - i % ANIMAL_CARD_GROUPS + i) / ANIMAL_CARD_GROUPS - 1;
 		console.log("Animal Card Group: " + tempNum);
 		console.log("Animal Number in Loop: " + i);
+		//Add the animal card
 		if (i % ANIMAL_CARD_GROUPS == 0) {
 			$($(divName + " .animal-card-group")[i / ANIMAL_CARD_GROUPS]).append("<div class='animal-card'><div class='animal-img'><a href=" + links[i] + "><img src=" + image + "></a></div><div class='animal-name'><p>" + name + "</p></div></div>");
 		} else {
