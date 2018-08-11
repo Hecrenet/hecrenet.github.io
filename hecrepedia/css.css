@@ -13,7 +13,7 @@ p, h1, h2, h3, h4, h5, h6 {color: #3a3a3a}
 /*===================================
   Top Navigation
   ===================================*/
-#top-nav {font-family: sans-serif; z-index: 1}
+#top-nav {font-family: sans-serif; z-index: 1; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); position: relative}
 #top-nav ul {list-style: none; margin: 0; padding: 0; overflow: hidden; background-color: #3a3a3a}
 #top-nav li {float: left; max-height: 60px;}
 #top-nav li:nth-child(even) {background-color: #333}
@@ -48,7 +48,7 @@ p, h1, h2, h3, h4, h5, h6 {color: #3a3a3a}
   ===================================*/
 /* Text Card */
 .text-card-group {clear: both; overflow: hidden; padding: 1px;}
-.text-card {background-color: #fff; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); margin-bottom: 10px; border-radius: 4px;}
+.text-card {background-color: #fff; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); margin-bottom: 10px; border-radius: 4px; overflow:}
 .text-card h2 {background-color: #5bbbff; color: #fff; padding: 10px; margin: 0; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25); font-weight: normal; border-radius: 4px 4px 0 0}
 .text-card-text {padding: 10px; overflow: auto; height: calc(100% - 69px); border: 1px solid #ddd; border-top: none; border-radius: 4px;}
 .text-card-text::-webkit-scrollbar {width: 5px;}
@@ -57,13 +57,14 @@ p, h1, h2, h3, h4, h5, h6 {color: #3a3a3a}
 .text-card-table {height: calc(100% - 49px); overflow: hidden; border-radius: 0 0 4px 4px}
 .text-card-table::-webkit-scrollbar {width: 5px}
 .text-card-table::-webkit-scrollbar-thumb {background-color: #5afa}
-.text-card table {border-collapse: collapse; width: 100%; height: 100%}
+.text-card-table table {border-collapse: collapse; width: 100%; height: 100%}
+.text-card table {border-collapse: collapse; width: 100%;}
 .text-card td {text-align: center; padding: 10px; width: 50%; color: #fff; transition: 0.3s}
 .text-card td:nth-child(odd) {background-color: #5bbbff; border-bottom: 1px solid #5aaaff}
 .text-card td:nth-child(odd):hover {background-color: #5aaaff}
 .text-card td:nth-child(even) {background-color: #3a3a3a; border-bottom: 1px solid #333}
 .text-card td:nth-child(even):hover {background-color: #333}
-.text-card tr:last-child td {border: none}
+.text-card tr:last-child td {border: none;}
 .text-card.full-height {height: calc(100% - 12px);}
 .text-card.half-height {height: calc(50% - 12px)}
 .text-card.left {width: calc(50% - 8px); float: left; clear: left;}
@@ -73,7 +74,7 @@ p, h1, h2, h3, h4, h5, h6 {color: #3a3a3a}
 .animal-card {width: calc(25% - 9px); overflow: hidden; background-color: #fff;  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); float: left; transition: 0.3s; margin-bottom: 10px; border-radius: 4px}
 .animal-card:not(:nth-child(4)) {margin-right: 12px}
 .animal-card:hover {box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05)}
-.animal-img  img {width: 100%; display: block}
+.animal-img img {width: 100%; display: block}
 .animal-name {text-align: center; font-weight: bold;}
 
 /*===================================
