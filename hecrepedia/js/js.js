@@ -10,9 +10,7 @@ var ANIMAL_CARD_GROUPS = 4;
   ===================================*/
 $(function() {
 	//Load in the Navigation Bar
-	$.ajax({url: "/index.html", type: "get", async: false, success: function(data){
-		$("#top-nav").load("/hecrepedia/nav.html");
-	}});
+	$("#top-nav").load("/hecrepedia/nav.html");
 	//Set the style of the tab
 	setTabStyle();
 	//Open the designated tab
