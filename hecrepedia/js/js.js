@@ -21,13 +21,25 @@ $(function() {
   Copied functions from first
   Hecrepedia, compressed a few of them
   ===================================*/
+/* WELCOME TO THE PROBLEM ZONE */
+//These two function do not work, as intended
+//Using Chrome developer tools, I have discovered that the requests are being sent at successed in the correct order
+//But, they do not appear on the page in the correct order, because it is random, and I do not know why this is
+//If it wasn't random, I could fix it. When I had hard-coded the ANIMAL_CARD_GROUPS as 2, and didn't even use ANIMAL_CARD_GROUPS as a variable, it worked
+//Now, I do not know what is happening.
+
+//The animal-card-group divs are being created correctly, and the animal cards are being created as intended, just in the wrong order
+//Also, I do not know how return functions work, I just copied and pasted from somewhere
+//By that, I mean that I don't know how the return function is being passed the data parameter from the ajax success function
+//I think that's it
+
 //Add Card(s)
 function addAnimalCards(divName, ...links) {
-	if (links.length % ANIMAL_CARD_GROUPS == 0) {
-		for (var i = 0; i < links.length / ANIMAL_CARD_GROUPS; i++) {$(divName).append("<div class='animal-card-group'></div>");}
-	} else {
-		for (var i = 0; i < (ANIMAL_CARD_GROUPS - links.length % ANIMAL_CARD_GROUPS + links.length) / ANIMAL_CARD_GROUPS; i++) {$(divName).append("<div class='animal-card-group'></div>");}
-	}
+	//Figure out how many animal card groups to add
+	var animalCardGroups = links.length % ANIMAL_CARD_GROUPS == 0 ? links.length / ANIMAL_CARD_GROUPS :  (ANIMAL_CARD_GROUPS - links.length % ANIMAL_CARD_GROUPS + links.length) / ANIMAL_CARD_GROUPS;
+	//Add the animal card groups
+	for (var i = 0; i < animalCardGroups; i++) {$(divName).append("<div class='animal-card-group'></div>");}
+	//Ajax... I have to use async true because synchronous is too slow
 	for (var i = 0; i < links.length; i++) {$.ajax({url: links[i], type: "get", success: createAnimalCard(i, divName, links)});}
 }
 
