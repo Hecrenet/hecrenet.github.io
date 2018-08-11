@@ -2,7 +2,7 @@
   Global Variables
   ===================================*/
 var MIN_TAB_WIDTH = 326;
-var ANIMAL_CARD_GROUPS = 4;
+var ANIMAL_CARD_GROUPS = 2;
 
 /*===================================
   Functions that need all DOM objects
