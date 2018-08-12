@@ -77,9 +77,9 @@ tr:last-child td {border: none;}
 .text-card.right {width: calc(50% - 8px); float: right; clear: right;}
 /* Animal Card */
 .animal-card-group {overflow: hidden}
-.animal-card {width: calc(25% - 9px); overflow: hidden; background-color: #fff;  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); float: left; transition: 0.3s; margin-bottom: 10px; border-radius: 4px}
+.animal-card {width: calc(25% - 9px); overflow: hidden; background-color: #fff;  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.19); float: left; transition: 0.3s; margin-bottom: 10px; border-radius: 4px}
 .animal-card:not(:nth-child(4)) {margin-right: 12px}
-.animal-card:hover {box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05)}
+.animal-card:hover {box-shadow: 0 2px 3px rgba(0, 0, 0, 0.19)}
 .animal-img img {width: 100%; display: block}
 .animal-name {text-align: center;}
 
