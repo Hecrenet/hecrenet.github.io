@@ -68,7 +68,7 @@ function createAnimalCard(i, divName, links) {
 		console.log("Animal Card Group: " + tempNum);
 		console.log("Animal Number in Loop: " + i);
 		//Append the animal card
-		$($(divName + " .animal-card-group")[tempNum]).append("<div class='animal-card'><div class='animal-img'><a href=" + links[i] + "><img src=" + image + "></a></div><div class='animal-name'><p>" + name + "</p></div></div>");
+		$($(divName + " .animal-card")[i]).append("<div class='animal-img'><a href=" + links[i] + "><img src=" + image + "></a></div><div class='animal-name'><p>" + name + "</p></div>");
 	}
 }
 
