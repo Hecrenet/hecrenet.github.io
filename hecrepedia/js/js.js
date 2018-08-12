@@ -54,7 +54,7 @@ function createAnimalCard(i, divName, links) {
 		//Set the variables of the other information
 		image = information[2].slice(information[2].search('"'), information[2].length - 1);
 		//Append the animal card
-		$($(divName + " .animal-card")[i]).append("<div class='animal-img'><a href=" + links[i] + "><img src=" + image + "></a></div><div class='animal-info'><div class='animal-name'><p>" + name + "</p><div class='card-button'><a herf='javascript:void(0)'>|</a><a herf='javascript:void(0)'>|</a></div></div></div>");
+		$($(divName + " .animal-card")[i]).append("<div class='animal-img'><a href=" + links[i] + "><img src=" + image + "></a></div><div class='animal-info'><div class='animal-name'><p>" + name + "</p><div class='card-button' onclick=\"openThis(this)\"><a herf='javascript:void(0)'>|</a><a herf='javascript:void(0)'>|</a></div></div></div>");
 	}
 }
 
@@ -69,22 +69,28 @@ function openTab(evt, tabName) {var i, tabcontent, tablinks;tabcontent = documen
 //Add the "open" class to an element with an id
 function openId(...idName) {
 	for (var i = 0; i < idName.length; i++) {
-		if ($($(idName[i])[0]).hasClass("open")) {
+		if ($($(idName[i])[0]).hasClass("open"))
 			$($(idName[i])[0]).removeClass("open");
-		} else {
+		else
 			$($(idName[i])[0]).addClass("open");
-		}
 	}
 }
 //Add the "open" class to an elements with a common class
 function openClass(className) {
 	for (var i = 0; i < $(className).length; i++) {
-		if ($($(className)[i]).hasClass("open")) {
-			$($(className)[i]).removeClass("open")
-		} else {
-			$($(className)[i]).addClass("open")
-		}
+		if ($($(className)[i]).hasClass("open"))
+			$($(className)[i]).removeClass("open");
+		else
+			$($(className)[i]).addClass("open");
 	}
+}
+
+//Add the "open" class to the obejct that called the function
+function openThis(object) {
+	if ($(object).hasClass("open"))
+		$(object).removeClass("open");
+	else
+		$(object).addClass("open");
 }
 
 /*===================================
