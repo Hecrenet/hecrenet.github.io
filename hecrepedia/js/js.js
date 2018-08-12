@@ -42,17 +42,19 @@ function addAnimalCards(divName, ...links) {
 function createAnimalCard(i, divName, links) {
 	return function(data) {
 		//Init Variables
-		var image, name, information;
+		var image, name, information, facts;
 		//Find Name
 		name = data.slice(data.search("<title>") + 7, data.search("</title>"));
 		//Set the information variable to array with comments and the information
 		information = data.slice(data.search("fillOutPage"), data.length);
 		information = information.slice(information.search("\\(") + 1, information.search("\\)"));
+		//Set the facts
+		//WIP
 		information = information.split("\n");
 		//Set the variables of the other information
 		image = information[2].slice(information[2].search('"'), information[2].length - 1);
 		//Append the animal card
-		$($(divName + " .animal-card")[i]).append("<div class='animal-img'><a href=" + links[i] + "><img src=" + image + "></a></div><div class='animal-name'><p>" + name + "</p></div>");
+		$($(divName + " .animal-card")[i]).append("<div class='animal-img'><a href=" + links[i] + "><img src=" + image + "></a></div><div class='animal-name'><p>" + name + "</p><div class='card-button'><a herf='javascript:void(0)'>-</a><a herf='javascript:void(0)'>-</a></div></div>");
 	}
 }
 
