@@ -21,18 +21,6 @@ $(function() {
   Copied functions from first
   Hecrepedia, compressed a few of them
   ===================================*/
-/* WELCOME TO THE PROBLEM ZONE */
-//These two function do not work, as intended
-//Using Chrome developer tools, I have discovered that the requests are being sent at successed in the correct order
-//But, they do not appear on the page in the correct order, because it is random, and I do not know why this is
-//If it wasn't random, I could fix it. When I had hard-coded the ANIMAL_CARD_GROUPS as 2, and didn't even use ANIMAL_CARD_GROUPS as a variable, it worked
-//Now, I do not know what is happening.
-
-//The animal-card-group divs are being created correctly, and the animal cards are being created as intended, just in the wrong order
-//Also, I do not know how return functions work, I just copied and pasted from somewhere
-//By that, I mean that I don't know how the return function is being passed the data parameter from the ajax success function
-//I think that's it
-
 //Add Card(s)
 function addAnimalCards(divName, ...links) {
 	//Figure out how many animal card groups to add
@@ -47,14 +35,14 @@ function addAnimalCards(divName, ...links) {
 		cardGroup = i % ANIMAL_CARD_GROUPS == 0 ? i / ANIMAL_CARD_GROUPS : (ANIMAL_CARD_GROUPS - i % ANIMAL_CARD_GROUPS + i) / ANIMAL_CARD_GROUPS - 1;
 		$($(divName + " .animal-card-group")[cardGroup]).append("<div class='animal-card'></div>");
 	}
-	//Ajax... I have to use async true because synchronous is too slow
+	//Get the data from the other page and use the callback function
 	for (var i = 0; i < links.length; i++) {$.ajax({url: links[i], type: "get", success: createAnimalCard(i, divName, links)});}
 }
 
 function createAnimalCard(i, divName, links) {
 	return function(data) {
 		//Init Variables
-		var image, name, information, tempNum;
+		var image, name, information;
 		//Find Name
 		name = data.slice(data.search("<title>") + 7, data.search("</title>"));
 		//Set the information variable to array with comments and the information
@@ -63,10 +51,6 @@ function createAnimalCard(i, divName, links) {
 		information = information.split("\n");
 		//Set the variables of the other information
 		image = information[2].slice(information[2].search('"'), information[2].length - 1);
-		//Set tempNum to the div of which group the animal card should be added to
-		tempNum = i % ANIMAL_CARD_GROUPS == 0 ? i / ANIMAL_CARD_GROUPS : (ANIMAL_CARD_GROUPS - i % ANIMAL_CARD_GROUPS + i) / ANIMAL_CARD_GROUPS - 1;
-		console.log("Animal Card Group: " + tempNum);
-		console.log("Animal Number in Loop: " + i);
 		//Append the animal card
 		$($(divName + " .animal-card")[i]).append("<div class='animal-img'><a href=" + links[i] + "><img src=" + image + "></a></div><div class='animal-name'><p>" + name + "</p></div>");
 	}
@@ -105,9 +89,8 @@ function openClass(className) {
   Background Functions
   ===================================*/
 (function($) {
-	//Resize Stuff
 	var $window = $(window);
-
+	//Resize stuff
 	$window.resize(function resize(){
 		if ($window.width() > 672) {$(".dropdown").removeClass("open");}
 		setTabStyle();
@@ -118,6 +101,8 @@ function openClass(className) {
 /*===================================
   Functions used for organization ):
   ===================================*/
+//This changes the height of cards, since height % only works if parent height has height
+//This sets the fixed height of the cards at the time the function is called
 function changeCardGroupHeight() {
 	var cardContainers = $(".text-card-group");
 	cardContainers.css("height", "auto");
@@ -128,6 +113,5 @@ function changeCardGroupHeight() {
 	}
 }
 
-function setTabStyle() {
-	if ($($(".tab")[0]).height() > 47 && $($(".tab")[0]).width() < MIN_TAB_WIDTH) {$($(".tab button")).css("width", "100%")} else {$($(".tab button")).css("width", "auto");}
-}
+//This changes all buttons from being on one row to each button having its own row based on screen size
+function setTabStyle() {if ($($(".tab")[0]).height() > 47 && $($(".tab")[0]).width() < MIN_TAB_WIDTH) {$($(".tab button")).css("width", "100%")} else {$($(".tab button")).css("width", "auto");}}
