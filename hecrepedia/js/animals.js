@@ -35,7 +35,7 @@ function fillOutPage(imgLink, breifDesc, pers, associations, birth, history, mor
 
 function addFactTable(...tableData) {
 	if (tableData.length % 2 == 0) {
-		$($("#quick-facts")[0]).append("<div id='table-conatiner'><table></table></div>");
+		$($("#quick-facts")[0]).append("<div id='table-container'><table></table></div>");
 		for (var i = 0; i < tableData.length/2; i++) {
 			$($("#quick-facts table")[0]).append("<tr><td>" + tableData[i * 2] + "</td><td>" + tableData[i * 2 + 1] + "</td></tr>")
 		}
