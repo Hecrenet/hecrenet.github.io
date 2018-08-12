@@ -45,7 +45,7 @@ function addAnimalCards(divName, ...links) {
 	var cardGroup;
 	for (var i = 0; i < links.length; i++) {
 		cardGroup = i % ANIMAL_CARD_GROUPS == 0 ? i / ANIMAL_CARD_GROUPS : (ANIMAL_CARD_GROUPS - i % ANIMAL_CARD_GROUPS + i) / ANIMAL_CARD_GROUPS - 1;
-		$(divName + " .animal-card-group")[cardGroup].append("<div class='animal-card'></div>");
+		$($(divName + " .animal-card-group")[cardGroup]).append("<div class='animal-card'></div>");
 	}
 	//Ajax... I have to use async true because synchronous is too slow
 	for (var i = 0; i < links.length; i++) {$.ajax({url: links[i], type: "get", success: createAnimalCard(i, divName, links)});}
