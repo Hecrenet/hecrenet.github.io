@@ -86,8 +86,8 @@ tr:last-child td {border: none;}
 .animal-name p {text-align: center; display: block; margin: 0; padding: 10px 0}
 .card-button {position: absolute; top: 10px; right: 10px; display: none}
 .animal-card:hover .card-button {display: block}
-.card-button a {display: inline-block; position: relative}
-.card-button a:last-child {transform: rotate(90deg); right: 2.5px;}
+.card-button a {display: inline-block; position: relative; font-size: 16px}
+.card-button a:last-child {transform: rotate(90deg); right: 6px;}
 .card-button a:first-child {animation: rotateUp 1s ease forwards}
 .card-button.open a:first-child {animation: rotateFlat 1s ease forwards}
 
@@ -108,8 +108,8 @@ hr {border: none; height: 1px; background-color: #ddd;}
 /*===================================
   Animations
   ===================================*/
-  @keyframes rotateFlat {to {transform: rotate(90deg); right: 2.5px}}
-  @keyframes rotateUp {to {transform: rotate(0deg); right: 0}}
+  @keyframes rotateFlat {to {transform: rotate(90deg);}}
+  @keyframes rotateUp {to {transform: rotate(360deg);}}
 
 /*===================================
   Responsive Navigation
