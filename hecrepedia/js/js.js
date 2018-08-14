@@ -57,7 +57,7 @@ function createAnimalCard(i, divName, links) {
 		console.log(information);
 		//Set the variables of the other information
 		image = information[2].slice(information[2].search('"'), information[2].length - 1);
-		bio = information[4].slice(information[4].search('"') + 1, information[2].length - 1);
+		bio = information[4].slice(information[4].search('"') + 1, information[4].length - 1);
 		//Append the animal card, I wish I could make this look better, because I would refer to note.
 		$($(divName + " .animal-card")[i]).append("<div class='animal-img'><a href=" + links[i] + "><img src=" + image + "></a></div><div class='animal-info'><div class='animal-name'><p>" + name + "</p></div><div class='extra-info'><ul></ul></div></div>");
 		//Create the extra info stuff
@@ -74,6 +74,11 @@ function createExtraInfo(parentElement, i, ...tabNames) {
 }
 
 function openExtraInfoContent(object) {
+	//Will stop 'bubbling'
+	if (!e) var e = window.event;
+	e.cancelBubble = true;
+	if (e.stopPropagation) e.stopPropagation();
+	
 	if ($(object).hasClass("active"))
 		$(object).removeClass("active");
 	else {
