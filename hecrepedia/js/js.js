@@ -42,7 +42,7 @@ function addAnimalCards(divName, ...links) {
 function createAnimalCard(i, divName, links) {
 	return function(data) {
 		//Init Variables
-		var image, name, information, ;
+		var image, name, information;
 		//Find Name
 		name = data.slice(data.search("<title>") + 7, data.search("</title>"));
 		//Set the information variable to array with comments and the information
