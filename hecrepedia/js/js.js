@@ -39,6 +39,9 @@ function addAnimalCards(divName, ...links) {
 	for (var i = 0; i < links.length; i++) {$.ajax({url: links[i], type: "get", success: createAnimalCard(i, divName, links)});}
 }
 
+/* NOTE */
+//I am going to split the appending of the animal card into chunks
+//To prevent redundant code and to organize it a bit better
 function createAnimalCard(i, divName, links) {
 	return function(data) {
 		//Init Variables
@@ -55,7 +58,7 @@ function createAnimalCard(i, divName, links) {
 		//Set the variables of the other information
 		image = information[2].slice(information[2].search('"'), information[2].length - 1);
 		bio = information[4].slice(information[4].search('"'), information[2].length - 1);
-		//Append the animal card, I wish I could make this look better, because I would.
+		//Append the animal card, I wish I could make this look better, because I would refer to note.
 		$($(divName + " .animal-card")[i]).append("<div class='animal-img'><a href=" + links[i] + "><img src=" + image + "></a></div><div class='animal-info'><div class='animal-name'><p>" + name + "</p></div><div class='extra-info'><a href='javascript:void(0)'>&#x22ee</a><div class='extra-info-menu'><ul><li class='quick-facts active'>?</li><li class='bio'>?</li><li class='history'>?</li><li class='powers'>?</li><li>?</li></ul></div><div class='extra-info-content'><div class='quick-facts-content content'></div><div class='bio-content content'>" + bio + "</div><div class='history-content content'></div><div class='powers-content content'></div></div></div></div>");
 		//Add the 'links' to the extra info menu
 		$(".animal-card .li").attr("href", "javascript:void(0)");
