@@ -75,6 +75,15 @@ function createExtraInfo(parentElement, i, ...tabNames) {
 	}
 }
 
+function openExtraInfoContent(object) {
+	if ($(object).hasClass("active"))
+		$(object).removeClass("active");
+	else {
+		$(object).parent().children().removeClass("active");
+		$(object).addClass("active");
+	}
+}
+
 //Add Tabs
 function addTabs(...names) {for (var i = 0; i < names.length; i++) {$($(".tab")[0]).append("<button class=\"tablinks\" onclick=\"openTab(event,'" + names[i] + "')\">" + names[i] + "</button>");}$($(".tab .tablinks")[0]).addClass("active");$(".tab .tablinks")[0].id = "defaultOpen";}
 //Switch the content tabs
