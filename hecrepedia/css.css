@@ -87,13 +87,13 @@ tr:last-child td {border: none;}
 .card-button {position: absolute; top: 10px; right: 10px; display: none}
 .animal-card:hover .card-button {display: block}
 /* Extra info, part of Animal Card */
-.extra-info-menu, .extra-info-content {clear: both}
-.extra-info-menu li {overflow: hidden; float: left; width: 20%}
-.extra-info-menu ul {list-style: none; padding: 0; margin: 0; overflow: hidden}
-.extra-info-menu li a {padding: 0; display: block; float: none; text-align: center; padding: 10px; text-decoration: none; color: #000}
+.extra-info {clear: both}
+.extra-info li {overflow: hidden; float: left; width: 20%}
+.extra-info ul {list-style: none; padding: 0; margin: 0; overflow: hidden}
+.extra-info li a {padding: 0; display: block; float: none; text-align: center; padding: 10px; text-decoration: none; color: #000}
 .extra-info .content {display: none}
-.extra-info-menu li.active a {color: #5bbbff; border-bottom: 2px solid;}
-.extra-info-menu li.active .content {display: block}
+.extra-info li.active a {color: #5bbbff; border-bottom: 2px solid;}
+.extra-info li.active .content {display: block}
 
 /*===================================
   Misc.
