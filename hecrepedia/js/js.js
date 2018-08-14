@@ -62,8 +62,6 @@ function createAnimalCard(i, divName, links) {
 		$($(divName + " .animal-card")[i]).append("<div class='animal-img'><a href=" + links[i] + "><img src=" + image + "></a></div><div class='animal-info'><div class='animal-name'><p>" + name + "</p></div><div class='extra-info'><ul></ul></div></div>");
 		//Create the extra info stuff
 		createExtraInfo(divName + " .animal-card .extra-info ul", i, "quick-facts", "bio", "history", "powers", "trivia");
-		//Add the 'links' to the extra info menu
-		$(divName + " .animal-card li a").attr("href", "javascript:void(0)");
 		//Add all the stuff to the extra info content
 		$($(divName + " .animal-card .bio-content")[i]).append(bio);
 	}
@@ -71,7 +69,7 @@ function createAnimalCard(i, divName, links) {
 
 function createExtraInfo(parentElement, i, ...tabNames) {
 	for (var j = 0; j < tabNames.length; j++) {
-		$($(parentElement)[i]).append("<li class=" + tabNames[j] + "><a>?</a><div class='" + tabNames[j] + "-content content'></div></li>");
+		$($(parentElement)[i]).append("<li class=" + tabNames[j] + "><a href='javascript:void(0)' onclick='openExtraInfoContent(this)'>?</a><div class='" + tabNames[j] + "-content content'></div></li>");
 	}
 }
 
