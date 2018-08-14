@@ -54,7 +54,7 @@ function createAnimalCard(i, divName, links) {
 		//Set the variables of the other information
 		image = information[2].slice(information[2].search('"'), information[2].length - 1);
 		//Append the animal card
-		$($(divName + " .animal-card")[i]).append("<div class='animal-img'><a href=" + links[i] + "><img src=" + image + "></a></div><div class='animal-info'><div class='animal-name'><p>" + name + "</p></div><div class='card-options'><a href='javascript:void(0)'>&#x22ee</a><ul><li>Feautres coming soon</li><li>Feautres coming soon</li><li>Feautres coming soon</li><ul></div></div>");
+		$($(divName + " .animal-card")[i]).append("<div class='animal-img'><a href=" + links[i] + "><img src=" + image + "></a></div><div class='animal-info'><div class='animal-name'><p>" + name + "</p></div><div class='card-options'><a href='javascript:void(0)'>&#x22ee</a><ul><li><p>Feautres coming soon</p></li><li><p>Feautres coming soon</p></li><li><p>Feautres coming soon</p></li><ul></div></div>");
 	}
 }
 
