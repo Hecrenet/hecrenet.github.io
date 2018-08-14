@@ -42,7 +42,7 @@ function addAnimalCards(divName, ...links) {
 function createAnimalCard(i, divName, links) {
 	return function(data) {
 		//Init Variables
-		var image, name, information, facts;
+		var image, name, information, ;
 		//Find Name
 		name = data.slice(data.search("<title>") + 7, data.search("</title>"));
 		//Set the information variable to array with comments and the information
@@ -53,8 +53,8 @@ function createAnimalCard(i, divName, links) {
 		information = information.split("\n");
 		//Set the variables of the other information
 		image = information[2].slice(information[2].search('"'), information[2].length - 1);
-		//Append the animal card
-		$($(divName + " .animal-card")[i]).append("<div class='animal-img'><a href=" + links[i] + "><img src=" + image + "></a></div><div class='animal-info'><div class='animal-name'><p>" + name + "</p></div><div class='card-options'><a href='javascript:void(0)'>&#x22ee</a><ul><li><p>Feautres coming soon</p></li><li><p>Feautres coming soon</p></li><li><p>Feautres coming soon</p></li><ul></div></div>");
+		//Append the animal card, I wish I could make this look better, because I would.
+		$($(divName + " .animal-card")[i]).append("<div class='animal-img'><a href=" + links[i] + "><img src=" + image + "></a></div><div class='animal-info'><div class='animal-name'><p>" + name + "</p></div><div class='extra-info'><a href='javascript:void(0)'>&#x22ee</a><div class='extra-info-menu'><ul><li class='quick-facts active'>?</li><li class='bio'>?</li><li class='history'>?</li><li class='powers'>?</li><li>?</li></ul></div><div class='extra-info-content'><div class='quick-facts-content'></div><div class='bio-content'></div><div class='history-content'></div><div class=''></div><div class='powers-content'></div></div></div></div>");
 	}
 }
 
