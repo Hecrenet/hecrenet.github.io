@@ -59,9 +59,19 @@ function createAnimalCard(i, divName, links) {
 		image = information[2].slice(information[2].search('"'), information[2].length - 1);
 		bio = information[4].slice(information[4].search('"'), information[2].length - 1);
 		//Append the animal card, I wish I could make this look better, because I would refer to note.
-		$($(divName + " .animal-card")[i]).append("<div class='animal-img'><a href=" + links[i] + "><img src=" + image + "></a></div><div class='animal-info'><div class='animal-name'><p>" + name + "</p></div><div class='extra-info'><div class='extra-info-menu'><ul><li class='quick-facts active'><a>?</a></li><li class='bio'><a>?</a></li><li class='history'><a>?</a></li><li class='powers'><a>?</a></li><li><a>?</a></li></ul></div><div class='extra-info-content'><div class='quick-facts-content content'></div><div class='bio-content content'>" + bio + "</div><div class='history-content content'></div><div class='powers-content content'></div></div></div></div>");
-		//Add the 'links' to the extra info menu, I know this does it multiple times each time a card is appended, but whatever
-		$(".animal-card li a").attr("href", "javascript:void(0)");
+		$($(divName + " .animal-card")[i]).append("<div class='animal-img'><a href=" + links[i] + "><img src=" + image + "></a></div><div class='animal-info'><div class='animal-name'><p>" + name + "</p></div><div class='extra-info'><ul></ul></div></div>");
+		//Create the extra info stuff
+		createExtraInfo(divName + " .animal-card .extra-info ul", i, "quick-facts", "bio", "history", "powers", "trivia");
+		//Add the 'links' to the extra info menu
+		$(divName + " .animal-card li a").attr("href", "javascript:void(0)");
+		//Add all the stuff to the extra info content
+		$($(divName + " .animal-card .bio-content")[i]).append(bio);
+	}
+}
+
+function createExtraInfo(parentElement, i, ...tabNames) {
+	for (var j = 0; j < tabNames.length; j++) {
+		$($(parentElement)[i]).append("<li class=" + tabNames[j] + "><a>?</a><div class='" + tabNames[j] + "-content content'></div></li>");
 	}
 }
 
