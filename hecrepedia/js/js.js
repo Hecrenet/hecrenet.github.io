@@ -71,7 +71,7 @@ function createExtraInfo(parentElement, i, ...tabNames) {
 	for (var j = 0; j < tabNames.length; j++) {
 		$($(parentElement)[i]).append("<li class=" + tabNames[j] + " onclick='openExtraInfoContent(this)'><a href='javascript:void(0)'></a><hr><div class='" + tabNames[j] + "-content content'></div></li>");
 	}
-	$($(parentElement + " .bio a")[i]).html("<i class='fab fa-delicious'></i>");
+	$($(parentElement + " .bio a")[i]).html("<i class='fas fa-th-large'></i>");
 	$($(parentElement + " .bio a")[i]).html("<i class='fas fa-user'></li>");
 	$($(parentElement + " .history a")[i]).html("<i class='fas fa-clock'></li>");
 	$($(parentElement + " .powers a")[i]).html("<i class='fas fa-hand-rock'></li>");
