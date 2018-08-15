@@ -45,7 +45,7 @@ function addAnimalCards(divName, ...links) {
 function createAnimalCard(i, divName, links) {
 	return function(data) {
 		//Init Variables
-		var image, name, bio, history, information;
+		var image, name, bio, history, trivia, information;
 		//Find Name
 		name = data.slice(data.search("<title>") + 7, data.search("</title>"));
 		//Set the information variable to array with comments and the information
@@ -58,13 +58,18 @@ function createAnimalCard(i, divName, links) {
 		//Set the variables of the other information
 		image = information[2].slice(information[2].search('"'), information[2].length - 1);
 		bio = information[4].slice(information[4].search('"') + 1, information[4].length - 2);
-		history = information[10].slice(information[10].search('"') + 1, information[10].length - 2);
+		history = information[12].slice(information[10].search('"') + 1, information[12].length - 2);
+		trivia = information[20].slice(information[20].search('"') + 1, information[20].length - 2);
 		//Append the animal card, I wish I could make this look better, because I would refer to note.
 		$($(divName + " .animal-card")[i]).append("<div class='animal-img'><a href=" + links[i] + "><img src=" + image + "></a></div><div class='animal-info'><div class='animal-name'><p>" + name + "</p></div><div class='extra-info'><ul></ul></div></div>");
 		//Create the extra info stuff
 		createExtraInfo(divName + " .animal-card .extra-info ul", i, "quick-facts", "bio", "history", "powers", "trivia");
 		//Add all the stuff to the extra info content
+		$($(divName + " .animal-card .quick-facts-content")[i]).append("Coming Soon");
 		$($(divName + " .animal-card .bio-content")[i]).append(bio);
+		$($(divName + " .animal-card .history-content")[i]).append(history);
+		$($(divName + " .animal-card .powers-content")[i]).append("Coming Soon");
+		$($(divName + " .animal-card .trivia-content")[i]).append(trivia);
 	}
 }
 
