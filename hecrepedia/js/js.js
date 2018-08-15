@@ -75,7 +75,7 @@ function createAnimalCard(i, divName, links) {
 
 function createExtraInfo(parentElement, i, ...tabNames) {
 	for (var j = 0; j < tabNames.length; j++) {
-		$($(parentElement)[i]).append("<li class=" + tabNames[j] + " onclick='openExtraInfoContent(this)'><a href='javascript:void(0)'></a><hr><div class='" + tabNames[j] + "-content content'></div></li>");
+		$($(parentElement + " .animal-card")[i]).append("<li class=" + tabNames[j] + " onclick='openExtraInfoContent(this)'><a href='javascript:void(0)'></a><hr><div class='" + tabNames[j] + "-content content'></div></li>");
 	}
 	$($(parentElement + " .quick-facts a")[i]).html("<i class='fab fa-delicious' style='color: #3a3a3a'></i>");
 	$($(parentElement + " .bio a")[i]).html("<i class='fas fa-user' style='color: #3a3a3a'></li>");
