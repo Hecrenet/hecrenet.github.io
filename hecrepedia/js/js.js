@@ -62,7 +62,7 @@ function createAnimalCard(i, divName, links) {
 		//Append the animal card, I wish I could make this look better, because I would refer to note.
 		$($(divName + " .animal-card")[i]).append("<div class='animal-img'><a href=" + links[i] + "><img src=" + image + "></a></div><div class='animal-info'><div class='animal-name'><p>" + name + "</p></div><div class='extra-info'><ul></ul></div></div>");
 		//Create the extra info stuff
-		createExtraInfo(divName + " .animal-card .extra-info ul", i, "quick-facts", "bio", "history", "powers", "trivia");
+		createExtraInfo(divName + " .animal-card[i]", i, "quick-facts", "bio", "history", "powers", "trivia");
 		//Add all the stuff to the extra info content
 		$($(divName + " .animal-card .quick-facts-content")[i]).append("Coming Soon");
 		$($(divName + " .animal-card .bio-content")[i]).append(bio);
@@ -74,6 +74,7 @@ function createAnimalCard(i, divName, links) {
 
 function createExtraInfo(parentElement, i, ...tabNames) {
 	console.log(i + " " + parentElement);
+	parentElement = parentElement + " .extra-info ul";
 	for (var j = 0; j < tabNames.length; j++) {
 		$($(parentElement)[i]).append("<li class=" + tabNames[j] + " onclick='openExtraInfoContent(this)'><a href='javascript:void(0)'></a><hr><div class='" + tabNames[j] + "-content content'></div></li>");
 	}
