@@ -93,7 +93,7 @@ tr:last-child td {border: none;}
 .extra-info li a {padding: 0; display: block; float: none; text-align: center; padding: 10px; text-decoration: none; color: #000}
 .extra-info li hr {display: none; margin: 0; position: relative; bottom: 10px}
 .extra-info .content {display: none}
-.extra-info li.active a {color: #5bbbff;}
+.extra-info li.active i {color: #5bbbff !important;}
 .extra-info li.active hr {background-color: #5bbbff; height: 2px; display: block; animation: borderSlide 0.5s ease forwards}
 .extra-info li.active .content {display: block; padding: 10px; position: relative; width: calc(500% - 20px)}
 .extra-info li.active .content:nth-child(3) {right: 100%}
