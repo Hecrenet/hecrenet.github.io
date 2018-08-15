@@ -50,7 +50,7 @@ function createAnimalCard(i, divName, links) {
 		name = data.slice(data.search("<title>") + 7, data.search("</title>"));
 		//Set the information variable to array with comments and the information
 		information = data.slice(data.search("fillOutPage"), data.length);
-		information = information.slice(information.search("\\(") + 1, information.search("\\)"));
+		information = information.slice(information.search("\\(") + 1, information.search("\\)\\;"));
 		//Set the facts
 		//WIP
 		information = information.split("\n");
