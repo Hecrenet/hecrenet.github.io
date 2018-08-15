@@ -72,10 +72,10 @@ function createExtraInfo(parentElement, i, ...tabNames) {
 		$($(parentElement)[i]).append("<li class=" + tabNames[j] + " onclick='openExtraInfoContent(this)'><a href='javascript:void(0)'></a><hr><div class='" + tabNames[j] + "-content content'></div></li>");
 	}
 	$($(parentElement + " .quick-facts a")[i]).html("<i class='fab fa-delicious'></i>");
-	$($(parentElement + " .bio a")[i]).html("<i class='fas fa-user'></li>");
-	$($(parentElement + " .history a")[i]).html("<i class='fas fa-clock'></li>");
-	$($(parentElement + " .powers a")[i]).html("<i class='fas fa-hand-rock'></li>");
-	$($(parentElement + " .trivia a")[i]).html("<i class='fas fa-chess-queen'></li>");
+	$($(parentElement + " .bio a")[i]).html("<i class='fas fa-user' style='#3a3a3a'></li>");
+	$($(parentElement + " .history a")[i]).html("<i class='fas fa-clock' style='#3a3a3a'></li>");
+	$($(parentElement + " .powers a")[i]).html("<i class='fas fa-hand-rock' style='color: #3a3a3a'></li>");
+	$($(parentElement + " .trivia a")[i]).html("<i class='fas fa-chess-queen' style='color: #3a3a3a'></li>");
 }
 
 function openExtraInfoContent(object) {
