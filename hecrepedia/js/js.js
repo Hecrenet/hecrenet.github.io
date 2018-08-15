@@ -54,7 +54,6 @@ function createAnimalCard(i, divName, links) {
 		//Set the facts
 		//WIP
 		information = information.split("\n");
-		console.log(information);
 		//Set the variables of the other information
 		image = information[2].slice(information[2].search('"'), information[2].length - 1);
 		bio = information[4].slice(information[4].search('"') + 1, information[4].length - 2);
@@ -74,8 +73,8 @@ function createAnimalCard(i, divName, links) {
 }
 
 function createExtraInfo(parentElement, i, ...tabNames) {
+	console.log(i + " " + parentElement);
 	for (var j = 0; j < tabNames.length; j++) {
-		console.log($(parentElement)[i]);
 		$($(parentElement)[i]).append("<li class=" + tabNames[j] + " onclick='openExtraInfoContent(this)'><a href='javascript:void(0)'></a><hr><div class='" + tabNames[j] + "-content content'></div></li>");
 	}
 	$($(parentElement + " .quick-facts a")[i]).html("<i class='fab fa-delicious' style='color: #3a3a3a'></i>");
