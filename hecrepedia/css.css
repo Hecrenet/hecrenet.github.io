@@ -91,8 +91,10 @@ tr:last-child td {border: none;}
 .extra-info li {float: left; width: 20%}
 .extra-info ul {list-style: none; padding: 0; margin: 0; overflow: hidden}
 .extra-info li a {padding: 0; display: block; float: none; text-align: center; padding: 10px; text-decoration: none; color: #000}
+.extra-info li hr {display: none; margin: 0; position: relative; bottom: 10px}
 .extra-info .content {display: none}
-.extra-info li.active a {color: #5bbbff; border-bottom: 2px solid;}
+.extra-info li.active a {color: #5bbbff;}
+.extra-info li.active hr {background-color: #5bbbff; height: 2px; display: block; animation: borderSlide 0.5s ease forwards}
 .extra-info li.active .content {display: block; padding: 10px; position: relative; width: calc(500% - 20px)}
 .extra-info li.active .content:nth-child(2) {right: 100%}
 .extra-info li.active .content:nth-child(3) {right: 200%}
@@ -116,6 +118,7 @@ hr {border: none; height: 1px; background-color: #ddd;}
 /*===================================
   Animations
   ===================================*/
+  @keyframes borderSlide {0%{width: 0;} 100%{width: 100%;}}
 
 /*===================================
   Responsive Navigation
