@@ -45,7 +45,7 @@ function addAnimalCards(divName, ...links) {
 function createAnimalCard(i, divName, links) {
 	return function(data) {
 		//Init Variables
-		var image, name, bio, information;
+		var image, name, bio, history, information;
 		//Find Name
 		name = data.slice(data.search("<title>") + 7, data.search("</title>"));
 		//Set the information variable to array with comments and the information
@@ -58,6 +58,7 @@ function createAnimalCard(i, divName, links) {
 		//Set the variables of the other information
 		image = information[2].slice(information[2].search('"'), information[2].length - 1);
 		bio = information[4].slice(information[4].search('"') + 1, information[4].length - 2);
+		history = information[10].slice(information[10].search('"') + 1, information[10].length - 2);
 		//Append the animal card, I wish I could make this look better, because I would refer to note.
 		$($(divName + " .animal-card")[i]).append("<div class='animal-img'><a href=" + links[i] + "><img src=" + image + "></a></div><div class='animal-info'><div class='animal-name'><p>" + name + "</p></div><div class='extra-info'><ul></ul></div></div>");
 		//Create the extra info stuff
