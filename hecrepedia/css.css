@@ -96,10 +96,10 @@ tr:last-child td {border: none;}
 .extra-info li.active i {color: #5bbbff !important;}
 .extra-info li.active hr {background-color: #5bbbff; height: 2px; display: block; animation: borderSlide 0.5s ease forwards}
 .extra-info li.active .content {display: block; padding: 10px; position: relative; width: calc(500% - 20px)}
-.extra-info li.active .content:nth-child(3) {right: 100%}
-.extra-info li.active .content:nth-child(4) {right: 200%}
-.extra-info li.active .content:nth-child(5) {right: 300%}
-.extra-info li.active .content:nth-child(6) {right: 400%}
+.extra-info li:nth-child(2).active .content {right: 100%}
+.extra-info li:nth-child(3).active .content {right: 200%}
+.extra-info li:nth-child(4).active .content {right: 300%}
+
 
 /*===================================
   Misc.
