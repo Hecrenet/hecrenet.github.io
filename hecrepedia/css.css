@@ -126,6 +126,10 @@ hr {border: none; height: 1px; background-color: #ddd;}
   first approach, take that, phone
   users (Probably gonna affect SEO)
   ===================================*/
+@media only screen and (max-width: 848px) {
+	.animal-card {width: calc(50% - 0px)}
+}
+
 @media only screen and (max-width: 767px) {
 	#top-nav li:not(:first-child):not(:last-child) a {display: none}
 	#top-nav li.menu-icon a {display: block !important;}
