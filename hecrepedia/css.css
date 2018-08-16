@@ -127,7 +127,8 @@ hr {border: none; height: 1px; background-color: #ddd;}
   users (Probably gonna affect SEO)
   ===================================*/
 @media only screen and (max-width: 848px) {
-	.animal-card {width: calc(50% - 0px)}
+	.animal-card {width: calc(50% - 6px);}
+	.animal-card:nth-child(even) {float: right; margin-right: 0}
 }
 
 @media only screen and (max-width: 767px) {
