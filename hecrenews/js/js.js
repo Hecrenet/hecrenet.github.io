@@ -7,5 +7,5 @@
   ===================================*/
 $(function(){
   	//Set the background image of wallpaper divs
-	$(".wallpaper").css("background-image", "background-image: url(" + $(this).id + ")";
+	$(".wallpaper").css("background-image", "background-image: url(" + $(this).attr("id") + ")";
 });
