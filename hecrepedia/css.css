@@ -128,7 +128,7 @@ hr {border: none; height: 1px; background-color: #ddd;}
   ===================================*/
 @media only screen and (max-width: 848px) {
 	.animal-card {width: calc(50% - 6px);}
-	.animal-card:nth-child(even) {float: right; margin-right: 0}
+	.animal-card:nth-child(even) {margin-right: 0}
 }
 
 @media only screen and (max-width: 767px) {
