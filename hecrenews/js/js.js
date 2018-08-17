@@ -22,5 +22,6 @@ function wallpaperSetup() {
 		"height" : String(WALLPAPER_SIZE) + "px"
 	});
 	//Center the box
-	$(".title-box").css("margin-top", String(WALLPAPER_SIZE - $(".title-box").height) + "px");
+	$(".title-box").css("margin-top", String(WALLPAPER_SIZE / 2 - $(".title-box").height()) + "px");
+
 }
