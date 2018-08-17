@@ -1,4 +1,12 @@
 /*===================================
   General Styling
   ===================================*/
-body {margin: 0; padding: 0}
+body {margin: 0; padding: 0;}
+h1, h2, h3, h4, h5, h6 {margin: 0; font-family: sans-serif}
+
+/*===================================
+  Wallpaper Title Thingy
+  ===================================*/
+.wallpaper {overflow: hidden; background-repeat: no-repeat; background-size: 100%; position: relative;}
+.title-box {width: 50%; margin: auto; padding: 20px; border: 5px solid #fff;}
+.title-box h1 {text-align: center; color: #fff;}
