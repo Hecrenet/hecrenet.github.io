@@ -25,7 +25,7 @@ function wallpaperSetup() {
 	//Set the height and background image of wallpaper divs
 	$(".wallpaper").css({
 		"background-image" : "url(" + $(".wallpaper").attr('id') + ")",
-		"max-height" : String(WALLPAPER_SIZE) + "px"
+		"height" : String(WALLPAPER_SIZE) + "px"
 	});
 	//Center the box
 	$(".title-box").css("margin-top", String(WALLPAPER_SIZE / 2 - $(".title-box").height()) + "px");
