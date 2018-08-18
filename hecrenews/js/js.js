@@ -13,6 +13,10 @@ $(function(){
 	//Setup the wallpaper divs
 	WALLPAPER_SIZE = $window.height() / 2;
 	wallpaperSetup();
+	$window.resize(function resize(){
+		WALLPAPER_SIZE = $window.height() / 2;
+		wallpaperSetup();
+	});
 });
 
 /*===================================
@@ -30,7 +34,9 @@ function wallpaperSetup() {
 }
 
 /*===================================
+  Test
   ===================================*/
+/*
 (function($) {
 	//Resize Stuff
 	$window.resize(function resize(){
@@ -38,3 +44,4 @@ function wallpaperSetup() {
 		wallpaperSetup();
 	});
 })(jQuery);
+*/
