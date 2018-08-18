@@ -1,15 +1,24 @@
 /*===================================
   Global Variables
   ===================================*/
-var WALLPAPER_SIZE = 500;
+var WALLPAPER_SIZE;
 
 /*===================================
   Wait for DOM Elements to load
   ===================================*/
 $(function(){
+	//Create a window variable
+	var $window = $(window);
 	//Load in the navigation bar
 	$("#top-nav").load("/hecrenews/nav.html");
+	//Setup the wallpaper divs
+	WALLPAPER_SIZE = $window.height() / 2;
 	wallpaperSetup();
+	//Viewport resize functions
+	$window.resize(function resize(){
+		WALLPAPER_SIZE = $window.height() / 2;
+		wallpaperSetup();
+	});
 });
 
 /*===================================
