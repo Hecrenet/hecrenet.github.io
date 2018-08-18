@@ -10,12 +10,6 @@ $(function(){
 	//Load in the navigation bar
 	$("#top-nav").load("/hecrenews/nav.html");
 	wallpaperSetup();
-	//Do stuff on window resize
-	var $window = $(window);
-	//Resize stuff
-	$window.resize(function resize(){
-		$(".title-box").css("margin-top", String(WALLPAPER_SIZE / 2 - $(".title-box").height()) + "px");
-	});
 });
 
 /*===================================
