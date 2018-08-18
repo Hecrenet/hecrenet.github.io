@@ -11,10 +11,10 @@ $(function(){
 	//Load in the navigation bar
 	$("#top-nav").load("/hecrenews/nav.html");
 	//Setup the wallpaper divs
-	WALLPAPER_SIZE = $window.width() / 2;
+	WALLPAPER_SIZE = $window.width() * 0.25;
 	wallpaperSetup();
 	$window.resize(function resize(){
-		WALLPAPER_SIZE = $window.width() / 2;
+		WALLPAPER_SIZE = $window.width() * 0.25;
 		wallpaperSetup();
 	});
 });
