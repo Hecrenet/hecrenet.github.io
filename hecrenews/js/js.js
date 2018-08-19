@@ -60,9 +60,9 @@ function createAnimalCard(i, divName, links) {
 		bio = information[2];
 		console.log(name + "\n" + image + "\n" + bio);
 		//Append the empty person card to the specified div
-		$($(divName)[i]).append("<div class='person-card'><div class='person-image'></div><div class='person-bio'></div></div>");
+		$($(divName)[i]).append("<div class='person-card'><div class='person-name'></div><div class='person-image'></div><div class='person-bio'></div></div>");
 		//Add all the information
-		$($(divName + " .person-card")[i]).append("<h1>" + name + "</h1>");
+		$($(divName + " .person-card .person-name")[i]).append("><h1>" + name + "</h1>");
 		$($(divName + " .person-card .person-image")[i]).append("<img src='" + image + "'>");
 		$($(divName + " .person-card .person-bio")[i]).append("<p>" + bio + "</p>");
 	}
