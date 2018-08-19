@@ -58,12 +58,11 @@ function createAnimalCard(i, divName, links) {
 		for (var j = 0; j < information.length; j++) {
 			information[j] = information[j].slice(0, information[j].search("</li>"));
 		}
-		console.log(information);
 		//Set the variables of the information
 		name = information[0];
 		image = information[1];
 		bio = information[2];
-		console.log(name + "\n" + image + "\n" + bio);
+		console.log(name, i)
 		//Add all the information
 		$($(divName + " .person-card .person-name")[i]).append("<h1>" + name + "</h1>");
 		$($(divName + " .person-card .person-image")[i]).append("<img src=" + image + ">");
