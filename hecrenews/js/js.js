@@ -58,6 +58,7 @@ function createAnimalCard(i, divName, links) {
 		name = information[0];
 		image = information[1];
 		bio = information[2];
+		console.log(name + "\n" + image + "\n" + bio);
 		/*
 		//Append the animal card, I wish I could make this look better, because I would refer to note.
 		$($(divName)[i]).append("<div class='animal-img'><a href=" + links[i] + "><img src=" + image + "></a></div><div class='animal-info'><div class='animal-name'><p>" + name + "</p></div><div class='extra-info'><ul></ul></div></div>");
