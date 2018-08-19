@@ -59,15 +59,13 @@ function createAnimalCard(i, divName, links) {
 		bio = information[2];
 		/*
 		//Append the animal card, I wish I could make this look better, because I would refer to note.
-		$($(divName + " .animal-card")[i]).append("<div class='animal-img'><a href=" + links[i] + "><img src=" + image + "></a></div><div class='animal-info'><div class='animal-name'><p>" + name + "</p></div><div class='extra-info'><ul></ul></div></div>");
-		//Create the extra info stuff
-		createExtraInfo($(divName + " .animal-card")[i], i, "quick-facts", "bio", "history", "powers", "trivia");
-		//Add all the stuff to the extra info content
-		$($(divName + " .animal-card .quick-facts-content")[i]).append("Coming Soon");
-		$($(divName + " .animal-card .bio-content")[i]).append(bio);
-		$($(divName + " .animal-card .history-content")[i]).append(history);
-		$($(divName + " .animal-card .powers-content")[i]).append("Coming Soon");
-		$($(divName + " .animal-card .trivia-content")[i]).append(trivia);
+		$($(divName)[i]).append("<div class='animal-img'><a href=" + links[i] + "><img src=" + image + "></a></div><div class='animal-info'><div class='animal-name'><p>" + name + "</p></div><div class='extra-info'><ul></ul></div></div>");
+		//Add all the information
+		$($(divName + " ")[i]).append("Coming Soon");
+		$($(divName + " ")[i]).append(bio);
+		$($(divName + " ")[i]).append(history);
+		$($(divName + " ")[i]).append("Coming Soon");
+		$($(divName + " ")[i]).append(trivia);
 		*/
 	}
 }
