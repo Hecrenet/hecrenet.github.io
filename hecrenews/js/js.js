@@ -38,7 +38,7 @@ function createPersonCards(divName, ...links) {
 	//Get the data from the other page and use the callback function
 	for (var i = 0; i < links.length; i++) {
 		//Append the empty person card to the specified div
-		$($(divName)[i]).append("<div class='person-card'><div class='person-name'></div><div class='person-image'></div><div class='person-bio'></div></div>");
+		$(divName).append("<div class='person-card'><div class='person-name'></div><div class='person-image'></div><div class='person-bio'></div></div>");
 		//Call the function that addes information to the person card
 		$.ajax({url: links[i], type: "get", success: createAnimalCard(i, divName, links)});
 	}
