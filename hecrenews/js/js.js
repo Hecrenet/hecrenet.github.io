@@ -20,7 +20,7 @@ $(function(){
 });
 
 /*===================================
-  Organized Functions
+  Reuseable Functions
   ===================================*/
 function wallpaperSetup() {
 	//Set the height and background image of wallpaper divs
@@ -31,6 +31,11 @@ function wallpaperSetup() {
 	//Center the box
 	$(".title-box").css("margin-top", String(WALLPAPER_SIZE / 2 - $(".title-box").height()) + "px");
 
+}
+
+function createPesronCard(divName, ...links) {
+	
+	
 }
 
 /*===================================
