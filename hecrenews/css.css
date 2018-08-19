@@ -17,6 +17,7 @@ p, h1, h2, h3, h4, h5, h6 {margin: 0;}
 #top-nav a {display: block; padding: 16px; color: #fff; text-decoration: none; transition: 0.3s}
 #top-nav a:hover {background-color: #2a2a2a}
 /* Hecrenews Icon */
+#top-nav li:last-child {float: right}
 #top-nav li:last-child a {padding: 0;}
 #top-nav img {display: block;}
 
