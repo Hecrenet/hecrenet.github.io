@@ -49,6 +49,9 @@ function createAnimalCard(i, divName, links) {
 		//Set the information variable to array with comments and the information
 		information = data.slice(data.search("<ul>") + 4, data.search("</ul>"));
 		information = information.split("</li>");
+		for (var i = 0; i < information.length; i++) {
+			information[i].slice(4, information[i].length);
+		}
 		console.log(information);
 		/*
 		//Set the variables of the information
