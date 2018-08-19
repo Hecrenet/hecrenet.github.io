@@ -59,16 +59,12 @@ function createAnimalCard(i, divName, links) {
 		image = information[1];
 		bio = information[2];
 		console.log(name + "\n" + image + "\n" + bio);
-		/*
-		//Append the animal card, I wish I could make this look better, because I would refer to note.
-		$($(divName)[i]).append("<div class='animal-img'><a href=" + links[i] + "><img src=" + image + "></a></div><div class='animal-info'><div class='animal-name'><p>" + name + "</p></div><div class='extra-info'><ul></ul></div></div>");
+		//Append the empty person card to the specified div
+		$($(divName)[i]).append("<div class='person-card'><div class='person-image'></div><div class='person-bio'></div></div>");
 		//Add all the information
-		$($(divName + " ")[i]).append("Coming Soon");
-		$($(divName + " ")[i]).append(bio);
-		$($(divName + " ")[i]).append(history);
-		$($(divName + " ")[i]).append("Coming Soon");
-		$($(divName + " ")[i]).append(trivia);
-		*/
+		$($(divName + " .person-card")[i]).append("<h1>" + name + "</h1>");
+		$($(divName + " .person-card .person-image")[i]).append("<img src='" + image + "'>");
+		$($(divName + " .person-card .person-bio")[i]).append("<p>" + bio + "</p>");
 	}
 }
 
