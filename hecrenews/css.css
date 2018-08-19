@@ -29,6 +29,7 @@ p, h1, h2, h3, h4, h5, h6 {margin: 0;}
   ===================================*/
 #people-section {margin: 16px 10%; float: left; width: 80%}
 .person-card {background-color: #fff; float: left; width: 30%; overflow: hidden; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25); border-radius: 4px}
+.person-card:not(:nth-child(3)) {margin-right: 5%}
 .person-card .person-name h1 {font-weight: normal; font-family: 'Nunito', sans-serif; padding: 16px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); position: relative;}
 .person-card .person-image img {display: block; width: 25%; border-radius: 50%; float: left; padding: 16px;}
 .person-card .person-bio p {padding: 16px; font-family: sans-serif;}
