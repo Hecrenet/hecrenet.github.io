@@ -1,4 +1,9 @@
 /*===================================
+  Imports
+  ===================================*/
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+/*===================================
   General Styling
   ===================================*/
 body {margin: 0; padding: 0; background-color: #f0f0f0}
@@ -8,7 +13,7 @@ a {font-family: sans-serif}
 /*===================================
   Top Nav
   ===================================*/
-#top-nav ul {padding: 0; margin: 0; overflow: hidden; background-color: #3a3a3a; box-shadow: 0 1px 3px rgba(0, 0, 0, 1); position: sticky}
+#top-nav ul {padding: 0; margin: 0; overflow: hidden; background-color: #3a3a3a; box-shadow: 0 1px 3px rgba(0, 0, 0, 1); position: sticky; font-family: 'Nunito', sans-serif}
 #top-nav li {overflow: hidden; float: left;}
 #top-nav a {display: block; padding: 16px; color: #fff; text-decoration: none;}
 
