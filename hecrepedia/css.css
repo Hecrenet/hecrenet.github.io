@@ -33,7 +33,7 @@ tr:last-child td {border: none;}
 #top-nav li:nth-child(even) {background-color: #333}
 #top-nav li:last-child {float: right}
 #top-nav li.menu-icon a {display: none; background-color: #333;}
-#top-nav a {display: block; color: #fff; text-decoration: none; padding: 21px 15px; transition: 0.3s;}
+#top-nav a {display: block; color: #fff; text-decoration: none; padding: 20px 15px; transition: 0.3s;}
 #top-nav li:last-child a {padding: 0;}
 #top-nav a:hover {background-color: #222 !important}
 #top-nav img {display: block; width: 60px}
