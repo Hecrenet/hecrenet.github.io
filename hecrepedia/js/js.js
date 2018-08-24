@@ -84,11 +84,6 @@ function createExtraInfo(parentElement, i, ...tabNames) {
 }
 
 function openExtraInfoContent(object) {
-	//Will stop 'bubbling'
-	if (!e) var e = window.event;
-	e.cancelBubble = true;
-	if (e.stopPropagation) e.stopPropagation();
-	
 	if ($(object).hasClass("active"))
 		$(object).removeClass("active");
 	else {
