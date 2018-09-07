@@ -49,7 +49,11 @@ p, h1, h2, h3, h4, h5, h6 {margin: 0;}
 /*===================================
   Article Stlying
   ===================================*/
-#content #info {overflow: hidden}
+#content #info {overflow: hidden;}
+#content #info #author {float: left; position: relative}
+#content #info #author .author-image img {display: block; width: 40px; border-radius: 50%}
+#content #info #author .author-info {position: absolute; width: 520%}
+#content #info #author:hover .author-info {display: block}
 #content #info #publish {float: right}
 #content #article .big-letter {font-size: 32px}
 
