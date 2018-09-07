@@ -31,14 +31,14 @@ p, h1, h2, h3, h4, h5, h6 {margin: 0;}
 /*===================================
   Content Div and General Content
   ===================================*/
-#content {margin: 16px 10%; width: 80%; overflow: hidden;}
+#content {margin: 16px 10%; width: 80%; overflow: hidden; padding-bottom: 16px}
 #content h1 {font-weight: normal; margin: 16px 0 16px 0}
 #content hr {height: 1px; border: 0; background-color: #ccc}
 
 /*===================================
   Person Card
   ===================================*/
-#content #people-section {float: left}
+#content #people-section {float: left; height: calc(0 + 5px)}
 #content .person-card {background-color: #fff; float: left; width: 30%; overflow: hidden; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25); border-radius: 4px}
 #content .person-card:not(:nth-child(3)) {margin-right: 5%}
 #content .person-card .person-name h1 {font-weight: normal; font-family: 'Nunito', sans-serif; padding: 16px; box-shadow: 0 1px 3px rgba(0, 0, 0, 1); position: relative; margin: 0; background-color: #3a3a3a; color: #fff}
@@ -55,4 +55,4 @@ p, h1, h2, h3, h4, h5, h6 {margin: 0;}
 /*===================================
   Footer Stlying
   ===================================*/
-#footer {color: #fff; max-width: 100%; background-color: #3a3a3a; padding: 5px 10% 5px 10%; text-align: center}
+#footer {color: #fff; max-width: 100%; background-color: #3a3a3a; padding: 16px 10% 16px 10%; text-align: center}
