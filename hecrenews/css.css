@@ -12,7 +12,8 @@ p, h1, h2, h3, h4, h5, h6 {margin: 0;}
 /*===================================
   Top Nav
   ===================================*/
-#top-nav ul {padding: 0; margin: 0; overflow: hidden; background-color: #3a3a3a; box-shadow: 0 1px 3px rgba(0, 0, 0, 1); position: sticky; font-family: 'Nunito', sans-serif}
+#top-nav {position: sticky; top: 0}
+#top-nav ul {padding: 0; margin: 0; overflow: hidden; background-color: #3a3a3a; box-shadow: 0 1px 3px rgba(0, 0, 0, 1); font-family: 'Nunito', sans-serif}
 #top-nav li {overflow: hidden; float: left;}
 #top-nav a {display: block; padding: 16px; color: #fff; text-decoration: none; transition: 0.3s}
 #top-nav a:hover {background-color: #2a2a2a}
