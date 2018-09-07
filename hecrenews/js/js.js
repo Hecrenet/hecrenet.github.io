@@ -9,7 +9,7 @@ var WALLPAPER_SIZE;
   ===================================*/
 $(function(){
 	//Load in the navigation bar
-	$("#top-nav").load("/hecrenews/nav.html");
+	$("#top-nav").load("/hecrenews/body-sections/nav.html");
 	//Setup the wallpaper divs
 	WALLPAPER_SIZE = $window.width() * 0.25;
 	wallpaperSetup();
