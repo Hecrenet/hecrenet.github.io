@@ -31,7 +31,7 @@ p, h1, h2, h3, h4, h5, h6 {margin: 0;}
 /*===================================
   Content Div and General Content
   ===================================*/
-#content {margin: 16px 10%; width: 80%}
+#content {margin: 16px 10%; width: 80%; overflow: hidden;}
 #content h1 {font-weight: normal; margin: 16px 0 16px 0}
 #content hr {height: 1px; border: 0; background-color: #ccc}
 
