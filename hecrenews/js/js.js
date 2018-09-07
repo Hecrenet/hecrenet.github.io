@@ -8,10 +8,10 @@ var WALLPAPER_SIZE;
   Wait for DOM Elements to load
   ===================================*/
 $(function(){
-	//Load in the navigation bar
-	$("#top-nav").load("/hecrenews/body-sections/nav.html");
+	//Load in the top navigation
+	insertIntoDiv("#top-nav", "/hecrenews/body-sections/nav.html");
 	//Load in the footer
-	$("#footer").load("/hecrenews/body-sections/footer.html");
+	insertIntoDiv("#footer", "/hecrenews/body-sections/footer.html");
 	//Setup the wallpaper divs
 	WALLPAPER_SIZE = $window.width() * 0.25;
 	wallpaperSetup();
@@ -39,10 +39,10 @@ function idExists(idName) {
 	return($(idName).length != 0);
 }
 
-function insertAuthor(link) {
+function insertIntoDiv(div, link) {
 	//Check if it's an article and add the author
-	if (idExists("#author")) {
-		$("#author").load(link);
+	if (idExists(div)) {
+		$(div).load(link);
 	} 
 }
 
