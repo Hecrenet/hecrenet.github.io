@@ -22,7 +22,7 @@ $(function(){
 });
 
 /*===================================
-  Reuseable Functions
+  Organized Functions
   ===================================*/
 function wallpaperSetup() {
 	//Set the height and background image of wallpaper divs
@@ -35,6 +35,9 @@ function wallpaperSetup() {
 
 }
 
+/*===================================
+  Add a person card
+  ===================================*/
 //Add Card(s)
 function createPersonCards(divName, ...links) {
 	//Get the data from the other page and use the callback function
@@ -42,14 +45,14 @@ function createPersonCards(divName, ...links) {
 		//Append the empty person card to the specified div
 		$(divName).append("<div class='person-card'><div class='person-name'></div><div class='person-image'></div><div class='person-bio'></div></div>");
 		//Call the function that addes information to the person card
-		$.ajax({url: links[i], type: "get", success: createAnimalCard(i, divName, links)});
+		$.ajax({url: links[i], type: "get", success: createPersonCard(i, divName, links)});
 	}
 }
 
 /* NOTE */
 //I am going to split the appending of the animal card into chunks
 //To prevent redundant code and to organize it a bit better
-function createAnimalCard(i, divName, links) {
+function createPersonCard(i, divName, links) {
 	return function(data) {
 		//Init Variables
 		var name, image, bio, information;
