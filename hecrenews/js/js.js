@@ -49,7 +49,7 @@ function insertIntoDiv(div, link) {
 /*===================================
   Add a person card
   ===================================*/
-//Add Card(s)
+//Collects Data
 function createPersonCards(divName, ...links) {
 	//Get the data from the other page and use the callback function
 	for (var i = 0; i < links.length; i++) {
@@ -59,10 +59,7 @@ function createPersonCards(divName, ...links) {
 		$.ajax({url: links[i], type: "get", success: createPersonCard(i, divName, links)});
 	}
 }
-
-/* NOTE */
-//I am going to split the appending of the animal card into chunks
-//To prevent redundant code and to organize it a bit better
+//Processes Data
 function createPersonCard(i, divName, links) {
 	return function(data) {
 		//Init Variables
@@ -78,7 +75,6 @@ function createPersonCard(i, divName, links) {
 		name = information[0];
 		image = information[1];
 		bio = information[2];
-		console.log(name, i)
 		//Add all the information
 		$($(divName + " .person-card .person-name")[i]).append("<h1>" + name + "</h1>");
 		$($(divName + " .person-card .person-image")[i]).append("<img src=" + image + ">");
