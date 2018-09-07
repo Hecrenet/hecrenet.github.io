@@ -35,6 +35,17 @@ function wallpaperSetup() {
 
 }
 
+function idExists(idName) {
+	return($(idName).length != 0);
+}
+
+function insertAuthor(link) {
+	//Check if it's an article and add the author
+	if (idExists("#author")) {
+		$("#author").load(link);
+	} 
+}
+
 /*===================================
   Add a person card
   ===================================*/
