@@ -53,9 +53,9 @@ p, h1, h2, h3, h4, h5, h6 {margin: 0; font-family: sans-serif}
 #content #info {overflow: hidden;}
 #content #info #author {float: left;}
 #content #info #author .author-image img {display: block; width: 40px; border-radius: 50%; float: left}
-#content #info #author .author-info {position: absolute; top: 45px; width: 40%; background-color: #fff; padding: 16px; border-radius: 4px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25); clear: both; display: none}
+#content #info #author .author-info {position: absolute; top: 45px; width: 40%; background-color: #fff; padding: 16px; border-radius: 4px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25); clear: both; display: none; border-left: 2px solid #f55;}
 #content #info #author:hover .author-info {display: block}
-#content #info #author .author-info:after {}
+#content #info #author .author-info:after {content: " "; position: absolute; bottom: 100%; left: 20px; margin-left: -5px; border-width: 5px; border-style: solid; border-color: transparent transparent #f55 transparent;}
 #content #info #publish {float: right}
 #content #article .big-letter {font-size: 32px}
 
