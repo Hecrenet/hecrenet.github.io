@@ -25,7 +25,7 @@ This is the website of the Hecretary Bird Association.
 * Games (Soon to come)
 * Entertainment
   + A historical play (Very soon to come)
-  + A novel (Soon to come)
+  + A novel (NOT COMING)
   + A movie (Less Soon to come)
 * Political Stuff?! (Soon to come)
 
