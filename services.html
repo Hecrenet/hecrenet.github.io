@@ -5,49 +5,40 @@ description: All the services provided in the Hecrenet
 ---
 <div class="service-container" style="padding: 16px">
   <div class="service">
-    <a href="https://hecrepedia.github.io/" target="_blank"><span>HECREPEDIA</span></a>
-    <img src="/assets/images/services/hecrepedia_logo.jpg">
+    <a href="https://hecrepedia.github.io/" target="_blank">
+      <p>HECREPEDIA</p>
+      <img src="/assets/images/services/hecrepedia_logo.jpg">
+    </a>
   </div>
 
   <div class="service">
-    <a href="https://hecrenews.github.io/" target="_blank"><span>HECRENEWS</span></a>
-    <img src="/assets/images/services/hecrenews_logo.png">
+    <a href="https://hecrenews.github.io/" target="_blank">
+      <p>HECRENEWS</p>
+      <img src="/assets/images/services/hecrenews_logo.png">
+    </a>
   </div>
 </div>
 
 <style>
   .service-container {
-    display: grid;
-    grid-gap: 16px;
-    grid-template-columns: repeat(4, 20vw);
-    justify-content: center;
+    display: flex;
   }
 
   .service {
-    width: 20vw;
-    height: 20vw;
-    position: relative;
-    box-shadow: 0 1px 4px rgba(0,0,0,.5);
+    margin: 8px;
+    border: double;
   }
 
   .service a {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    background-color: rgba(0,0,0,.6);
-    color: #fff;
     display: flex;
-    justify-content: center;
     align-items: center;
-    font-size: 1.5rem;
   }
 
-  .service img {
-    width: 100%;
-    position: relative;
-    display: block;
+  .service a p {
+    margin: 0 8px;
+  }
+
+  img {
+    max-width: 128px;
   }
 </style>

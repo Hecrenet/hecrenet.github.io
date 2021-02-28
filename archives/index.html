@@ -1,0 +1,12 @@
+---
+layout: default
+---
+
+<h1>Archives</h1>
+<ul>
+    {% for archive in site.archives %}
+    <li>
+      <a href="{{ archive.url }}">{{ archive.title }}</a>
+    </li>
+    {% endfor %}
+</u>

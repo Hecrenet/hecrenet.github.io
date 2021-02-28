@@ -8,27 +8,11 @@ description: The HBA Blog
 <div class="post-item">
   <div class="post-item-heading">
   <a href="{{ post.url}}"><h1 class="post-item-title">{{ post.title }}</h1></a>
-  <p class="post-item-description">{{ post.description }}</p>
   <div class="post-item-excerpt">{{ post.excerpt }}</div>
   <p class="post-item-date">{{ post.date | date: '%B %d, %Y' }}</p>
 </div>
+<hr>
 {% endfor %}
 
 <style>
-  #content {
-    padding: 0 20%;
-  }
-
-  .post-item-description {
-    font-style: italic;
-    font-size: 0.9rem;
-  }
-
-  .post-item-excerpt {
-    padding-left: 5%;
-  }
-
-  .post-item-date {
-    font-style: italic;
-  }
 </style>
